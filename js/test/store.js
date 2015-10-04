@@ -1,10 +1,9 @@
 
-var store = Module("store");
-
 function test_store(){
 
-    var TEST_FILE= "json/stack/2015-10-04.json";
-    var tester = create_tester("store");
+    var TEST_FILE = "json/stack/2015-10-04.json";
+    var tester = Module("tester").create("store");
+    var store = Module("store");
 
     tester.assert(
         'Store starts empty',

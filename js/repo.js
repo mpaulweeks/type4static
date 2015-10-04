@@ -7,8 +7,6 @@ var store = Module("store");
     module.REMOVED_FROM_STACK = 3;
     module.REJECTED_FROM_STACK = 4;
 
-
-
     module.get_card_by_name = function(card_name){
         var cards = store.data.card;
         for (var i = 0; i < cards.length; i++){
@@ -60,9 +58,8 @@ var store = Module("store");
         return valid_cards;
     };
 
-    module.get_img_url = function(card){
-        var card_mid = store.data.multiverse[card.name.toLowerCase()];
-        return 'http://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=' + card_mid;
+    module.get_multiverse_id = function(card){
+        return store.data.multiverse[card.name.toLowerCase()];
     }
 
 

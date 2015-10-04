@@ -1,10 +1,11 @@
 
+var store = Module("store");
+var repo = Module("repo");
+
 function test_repo(){
 
     var TEST_FILE = "json/stack/2015-10-04.json";
-    var tester = Module("tester").create("repo");
-    var store = Module("store");
-    var repo = Module("repo");
+    var tester = create_tester("repo");
 
     function tests(){
         var now = new Date(2015, 10, 01);
@@ -32,8 +33,8 @@ function test_repo(){
         );
 
         tester.assert(
-            'get_multiverse_id',
-            repo.get_multiverse_id(masticore) > 0
+            'get_img_url',
+            repo.get_img_url(masticore).length > 0
         );
 
         tester.close();

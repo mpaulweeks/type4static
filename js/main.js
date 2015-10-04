@@ -1,18 +1,6 @@
 
 var store = Module('store');
-var repo = Module('repo');
-
-function str_format(str) {
-    var args = arguments;
-    return str.replace(/{(\d+)}/g, function(match, number) { 
-        return typeof args[number] != 'undefined' ? args[number] : match;
-    });
-}
-
-function get_img_tag(card){
-    var template = '<a href="http://magiccards.info/query?q={1}" target="_blank"><img class="cardimage" alt="{1}" src="{2}"><img/></a>';
-    return str_format(template, card.name, repo.get_img_url(card));
-}
+var view = Module('view');
 
 function run(data_file){
     store.load(function (){
