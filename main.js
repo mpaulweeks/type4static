@@ -1,5 +1,5 @@
 
-DATA_PATH = 'json/data/';
+_cards = 
 
 function run(data_file){
     data_file = DATA_PATH + data_file
@@ -10,6 +10,6 @@ function run(data_file){
     }
 
     $.getJSON(data_file, function(json) {
-        $('body').append(json);
+        $('body').append(JSON.stringify(json));
     });
 }
