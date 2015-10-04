@@ -32,6 +32,11 @@ function test_repo(){
             repo.get_by_date_and_status(now, repo.IN_STACK).length > 0
         );
 
+        tester.assert(
+            'get_img_url',
+            repo.get_img_url(masticore).length > 0
+        );
+
         tester.close();
     };
 

@@ -21,8 +21,8 @@
 
 	    $.getJSON(card_file, function(data){
 			module.data = data;
-			$.getJSON(multiverse_file, function(ids){
-				module.data.multiverse_ids = ids;
+			$.getJSON(multiverse_file, function(multiverse){
+				module.data.multiverse = multiverse;
 	    		return callback();
 			});
 	    });

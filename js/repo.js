@@ -7,6 +7,8 @@ var store = Module("store");
     module.REMOVED_FROM_STACK = 3;
     module.REJECTED_FROM_STACK = 4;
 
+
+
     module.get_card_by_name = function(card_name){
         var cards = store.data.card;
         for (var i = 0; i < cards.length; i++){
@@ -34,8 +36,6 @@ var store = Module("store");
     module.get_status_code = function(card, datetime){
         var card_statuses = module.get_statuses(card);
         var latest_status = card_statuses[0];
-        console.log(card_statuses);
-        console.log(latest_status);
         var latest_timestamp = new Date(latest_status.timestamp);
         for (var i = 1; i < card_statuses.length; i++){
             var status = card_statuses[i];
@@ -59,6 +59,11 @@ var store = Module("store");
         }
         return valid_cards;
     };
+
+    module.get_img_url = function(card){
+        var card_mid = store.data.multiverse[card.name.toLowerCase()];
+        return 'http://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=' + card_mid;
+    }
 
 
 })(Module('repo'));

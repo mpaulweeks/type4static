@@ -24,7 +24,7 @@ function test_store(){
 
         tester.assert(
             'Store contains status data',
-            store.data.status[0].name != null
+            store.data.status[0].card_id != null
         );
 
         tester.assert(
