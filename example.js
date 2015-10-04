@@ -9,8 +9,8 @@ function run(data_path){
         url: data_path,
         dataType: 'jsonp',
         success: function(json){
-            $('body').html('jsonp');
-        $('body').append(json["key"]);
+            $('body').append('jsonp');
+            $('body').append(json["key"]);
         }
     });
 }
