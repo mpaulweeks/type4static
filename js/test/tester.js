@@ -8,16 +8,15 @@ function create_tester(name){
     var div_tag = "#" + div_id;
     $(div_tag).append(name + " tests begin" + LINE);
 
-    function assert(message, value){
+    var tester = {};
+
+    tester.assert = function(message, value){
         $(div_tag).append(Boolean(value) + ' - ' + message + LINE);
     };
 
-    function close(){
+    tester.close = function(){
         $(div_tag).append(name + " tests end" + LINE);
     }
 
-    return {
-        "assert": assert,
-        "close": close
-    };
+    return tester;
 }
