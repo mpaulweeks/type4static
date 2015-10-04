@@ -6,10 +6,16 @@ function test_view(){
     var store = Module("store");
     var view = Module("view");
 
+    function mocks(){
+        Module("autocard").init = function(){};
+    };
+
     function tests(){
+        mocks();
+        
         tester.assert(
-            'run doesn\'t shit the bed',
-            view.run() != 1
+            'list doesn\'t shit the bed',
+            view.list() != 1
         );
         tester.close();
     };

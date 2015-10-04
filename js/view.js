@@ -1,4 +1,5 @@
 var repo = Module("repo");
+var autocard = Module("autocard");
 
 (function(module){
 
@@ -83,14 +84,18 @@ var repo = Module("repo");
             toggle_images(date, status);
         });
         toggle_images(date, status);
-        init_autocard();
+        autocard.init();
     };
 
-    module.run = function(){
+    module.list = function(){
         var date = new Date();
         for (var status in status_names){
             display_status(date, status);
         }
+    };
+
+    module.filter = function(){
+        module.list();
     };
 
 

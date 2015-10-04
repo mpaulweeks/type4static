@@ -168,29 +168,29 @@ if(URL_START_IMG == undefined || URL_START_IMG == null){
 	URL_START_IMG = URL_START_IMG_DEFAULT;
 }
 
-//to be called by cardlist.js
-function init_autocard(){
-	// Adding onmouseover and onmouseout listeners to all matching links
-	var cardLinks = document.getElementsByTagName("a");
-	for (var i=0;i<cardLinks.length;i++) {
-	  var elem = cardLinks[i];
-  
-	  if(elem.className === CSS_TAG || elem.href.indexOf(URL_START)!=-1 || elem.href.indexOf(URL_START_IMG)!=-1) {
+(function(module){
+	//to be called by view.js
+	module.init = function(){
+		// Adding onmouseover and onmouseout listeners to all matching links
+		var cardLinks = document.getElementsByTagName("a");
+		for (var i=0;i<cardLinks.length;i++) {
+		  var elem = cardLinks[i];
+	  
+		  if(elem.className === CSS_TAG || elem.href.indexOf(URL_START)!=-1 || elem.href.indexOf(URL_START_IMG)!=-1) {
 
-		elem.onmouseover = function(evt){
-			var sourceElement;
-			if(document.all) {
-				sourceElement = evt.srcElement; // for IE
-			} else {
-				sourceElement = evt.target;
+			elem.onmouseover = function(evt){
+				var sourceElement;
+				if(document.all) {
+					sourceElement = evt.srcElement; // for IE
+				} else {
+					sourceElement = evt.target;
+				}
+				showImgPopup(sourceElement);
 			}
-			showImgPopup(sourceElement);
+			elem.onmouseout  = function(){
+				hideImgPopup();
+			}
+		  }
 		}
-		elem.onmouseout  = function(){
-			hideImgPopup();
-		}
-	  }
-	}
-}
-
-
+	};
+})(Module("autocard"));
