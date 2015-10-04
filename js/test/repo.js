@@ -4,7 +4,7 @@ var repo = Module("repo");
 
 function test_repo(){
 
-    var TEST_FILE = "json/data/2015-10-04.json";
+    var TEST_FILE = "json/stack/2015-10-04.json";
     var tester = create_tester("repo");
 
     function tests(){

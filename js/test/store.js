@@ -3,7 +3,7 @@ var store = Module("store");
 
 function test_store(){
 
-    var TEST_FILE= "json/data/2015-10-04.json";
+    var TEST_FILE= "json/stack/2015-10-04.json";
     var tester = create_tester("store");
 
     tester.assert(
@@ -18,8 +18,18 @@ function test_store(){
         );
 
         tester.assert(
-            'Store contains cards w/ data',
+            'Store contains cards data',
             store.data.card[0].name != null
+        );
+
+        tester.assert(
+            'Store contains status data',
+            store.data.status[0].name != null
+        );
+
+        tester.assert(
+            'Store contains multiverse data',
+            store.data.multiverse.masticore != null
         );
 
         var card_length = store.data.card.length;
