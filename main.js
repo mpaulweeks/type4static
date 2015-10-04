@@ -1,7 +1,7 @@
 
 DATA_PATH = 'json/data/';
 
-function run(data_path){
+function run(data_file){
     data_file = DATA_PATH + data_file
 
     var local = window.location.href.indexOf('file:///') > -1;
