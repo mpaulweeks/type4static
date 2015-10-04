@@ -6,7 +6,7 @@ function create_tester(name){
     $('body').append('<div id="' + div_id + '"></div>');
 
     var div_tag = "#" + div_id;
-    $(div_tag).append(name + " tests begin" + LINE);
+    $(div_tag).append(LINE + name + " tests begin" + LINE);
 
     var tester = {};
 
