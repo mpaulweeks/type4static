@@ -83,6 +83,7 @@ var repo = Module("repo");
             toggle_images(date, status);
         });
         toggle_images(date, status);
+        init_autocard();
     };
 
     module.run = function(){
