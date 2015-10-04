@@ -1,6 +1,4 @@
-var anime = anime || {};
-
-anime.module = function () {
+Module = function () {
     
     var modules = {};
 
