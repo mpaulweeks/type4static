@@ -10,6 +10,15 @@ var autocard = Module("autocard");
     var cardlistdisplay = '<div id="cardlistdisplay_{1}" class="cardlistdisplay"></div>';
     var card_img_template = '<a href="http://magiccards.info/query?q={1}" target="_blank"><img class="cardimage" alt="{1}" src="{2}"><img/></a>';
     var card_text_template = '<div><a href="http://magiccards.info/query?q={1}" class="mtgcard" target="_blank">{1}</a></div>';
+    var filter_table = (
+        '<tr>' +
+        '<td class="text-right col-md-1">{1}</td>' +
+        '<td class="text-right col-md-1">{2}%</td>' +
+        '<td class="text-center"></td>' +
+        '<td>{3}</td>' +
+        '<td><a href="stats?category={4}">Filter</a></td>' +
+        '</tr>'
+    );
 
     var status_names = {}
     status_names[repo.IN_STACK] = 'Current list';
@@ -88,7 +97,7 @@ var autocard = Module("autocard");
             str_format(cardlistdisplay, status)
         );
         var list_html = str_format(cardlist, inner_html);
-        $(".container").append(header_html + list_html);
+        $("#main_list").append(header_html + list_html);
 
         request.card_img[status] = true;
         $("#toggle_" + status).click(function(){
@@ -122,9 +131,28 @@ var autocard = Module("autocard");
         return null;
     };
 
+    function display_filter_row(category){
+        var cards = repo.get_current_cards();
+        if(category){
+            cards = repo.filter_cards_by_category(cards, category);
+        }
+        var percentage = parseInt(100*cards.length/request.total_cards);
+        var label = category == null ? 'Total' : category;
+        var row_html = str_format(filter_table,
+            cards.length, percentage, label, category
+        );
+        $('#filter_categories').append(row_html);
+    };
+
     module.filter = function(){
         request.category = read_url_category();
         module.list();
+
+        request.total_cards = repo.get_current_cards().length;
+        display_filter_row();
+        for (var i = 0; i < repo.CATEGORIES.length; i++){
+            display_filter_row(repo.CATEGORIES[i]);
+        }
     };
 
 

@@ -36,6 +36,11 @@ function test_repo(){
             repo.get_multiverse_id(masticore) > 0
         );
 
+        tester.assert(
+            'get_current_cards',
+            repo.get_current_cards().length == 240
+        );
+
         var cards = [masticore];
         tester.assert(
             'filter_cards_by_category on match',

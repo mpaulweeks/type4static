@@ -7,7 +7,33 @@ var store = Module("store");
     module.REMOVED_FROM_STACK = 3;
     module.REJECTED_FROM_STACK = 4;
 
-    module.categories = []
+    module.CATEGORIES = [
+        "is_instant",
+        "is_wrath",
+        "is_burn",
+        "is_lifegain",
+        "is_creature_fat",
+        "is_creature_threat",
+        "is_creature",
+        "is_artifact",
+        "is_enchantment",
+        "is_land",
+        "is_counterspell",
+        "is_masticore",
+        "is_draw",
+        "is_removal_creature",
+        "is_removal_artifact",
+        "is_removal_enchantment",
+        "is_removal_land",
+        "is_confiscate",
+        "is_morph",
+        "is_recurring",
+        "is_cycling",
+        "is_reanimate",
+        "is_flash_enabler",
+        "is_hard_to_kill",
+        "is_stack_specific"
+    ];
 
     module.filter_cards_by_category = function(cards, category){
         var out = [];
@@ -73,7 +99,11 @@ var store = Module("store");
 
     module.get_multiverse_id = function(card){
         return store.data.multiverse[card.name.toLowerCase()];
-    }
+    };
+
+    module.get_current_cards = function(){
+        return module.get_by_date_and_status(new Date(), module.IN_STACK);
+    };
 
 
 })(Module('repo'));
