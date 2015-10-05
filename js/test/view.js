@@ -12,10 +12,15 @@ function test_view(){
 
     function tests(){
         mocks();
-        
+
         tester.assert(
-            'list doesn\'t shit the bed',
-            view.list() != 1
+            'run_index smoke test',
+            view.run_index() != 1
+        );
+
+        tester.assert(
+            'run_edit smoke test',
+            view.run_edit() != 1
         );
         tester.close();
     };

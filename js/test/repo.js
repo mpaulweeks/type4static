@@ -46,6 +46,11 @@ function test_repo(){
             repo.get_current_cards().length == 240
         );
 
+        tester.assert(
+            'get_all_cards',
+            repo.get_all_cards().length == 337
+        );
+
         var cards = [masticore];
         tester.assert(
             'filter_cards_by_category on match',

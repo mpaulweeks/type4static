@@ -7,7 +7,8 @@
 
     function push_tester(){
         testers += 1;
-        $('#test_main').html("RUNNING TESTS...");
+        $('#test_main').html("SOMETHING BROKE");
+        $('body').css('background-color', 'fuchsia');
     }
 
     function pop_tester(){

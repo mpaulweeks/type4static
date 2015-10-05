@@ -108,12 +108,6 @@ var autocard = Module("autocard");
         autocard.init();
     };
 
-    module.list = function(){
-        for (var status in status_names){
-            display_status(status);
-        }
-    };
-
     function read_url_param(param_name){
         var vars = [], hash;
         var q = document.URL.split('?')[1];
@@ -145,20 +139,37 @@ var autocard = Module("autocard");
         $('#filter_categories').append(row_html);
     };
 
-    module.filter = function(){
+    module.run_index = function(){
         request.category = read_url_param("category");
         var timestamp = read_url_param("timestamp");
         if (timestamp){
             request.date = new Date(timestamp);
         }
 
-        module.list();
+        for (var status in status_names){
+            display_status(status);
+        }
 
         request.total_cards = repo.get_current_cards().length;
         display_filter_row();
         for (var i = 0; i < repo.CATEGORIES.length; i++){
             display_filter_row(repo.CATEGORIES[i]);
         }
+    };
+
+    function edit_card_row(card){
+
+    }
+
+    var EDIT_HEADER_TAB = '<th class="text-center col-md-1">{1}</th>';
+
+    module.run_edit = function(){
+        var cards = repo.get_all_cards();
+
+        for (var i = 0; i < repo.CATEGORIES.length; i++){
+            $("thead tr").append(str_format(EDIT_HEADER_TAB, repo.CATEGORIES[i]))
+        }
+
     };
 
 

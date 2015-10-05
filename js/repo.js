@@ -111,5 +111,9 @@ var store = Module("store");
         return module.get_by_date_and_status(new Date(), module.IN_STACK);
     };
 
+    module.get_all_cards = function(){
+        return store.data.card;
+    }
+
 
 })(Module('repo'));
