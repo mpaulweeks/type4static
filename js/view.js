@@ -18,7 +18,7 @@ var autocard = Module("autocard");
         '<td>{3}</td>' +
         '<td><a href="index.html?category={4}">Filter</a></td>' +
         '</tr>'
-    );
+    ); //todo url builder for category + date
 
     var status_names = {}
     status_names[repo.IN_STACK] = 'Current list';
@@ -29,6 +29,7 @@ var autocard = Module("autocard");
     //this module shouldn't persist more than one request
     var request = {};
     request.card_img = {};
+    request.date = new Date();
     request.category = null;
 
     function str_format(str) {
@@ -51,8 +52,8 @@ var autocard = Module("autocard");
         return str_format(card_text_template, card.name);
     };
 
-    function get_cards(date, status){
-        var cards = repo.get_by_date_and_status(date, status);
+    function get_cards(status){
+        var cards = repo.get_by_date_and_status(request.date, status);
         var category = request.category;
         if (category){
             cards = repo.filter_cards_by_category(cards, category);
@@ -60,9 +61,9 @@ var autocard = Module("autocard");
         return cards;
     }
 
-    function get_card_html(date, status, image){
+    function get_card_html(status, image){
         var card_html = "";
-        var cards = get_cards(date, status);
+        var cards = get_cards(status);
         for (var i = 0; i < cards.length; i++){
             var card = cards[i];
             var tag = get_text_tag(card);
@@ -74,11 +75,11 @@ var autocard = Module("autocard");
         return card_html;
     };
 
-    function toggle_images(date, status){
+    function toggle_images(status){
         var show_image = !request.card_img[status];
         request.card_img[status] = show_image;
 
-        var card_html = get_card_html(date, status, show_image);
+        var card_html = get_card_html(status, show_image);
         var div = $("#cardlistdisplay_" + status);
         div.html(card_html);
         if (show_image){
@@ -88,8 +89,8 @@ var autocard = Module("autocard");
         }
     };
 
-    function display_status(date, status){
-        var cards = get_cards(date, status);
+    function display_status(status){
+        var cards = get_cards(status);
         var header_html = str_format(header, status_names[status]);
         var inner_html = (
             str_format(toggle_button, status) +
@@ -101,20 +102,19 @@ var autocard = Module("autocard");
 
         request.card_img[status] = true;
         $("#toggle_" + status).click(function(){
-            toggle_images(date, status);
+            toggle_images(status);
         });
-        toggle_images(date, status);
+        toggle_images(status);
         autocard.init();
     };
 
     module.list = function(){
-        var date = new Date();
         for (var status in status_names){
-            display_status(date, status);
+            display_status(status);
         }
     };
 
-    function read_url_category(){
+    function read_url_param(param_name){
         var vars = [], hash;
         var q = document.URL.split('?')[1];
         if(q != undefined){
@@ -125,8 +125,8 @@ var autocard = Module("autocard");
                 vars[hash[0]] = hash[1];
             }
         }
-        if (vars.hasOwnProperty("category")){
-            return vars.category;
+        if (vars.hasOwnProperty(param_name)){
+            return vars[param_name];
         }
         return null;
     };
@@ -146,7 +146,12 @@ var autocard = Module("autocard");
     };
 
     module.filter = function(){
-        request.category = read_url_category();
+        request.category = read_url_param("category");
+        var timestamp = read_url_param("timestamp");
+        if (timestamp){
+            request.date = new Date(timestamp);
+        }
+
         module.list();
 
         request.total_cards = repo.get_current_cards().length;

@@ -27,6 +27,11 @@ function test_repo(){
         );
 
         tester.assert(
+            'get_status_code in past returns GOING_IN_STACK',
+            repo.get_status_code(masticore, new Date(2010,1,1)) == repo.GOING_IN_STACK
+        );
+
+        tester.assert(
             'get_by_date_and_status',
             repo.get_by_date_and_status(now, repo.IN_STACK).length > 0
         );

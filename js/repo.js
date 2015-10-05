@@ -72,15 +72,21 @@ var store = Module("store");
 
     module.get_status_code = function(card, datetime){
         var card_statuses = module.get_statuses(card);
-        var latest_status = card_statuses[0];
-        var latest_timestamp = new Date(latest_status.timestamp);
-        for (var i = 1; i < card_statuses.length; i++){
+        var latest_status = null;
+        var latest_timestamp = null;
+        for (var i = 0; i < card_statuses.length; i++){
             var status = card_statuses[i];
             var timestamp = new Date(status.timestamp);
-            if (timestamp > latest_timestamp && timestamp < datetime){
-                latest_status = status;
-                latest_timestamp = timestamp;
+            if (timestamp < datetime){
+                if (latest_timestamp == null || latest_timestamp < timestamp)
+                {
+                    latest_status = status;
+                    latest_timestamp = timestamp;
+                }
             }
+        }
+        if (latest_status == null){
+            return module.GOING_IN_STACK;
         }
         return latest_status.status;
     };
