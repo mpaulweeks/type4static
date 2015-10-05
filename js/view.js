@@ -157,19 +157,30 @@ var autocard = Module("autocard");
         }
     };
 
-    function edit_card_row(card){
-
-    }
-
-    var EDIT_HEADER_TAB = '<th class="text-center col-md-1">{1}</th>';
+    var EDIT_ROW_TAG = '<td class="text-center"><input type="checkbox" {1}></td>';
+    var EDIT_IMG_TAG = '<th><img class="cardimage" alt="{1}" src="{2}"><img/></th>';
 
     module.run_edit = function(){
-        var cards = repo.get_all_cards();
+        var rows = [];
 
-        for (var i = 0; i < repo.CATEGORIES.length; i++){
-            $("thead tr").append(str_format(EDIT_HEADER_TAB, repo.CATEGORIES[i]))
+        var cards = repo.get_all_cards();
+        for (var ci = 0; ci < cards.length; ci++){
+            var card = cards[ci];
+            var img_html = str_format(EDIT_IMG_TAG, card.name, get_img_url(card));
+            $('thead tr').append(img_html);
+
+            for (var ri = 0; ri < repo.CATEGORIES.length; ri++){
+                var row = rows[ri] || "";
+                var checked = card[repo.CATEGORIES[ri]] ? 'checked="true"' : "";
+                rows[ri] = row + str_format(EDIT_ROW_TAG, checked);
+            }
         }
 
+        for (var i = 0; i < repo.CATEGORIES.length; i++){
+            var ROW_TEMP = '<tr><td>{1}</td>{2}</tr>';
+            rows[i] = str_format(ROW_TEMP, repo.CATEGORIES[i], rows[i]);
+            $('tbody').append(rows[i]);
+        }
     };
 
 
