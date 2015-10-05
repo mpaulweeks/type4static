@@ -4,7 +4,7 @@ function test_view(){
     var TEST_FILE = "json/stack/2015-10-04.json";
     var tester = Module("tester").create("view");
     var store = Module("store");
-    var view = Module("view");
+    var view_index = Module("view_index");
     var view_edit = Module("view_edit");
 
     function mocks(){
@@ -15,15 +15,15 @@ function test_view(){
         mocks();
 
         tester.assert(
-            'run_index smoke test',
-            view.run_index() != 1
+            'index.run() smoke test',
+            view_index.run() != 1
         );
 
         tester.assert(
-            'run_edit smoke test',
-            view_edit.run_edit() != 1
+            'edit.run() smoke test',
+            view_edit.run() != 1
         );
-        
+
         tester.close();
     };
 
