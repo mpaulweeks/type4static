@@ -11,7 +11,7 @@ var autocard = Module("autocard");
     var card_img_template = '<a href="http://magiccards.info/query?q={1}" target="_blank"><img class="cardimage" alt="{1}" src="{2}"><img/></a>';
     var card_text_template = '<div><a href="http://magiccards.info/query?q={1}" class="mtgcard" target="_blank">{1}</a></div>';
     var filter_table = (
-        '<tr>' +
+        '<tr class="{5}">' +
         '<td class="text-right col-md-1">{1}</td>' +
         '<td class="text-right col-md-1">{2}%</td>' +
         '<td class="text-center"></td>' +
@@ -138,8 +138,9 @@ var autocard = Module("autocard");
         }
         var percentage = parseInt(100*cards.length/request.total_cards);
         var label = category == null ? 'Total' : category;
+        var css_class = category == request.category ? "success" : "";
         var row_html = str_format(filter_table,
-            cards.length, percentage, label, category
+            cards.length, percentage, label, category, css_class
         );
         $('#filter_categories').append(row_html);
     };

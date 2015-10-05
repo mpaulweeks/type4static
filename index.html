@@ -23,12 +23,31 @@
 <body>
 
 <div class="container">
+
     <div id="main_list"></div>
+
+    <h1> Stats </h1>
+
+    <table class="table table-hover table-condensed">
+        <thead>
+            <tr>
+                <th class="text-right col-md-1"> Count </th>
+                <th class="text-right col-md-1"> Percent </th>
+                <th class="text-center"></th>
+                <th class="text-left"> Category </th>
+                <th>  </th>
+            </tr>
+        </thead>
+        <tbody id="filter_categories">
+        </tbody>
+    </table>
+
 </div>
+
 
 <script type="text/javascript">
     $(document).ready(function () {
-        Module("main").index();
+        Module("main").stats();
     });
 </script>
 <script src="static/type4/gatherer_helper.js"></script>
