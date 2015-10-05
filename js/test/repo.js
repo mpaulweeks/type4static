@@ -45,6 +45,10 @@ function test_repo(){
             'filter_cards_by_category on miss',
             repo.filter_cards_by_category(cards, "is_instant").length == 0
         );
+        tester.assert(
+            'filter_cards_by_category handles bad category miss',
+            repo.filter_cards_by_category(cards, "blerp").length == 0
+        );
 
         tester.close();
     };

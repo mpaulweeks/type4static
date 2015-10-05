@@ -13,7 +13,7 @@ var store = Module("store");
         var out = [];
         for (var i = 0; i < cards.length; i++){
             var card = cards[i];
-            if (card[category]){
+            if (card.hasOwnProperty(category) && card[category]){
                 out.push(card);
             }
         }

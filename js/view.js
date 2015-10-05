@@ -17,8 +17,10 @@ var autocard = Module("autocard");
     status_names[repo.REMOVED_FROM_STACK] = 'Cards I have tried and removed';
     status_names[repo.REJECTED_FROM_STACK] = 'Cards I will never consider';
 
+    //this module shouldn't persist more than one request
     var request = {};
     request.card_img = {};
+    request.category = null;
 
     function str_format(str) {
         var args = arguments;
@@ -40,9 +42,18 @@ var autocard = Module("autocard");
         return str_format(card_text_template, card.name);
     };
 
+    function get_cards(date, status){
+        var cards = repo.get_by_date_and_status(date, status);
+        var category = request.category;
+        if (category){
+            cards = repo.filter_cards_by_category(cards, category);
+        }
+        return cards;
+    }
+
     function get_card_html(date, status, image){
         var card_html = "";
-        var cards = repo.get_by_date_and_status(date, status);
+        var cards = get_cards(date, status);
         for (var i = 0; i < cards.length; i++){
             var card = cards[i];
             var tag = get_text_tag(card);
@@ -69,7 +80,7 @@ var autocard = Module("autocard");
     };
 
     function display_status(date, status){
-        var cards = repo.get_by_date_and_status(date, status);
+        var cards = get_cards(date, status);
         var header_html = str_format(header, status_names[status]);
         var inner_html = (
             str_format(toggle_button, status) +
@@ -94,7 +105,25 @@ var autocard = Module("autocard");
         }
     };
 
+    function read_url_category(){
+        var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+        }
+        if (vars.hasOwnProperty("category")){
+            return vars.category;
+        }
+        return null;
+    };
+
     module.filter = function(){
+        request.category = read_url_category();
         module.list();
     };
 
