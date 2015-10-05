@@ -133,7 +133,8 @@ var autocard = Module("autocard");
     };
 
     module.run = function(){
-        request.category = read_url_param("category");
+        var category = read_url_param("category");
+        request.category = category ? category : null;
         var timestamp = read_url_param("timestamp");
         if (timestamp){
             request.date = new Date(timestamp);
