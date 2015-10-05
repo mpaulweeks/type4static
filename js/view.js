@@ -16,7 +16,7 @@ var autocard = Module("autocard");
         '<td class="text-right col-md-1">{2}%</td>' +
         '<td class="text-center"></td>' +
         '<td>{3}</td>' +
-        '<td><a href="stats?category={4}">Filter</a></td>' +
+        '<td><a href="index.html?category={4}">Filter</a></td>' +
         '</tr>'
     );
 
