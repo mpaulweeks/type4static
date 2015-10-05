@@ -51,11 +51,21 @@ var store = Module("store");
         for (var i = 0; i < cards.length; i++){
             var card = cards[i];
             if (card.name == card_name){
-                console.log(card);
                 return card;
             }
         }
-        console.log(name + " not found!")
+        console.log(card_name + " not found!")
+    };
+
+    module.get_card_by_id = function(card_id){
+        var cards = store.data.card;
+        for (var i = 0; i < cards.length; i++){
+            var card = cards[i];
+            if (card.id == card_id){
+                return card;
+            }
+        }
+        console.log(card_id + " not found!")
     };
 
     module.get_statuses = function(card){
@@ -113,6 +123,14 @@ var store = Module("store");
 
     module.get_all_cards = function(){
         return store.data.card;
+    }
+
+    module.get_new_json = function(changes){
+        $.each(changes, function (index, change){
+            var card = module.get_card_by_id(change.card_id);
+            card[change.category] = change.new_val;
+        });
+        return store.data;
     }
 
 

@@ -17,6 +17,11 @@ function test_repo(){
         );
 
         tester.assert(
+            'get_card_by_id',
+            repo.get_card_by_id(masticore.id).name == "Masticore"
+        );
+
+        tester.assert(
             'get_statuses',
             repo.get_statuses(masticore).length > 0
         );
@@ -63,6 +68,16 @@ function test_repo(){
         tester.assert(
             'filter_cards_by_category handles bad category miss',
             repo.filter_cards_by_category(cards, "blerp").length == 0
+        );
+
+        var changes = [{
+            card_id: masticore.id,
+            category: "is_instant",
+            new_val: false
+        }];
+        tester.assert(
+            'get_new_json potential no-op handles bad category miss',
+            repo.get_new_json(changes) == store.data
         );
 
         tester.close();
