@@ -5,6 +5,7 @@ function test_view(){
     var tester = Module("tester").create("view");
     var store = Module("store");
     var view = Module("view");
+    var view_edit = Module("view_edit");
 
     function mocks(){
         Module("autocard").init = function(){};
@@ -20,8 +21,9 @@ function test_view(){
 
         tester.assert(
             'run_edit smoke test',
-            view.run_edit() != 1
+            view_edit.run_edit() != 1
         );
+        
         tester.close();
     };
 
