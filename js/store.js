@@ -22,7 +22,7 @@
 	    $.getJSON(card_file, function(data){
 			module.data = data;
 			$.getJSON(multiverse_file, function(multiverse){
-				module.data.multiverse = multiverse;
+				module.multiverse = multiverse;
 	    		return callback();
 			});
 	    });

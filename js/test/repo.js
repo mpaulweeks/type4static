@@ -75,9 +75,13 @@ function test_repo(){
             category: "is_instant",
             new_val: false
         }];
+        var expected = JSON.stringify({
+            card: store.data.card,
+            status: store.data.status
+        });
         tester.assert(
-            'get_new_json potential no-op handles bad category miss',
-            repo.get_new_json(changes) == store.data
+            'get_new_json potential no-op',
+            JSON.stringify(repo.get_new_json(changes)) == expected
         );
 
         tester.close();

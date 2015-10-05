@@ -114,7 +114,7 @@ var store = Module("store");
     };
 
     module.get_multiverse_id = function(card){
-        return store.data.multiverse[card.name.toLowerCase()];
+        return store.multiverse[card.name.toLowerCase()];
     };
 
     module.get_current_cards = function(){

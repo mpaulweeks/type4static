@@ -40,7 +40,7 @@ var autocard = Module("autocard");
     };
     
     function get_img_url(card){
-        var card_mid = store.data.multiverse[card.name.toLowerCase()];
+        var card_mid = repo.get_multiverse_id(card);
         return 'http://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=' + card_mid;
     };
 

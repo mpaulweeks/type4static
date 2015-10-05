@@ -28,7 +28,7 @@ function test_store(){
 
         tester.assert(
             'Store contains multiverse data',
-            store.data.multiverse.masticore != null
+            store.multiverse.masticore != null
         );
 
         var card_length = store.data.card.length;
