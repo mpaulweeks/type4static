@@ -1,5 +1,7 @@
 (function(module){
 
+	var tool = Module("tool");
+
 	var LINE = '<br/>';
 	var CARD_FILE = 'json/stack/current.json';
 	var MULTIVERSE_FILE = 'json/multiverse_ids.json';
@@ -14,7 +16,7 @@
 		card_file = card_file || CARD_FILE;
 		multiverse_file = MULTIVERSE_FILE;
 
-	    if (window.location.href.indexOf('file:///') > -1){
+	    if (tool.is_local){
 	        card_file = GITHUB_BASE + card_file;
 	        multiverse_file = GITHUB_BASE + multiverse_file;
 	    }

@@ -1,11 +1,13 @@
-var tool = Module("tool");
-var repo = Module("repo");
-var autocard = Module("autocard");
-
 (function(module){
 
+    var tool = Module("tool");
+    var repo = Module("repo");
+    var autocard = Module("autocard");
+
     var str_format = tool.str_format;
-    var get_img_url = tool.get_img_url;
+    function get_img_url (card){
+        return tool.get_img_url(repo.get_multiverse_id(card));
+    }
 
     var header = '<h3 class="cardlist-title">{1}</h3>';
     var cardlist = '<div class="cardlist" data-art="false">{1}</div>';

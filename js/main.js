@@ -1,4 +1,3 @@
-
 (function(module){
 
     var store = Module('store');

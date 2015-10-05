@@ -1,6 +1,6 @@
-var store = Module("store");
-
 (function(module){
+
+    var store = Module("store");
 
     module.IN_STACK = 1;
     module.GOING_IN_STACK = 2;
