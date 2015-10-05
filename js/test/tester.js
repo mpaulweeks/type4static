@@ -25,7 +25,7 @@
 
     module.create = function(name){
         var div_id = "test_" + name;
-        $('body').append('<div id="' + div_id + '"></div>');
+        $('body').append('<div class="test_out" id="' + div_id + '"></div>');
 
         var div_tag = "#" + div_id;
         $(div_tag).append(LINE + name + " tests begin" + LINE);
