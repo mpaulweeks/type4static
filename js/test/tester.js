@@ -32,10 +32,13 @@
         $(div_tag).append(LINE + name + " tests begin" + LINE);
 
         var tester = {};
-        tester.assert = function(message, value){
-            $(div_tag).append(Boolean(value) + ' - ' + message + LINE);
+        tester.assert = function(message, value, data){
+            $(div_tag).append('<b>' + Boolean(value) + '</b> - ' + message + LINE);
             if (!value){
                 failures += 1;
+                if (data){
+                    $(div_tag).append('data - ' + data + LINE);
+                }
             }
         };
         tester.close = function(){

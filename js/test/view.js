@@ -1,7 +1,6 @@
 
 function test_view(){
 
-    var TEST_FILE = "json/stack/2015-10-04.json";
     var tester = Module("tester").create("view");
     var store = Module("store");
     var view_index = Module("view_index");
@@ -27,5 +26,5 @@ function test_view(){
         tester.close();
     };
 
-    store.load(tests, TEST_FILE);
+    store.load(tests);
 }

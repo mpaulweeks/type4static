@@ -7,7 +7,6 @@ Type4 using static pages
 
 todo:
 - fix timestamp issue that appears in non-Chrome browsers
-- add tests against current.json for dupe names, cards w/o status, illegal bools
 - shared module "tools" w/ is_local, fix urls in view (omit .html on not local)
 - update filter urls to keep timestamp if present
 - add datepicker to index
