@@ -36,6 +36,16 @@ function test_repo(){
             repo.get_multiverse_id(masticore) > 0
         );
 
+        var cards = [masticore];
+        tester.assert(
+            'filter_cards_by_category on match',
+            repo.filter_cards_by_category(cards, "is_masticore").length == 1
+        );
+        tester.assert(
+            'filter_cards_by_category on miss',
+            repo.filter_cards_by_category(cards, "is_instant").length == 0
+        );
+
         tester.close();
     };
 

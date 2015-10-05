@@ -3,6 +3,7 @@
 
     var LINE = '<br/>';
     var testers = 0;
+    var failures = 0;
 
     function push_tester(){
         testers += 1;
@@ -12,7 +13,13 @@
     function pop_tester(){
         testers -= 1;
         if (testers == 0){
-            $('#test_main').html("ALL TESTS PASS");
+            if(failures == 0){
+                $('#test_main').html("ALL TESTS PASS");
+                $('body').css('background-color', 'lightgreen');
+            } else {
+                $('#test_main').html("TEST FAILURES: " + failures);
+                $('body').css('background-color', 'lightsalmon');
+            }
         }
     }
 
@@ -26,6 +33,9 @@
         var tester = {};
         tester.assert = function(message, value){
             $(div_tag).append(Boolean(value) + ' - ' + message + LINE);
+            if (!value){
+                failures += 1;
+            }
         };
         tester.close = function(){
             $(div_tag).append(name + " tests end" + LINE);

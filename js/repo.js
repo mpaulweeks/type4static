@@ -7,6 +7,19 @@ var store = Module("store");
     module.REMOVED_FROM_STACK = 3;
     module.REJECTED_FROM_STACK = 4;
 
+    module.categories = []
+
+    module.filter_cards_by_category = function(cards, category){
+        var out = [];
+        for (var i = 0; i < cards.length; i++){
+            var card = cards[i];
+            if (card[category]){
+                out.push(card);
+            }
+        }
+        return out;
+    };
+
     module.get_card_by_name = function(card_name){
         var cards = store.data.card;
         for (var i = 0; i < cards.length; i++){
