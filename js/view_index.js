@@ -1,11 +1,11 @@
+var tool = Module("tool");
 var repo = Module("repo");
-var view = Module("view");
 var autocard = Module("autocard");
 
 (function(module){
 
-    var str_format = view.str_format;
-    var get_img_url = view.get_img_url;
+    var str_format = tool.str_format;
+    var get_img_url = tool.get_img_url;
 
     var header = '<h3 class="cardlist-title">{1}</h3>';
     var cardlist = '<div class="cardlist" data-art="false">{1}</div>';

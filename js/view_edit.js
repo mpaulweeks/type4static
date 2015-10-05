@@ -1,10 +1,10 @@
+var tool = Module("tool");
 var repo = Module("repo");
-var view = Module("view");
 
 (function(module){
 
-    var str_format = view.str_format;
-    var get_img_url = view.get_img_url;
+    var str_format = tool.str_format;
+    var get_img_url = tool.get_img_url;
 
     var EDIT_ROW_TAG = '<td class="text-center"><input class="category_checkbox" type="checkbox" data-id={1} data-category="{2}" {3}></td>';
     var EDIT_IMG_TAG = '<th><img class="cardimage" alt="{1}" src="{2}"><img/></th>';
