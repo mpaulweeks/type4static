@@ -25,4 +25,8 @@
         return new Date();
     }
 
+    module.submit_data = function(new_data){
+        $('body').html(JSON.stringify(new_data));
+    }
+
 })(Module('tool'));

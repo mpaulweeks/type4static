@@ -56,6 +56,7 @@
             }
         }
         console.log(card_name + " not found!")
+        return null;
     };
 
     module.get_card_by_id = function(card_id){
@@ -142,6 +143,54 @@
         }
         return dates;
     };
+
+    function new_card(name){
+        var max_id = 0;
+        for (var i = 0; i < store.data.card.length; i++){
+            var cid = store.data.card[i].id;
+            if (cid > max_id){
+                max_id = cid;
+            }
+        }
+        var card = {
+            id: max_id + 1,
+            name: name
+        }
+        for (var i = 0; i < module.CATEGORIES.length; i++){
+            card[module.CATEGORIES[i]] = false;
+        }
+        store.data.card.push(card);
+        return card
+    }
+
+    function new_status(card_id, status_code, timestamp){
+        var max_id = 0;
+        for (var i = 0; i < store.data.status.length; i++){
+            var sid = store.data.status[i].id;
+            if (sid > max_id){
+                max_id = sid;
+            }
+        }
+        var status = {
+            id: max_id + 1,
+            card_id: card_id,
+            status_code: status_code,
+            timestamp: timestamp
+        }
+        store.data.status.push(status);
+    }
+
+    module.update_status = function(card_names, status_code, timestamp){
+        for (var i = 0; i < card_names.length; i++){
+            var card_name = card_names[i];
+            var card = module.get_card_by_name(card_name);
+            if (!card){
+                card = new_card(card_name);
+            }
+            new_status(card, status_code, timestamp);
+        }
+        return store.data;
+    }
 
 
 })(Module('repo'));
