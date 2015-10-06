@@ -154,7 +154,7 @@ function getOffset( el ) {
 hover = document.createElement("div");
 hover.id = "hoverpopup";
 hover.setAttribute("class","card");//top:10; left:0; 
-hover.setAttribute("style","visibility:hidden; position:absolute; top:10px; left:5px; "+CSS_BORDER_STYLE);
+hover.setAttribute("style","visibility:hidden; position:absolute; top:10px; left:5px; ");
 
 // Inserting placeholder into the body
 body = document.getElementsByTagName('body')[0];

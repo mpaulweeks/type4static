@@ -1,4 +1,6 @@
-var wizardsURL = 'http://www.wizards.com/global/images/magic/general/';
+
+var _repo = Module('repo');
+var _tool = Module('tool');
 
 /**
 *	Wizards
@@ -7,11 +9,13 @@ function getWizardsCardName(cardName){
 	return cardName.replace(/&#8217;/g,"").replace(/\/g,"").replace(/\’/g,"").replace(/\'/g,"").replace(/,/g," ").replace(/-/g," ").replace(/\s+/g," ").replace(/ /g,"_");
 }
 function getWizardsHtml(cardName){
-	return "<img src=\""+wizardsURL+getWizardsCardName(cardName)+".jpg\" onerror=\"this.onerror=null;this.onmouseout=null;this.onmouseover=null;this.src='mtg_card_back.jpg';\"/>";
+	return "<img src=\""+getWizardsSrc(cardName)+"\" onerror=\"this.onerror=null;this.onmouseout=null;this.onmouseover=null;this.src='mtg_card_back.jpg';\"/>";
 }
 
 function getWizardsSrc(cardName){
-	return wizardsURL+getWizardsCardName(cardName)+".jpg";
+    var card = _repo.get_card_by_name(cardName);
+    var mid = _repo.get_multiverse_id(card);
+	return _tool.get_img_url(mid);
 }
 
 function getWizardsOnError(e){

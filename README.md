@@ -7,6 +7,4 @@ Type4 using static pages
 - http://mpaulweeks.github.io/type4static/test
 
 todo:
-- add add_cards/status_update page that takes custom date
-- fix autocard to include recent cards (just use gatherer images)
 - add changes.html, w/ 2 datepickers for range + list of eventful days
