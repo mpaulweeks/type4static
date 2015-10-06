@@ -120,6 +120,9 @@
                 valid_cards.push(card);
             }
         }
+        valid_cards.sort(function(a,b){
+            return a.name.localeCompare(b.name);
+        });
         return valid_cards;
     };
 
