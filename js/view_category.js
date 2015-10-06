@@ -57,10 +57,10 @@
         $('.changed').each(function (){
             var out = {};
             var card = $(this);
-            out.card_id = card.get_attr("data-id");
-            out.category = card.get_attr("data_category");
-            out.new_val = card.checked;
-            changes.push(card);
+            out.card_id = card.data("id");
+            out.category = card.data("category");
+            out.new_val = card.is(":checked");
+            changes.push(out);
         });
         var new_data = repo.update_category(changes);
         tool.submit_data(new_data);
