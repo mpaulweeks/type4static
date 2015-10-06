@@ -47,11 +47,6 @@ function test_repo(){
         );
 
         tester.assert(
-            'get_current_cards',
-            repo.get_current_cards().length == 240
-        );
-
-        tester.assert(
             'get_all_cards',
             repo.get_all_cards().length == 337
         );

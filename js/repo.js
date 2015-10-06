@@ -118,10 +118,6 @@
         return store.multiverse[card.name.toLowerCase()];
     };
 
-    module.get_current_cards = function(){
-        return module.get_by_date_and_status(tool.now(), module.IN_STACK);
-    };
-
     module.get_all_cards = function(){
         return store.data.card;
     }
