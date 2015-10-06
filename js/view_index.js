@@ -142,10 +142,17 @@
     };
 
     function display_dates(){
-        var dates = repo.get_relevant_dates();
         var html = '<div><a href="{1}">{2}</a></div>';
-        for (var key in dates){
-            var url = index_url(request.category, dates[key]);
+        var dates = repo.get_relevant_dates();
+        var sorted_keys = Object.keys(dates);
+        sorted_keys.sort(function (a,b){
+            return dates[a] - dates[b];
+        });
+        for (var i = 0; i < sorted_keys.length; i++){
+            var key = sorted_keys[i];
+            var date = dates[key];
+            var date_string = tool.str_format('{1}-{2}-{3}', date.getFullYear(), date.getMonth()+1, date.getDate());
+            var url = index_url(request.category, date_string);
             $('#dates').append(str_format(html, url, key));
         }
     };

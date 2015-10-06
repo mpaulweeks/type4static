@@ -149,8 +149,7 @@
             var datetime = tool.date_from_string(raw_timestamp);
             var date = new Date(datetime.getFullYear(), datetime.getMonth(), datetime.getDate() + 1);
             var key = date.toDateString();
-            var value = tool.str_format('{1}-{2}-{3}', date.getFullYear(), date.getMonth()+1, date.getDate());
-            dates[key] = value;
+            dates[key] = date;
         }
         return dates;
     };
