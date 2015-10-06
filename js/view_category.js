@@ -53,7 +53,7 @@
             out.new_val = card.checked;
             changes.push(card);
         });
-        var new_data = repo.update_category(changes)
+        var new_data = repo.update_category(changes);
         tool.submit_data(new_data);
     }
 
