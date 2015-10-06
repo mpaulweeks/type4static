@@ -25,10 +25,10 @@
         '<td><a href="{4}">Filter</a></td>' +
         '</tr>'
     );
-    var CATEGORY_LINK = '{1}?category={2}{3}';
+    var INDEX_LINK = '{1}?{2}{3}';
 
     var status_names = {}
-    status_names[repo.IN_STACK] = 'Current list';
+    status_names[repo.IN_STACK] = 'Cards in the Stack';
     status_names[repo.GOING_IN_STACK] = 'Cards I want to add';
     status_names[repo.REMOVED_FROM_STACK] = 'Cards I have tried and removed';
     status_names[repo.REJECTED_FROM_STACK] = 'Cards I will never consider';
@@ -121,11 +121,14 @@
         return null;
     };
 
-    function filter_url(category){
+    function index_url(category, date_string){
         var prefix = tool.is_local ? "index.html" : "";
-        var category_id = category == null ? "" : category;
-        var timestamp = request.custom_date_string ? "&timestamp=" + request.custom_date_string : "";
-        return str_format(CATEGORY_LINK, prefix, category_id, timestamp);
+        var category_id = category == null ? "" : "category=" + category;
+        var timestamp = date_string == null ? "" : "timestamp=" + date_string;
+        if (category && timestamp){
+            timestamp = "&" + timestamp;
+        }
+        return str_format(INDEX_LINK, prefix, category_id, timestamp);
     }
 
     function display_filter_row(cards, category){
@@ -137,9 +140,18 @@
         var css_class = category == request.category ? "success" : "";
         var label = category == null ? 'Total' : category;
         var row_html = str_format(filter_table,
-            cards.length, percentage, label, filter_url(category), css_class
+            cards.length, percentage, label, index_url(category, request.custom_date_string), css_class
         );
         $('#filter_categories').append(row_html);
+    };
+
+    function display_dates(){
+        var dates = repo.get_relevant_dates();
+        var html = '<div><a href="{1}">{2}</a></div>';
+        for (var key in dates){
+            var url = index_url(request.category, dates[key]);
+            $('#dates').append(str_format(html, url, key));
+        }
     };
 
     module.run = function(){
@@ -151,6 +163,9 @@
             request.custom_date_string = timestamp;
         }
 
+        var title_date = request.custom_date_string ? request.date.toDateString() : "TODAY";
+        $('#title').html("Stack as of " + title_date);
+
         for (var status in status_names){
             display_status(status);
         }
@@ -160,6 +175,8 @@
         for (var i = 0; i < repo.CATEGORIES.length; i++){
             display_filter_row(in_cards, repo.CATEGORIES[i]);
         }
+
+        display_dates();
     };
 
 })(Module('view_index'));

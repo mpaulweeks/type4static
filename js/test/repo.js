@@ -79,6 +79,11 @@ function test_repo(){
             JSON.stringify(repo.get_new_json(changes)) == expected
         );
 
+        tester.assert(
+            'get_relevant_dates',
+            Object.keys(repo.get_relevant_dates()).length == 13
+        );
+
         tester.close();
     };
 

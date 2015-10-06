@@ -120,7 +120,7 @@
 
     module.get_all_cards = function(){
         return store.data.card;
-    }
+    };
 
     module.get_new_json = function(changes){
         $.each(changes, function (index, change){
@@ -128,7 +128,20 @@
             card[change.category] = change.new_val;
         });
         return store.data;
-    }
+    };
+
+    module.get_relevant_dates = function(){
+        var dates = {};
+        for (var i = 0; i < store.data.status.length; i++){
+            var raw_timestamp = store.data.status[i].timestamp;
+            var datetime = tool.date_from_string(raw_timestamp);
+            var date = new Date(datetime.getFullYear(), datetime.getMonth(), datetime.getDate() + 1);
+            var key = date.toDateString();
+            var value = tool.str_format('{1}-{2}-{3}', date.getFullYear(), date.getMonth()+1, date.getDate());
+            dates[key] = value;
+        }
+        return dates;
+    };
 
 
 })(Module('repo'));
