@@ -1,6 +1,7 @@
 (function(module){
 
     module.is_local = window.location.href.indexOf('file:///') > -1;
+    module.is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 
     module.str_format = function(str) {
         var args = arguments;

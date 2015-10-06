@@ -13,7 +13,7 @@
 		card_file = card_file || CARD_FILE;
 		multiverse_file = MULTIVERSE_FILE;
 
-	    if (tool.is_local){
+	    if (tool.is_local && !tool.is_firefox){
 	        card_file = GITHUB_BASE + card_file;
 	        multiverse_file = GITHUB_BASE + multiverse_file;
 	    }
