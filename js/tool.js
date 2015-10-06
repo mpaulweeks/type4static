@@ -14,6 +14,24 @@
         return 'http://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=' + card_mid;
     };
 
+
+    module.read_url_param = function(param_name){
+        var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+        }
+        if (vars.hasOwnProperty(param_name)){
+            return vars[param_name];
+        }
+        return null;
+    };
+
     module.date_from_string = function(date_string){
         var a = date_string.split(/[^0-9]/);
         for (var i = 0; i < 6; i++){

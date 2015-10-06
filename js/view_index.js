@@ -100,23 +100,6 @@
         autocard.init();
     };
 
-    function read_url_param(param_name){
-        var vars = [], hash;
-        var q = document.URL.split('?')[1];
-        if(q != undefined){
-            q = q.split('&');
-            for(var i = 0; i < q.length; i++){
-                hash = q[i].split('=');
-                vars.push(hash[1]);
-                vars[hash[0]] = hash[1];
-            }
-        }
-        if (vars.hasOwnProperty(param_name)){
-            return vars[param_name];
-        }
-        return null;
-    };
-
     function index_url(category, date_string){
         var prefix = tool.is_local ? "index.html" : "";
         var category_id = category == null ? "" : "category=" + category;
@@ -158,9 +141,9 @@
     };
 
     module.run = function(){
-        var category = read_url_param("category");
+        var category = tool.read_url_param("category");
         request.category = category ? category : null;
-        var timestamp = read_url_param("timestamp");
+        var timestamp = tool.read_url_param("timestamp");
         if (timestamp){
             request.date = tool.date_from_string(timestamp);
             request.custom_date_string = timestamp;

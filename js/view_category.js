@@ -13,20 +13,29 @@
 
     module.run = function(){
         var rows = [];
+        var only_display_empty = tool.read_url_param("new");
 
         var cards = repo.get_all_cards();
         for (var ci = 0; ci < cards.length; ci++){
             var card = cards[ci];
-            var img_html = str_format(EDIT_IMG_TAG, card.name, get_img_url(card));
-            $('thead tr').append(img_html);
+            var true_cats = 0;
+            for (var cati = 0; cati < repo.CATEGORIES.length; cati++){
+                if (card[repo.CATEGORIES[cati]]){
+                    true_cats += 1;
+                }
+            }
+            if (true_cats == 0 || !only_display_empty){
+                var img_html = str_format(EDIT_IMG_TAG, card.name, get_img_url(card));
+                $('thead tr').append(img_html);
 
-            for (var ri = 0; ri < repo.CATEGORIES.length; ri++){
-                var row = rows[ri] || "";
-                var category = repo.CATEGORIES[ri];
-                var checked = card[category] ? 'checked' : "";
-                rows[ri] = row + str_format(EDIT_ROW_TAG,
-                    card.id, category, checked
-                );
+                for (var ri = 0; ri < repo.CATEGORIES.length; ri++){
+                    var row = rows[ri] || "";
+                    var category = repo.CATEGORIES[ri];
+                    var checked = card[category] ? 'checked' : "";
+                    rows[ri] = row + str_format(EDIT_ROW_TAG,
+                        card.id, category, checked
+                    );
+                }
             }
         }
 
