@@ -48,10 +48,11 @@
     };
 
     module.get_card_by_name = function(card_name){
+        var lower_name = card_name.toLowerCase();
         var cards = store.data.card;
         for (var i = 0; i < cards.length; i++){
             var card = cards[i];
-            if (card.name == card_name){
+            if (card.name.toLowerCase() == lower_name){
                 return card;
             }
         }
@@ -155,7 +156,7 @@
         var card = {
             id: max_id + 1,
             name: name
-        }
+        };
         for (var i = 0; i < module.CATEGORIES.length; i++){
             card[module.CATEGORIES[i]] = false;
         }
@@ -163,7 +164,7 @@
         return card
     }
 
-    function new_status(card_id, status_code, timestamp){
+    function new_status(card, status_code, datetime){
         var max_id = 0;
         for (var i = 0; i < store.data.status.length; i++){
             var sid = store.data.status[i].id;
@@ -173,21 +174,22 @@
         }
         var status = {
             id: max_id + 1,
-            card_id: card_id,
-            status_code: status_code,
-            timestamp: timestamp
-        }
+            card_id: card.id,
+            status: status_code,
+            timestamp: tool.string_from_date(datetime)
+        };
         store.data.status.push(status);
+        console.log(store.data.status);
     }
 
-    module.update_status = function(card_names, status_code, timestamp){
+    module.update_status = function(card_names, status_code, datetime){
         for (var i = 0; i < card_names.length; i++){
             var card_name = card_names[i];
             var card = module.get_card_by_name(card_name);
             if (!card){
                 card = new_card(card_name);
             }
-            new_status(card, status_code, timestamp);
+            new_status(card, status_code, datetime);
         }
         return store.data;
     }

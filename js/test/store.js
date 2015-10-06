@@ -1,8 +1,8 @@
 
-function test_store(){
+function test_store(callback){
 
     var TEST_FILE = "json/stack/2015-10-04.json";
-    var tester = Module("tester").create("store");
+    var tester = Module("tester").create("store", callback);
     var store = Module("store");
 
     tester.assert(
@@ -40,6 +40,6 @@ function test_store(){
             );
 
             tester.close();
-        }, TEST_FILE);
-    }, TEST_FILE);
+        }, TEST_FILE, true);
+    }, TEST_FILE, true);
 }

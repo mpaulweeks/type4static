@@ -21,6 +21,14 @@
         return new Date (a[0],a[1]-1,a[2],a[3],a[4],a[5]);
     }
 
+    module.string_from_date = function(date){
+        //"2014-07-24 08:46:50.251968-07"
+        var template = "{1}-{2}-{3} {4}:{5}:{6}";
+        return module.str_format(template,
+            date.getFullYear(), date.getMonth()+1, date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds()
+        );
+    }
+
     module.now = function(){
         return new Date();
     }

@@ -1,7 +1,7 @@
 
-function test_view(){
+function test_view(callback){
 
-    var tester = Module("tester").create("view");
+    var tester = Module("tester").create("view", callback);
     var store = Module("store");
     var view_index = Module("view_index");
     var view_edit = Module("view_edit");
@@ -26,5 +26,5 @@ function test_view(){
         tester.close();
     };
 
-    store.load(tests);
+    store.load(tests, null, true);
 }

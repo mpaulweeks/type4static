@@ -7,9 +7,9 @@
 	var MULTIVERSE_FILE = 'json/multiverse_ids.json';
 	var GITHUB_BASE = 'http://mpaulweeks.github.io/type4static/';
 
-	module.load = function(callback, card_file){
+	module.load = function(callback, card_file, force_reload){
 		callback = callback || function(){};
-		if(module.hasOwnProperty("data")){
+		if(module.hasOwnProperty("data") && !force_reload){
 			return callback();
 		}
 

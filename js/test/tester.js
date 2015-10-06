@@ -24,7 +24,7 @@
         }
     }
 
-    module.create = function(name){
+    module.create = function(name, callback){
         var div_id = "test_" + name;
         $('body').append('<div class="test_out" id="' + div_id + '"></div>');
 
@@ -44,6 +44,9 @@
         tester.close = function(){
             $(div_tag).append(name + " tests end" + LINE);
             pop_tester();
+            if (callback){
+                callback();
+            }
         }
 
         push_tester();

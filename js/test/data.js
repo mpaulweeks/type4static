@@ -1,7 +1,7 @@
 
-function test_data(){
+function test_data(callback){
 
-    var tester = Module("tester").create("data");
+    var tester = Module("tester").create("data", callback);
     var store = Module("store");
 
     function tests(){
@@ -42,7 +42,7 @@ function test_data(){
         var card_missing_status = [];
         for (var i = 0; i < card_ids.length; i++){
             if (card_ids[i] && !status_card_ids[i]){
-                card_missing_status.push(card_id);
+                card_missing_status.push(card_ids[i]);
             }
         }
         tester.assert(
@@ -53,7 +53,7 @@ function test_data(){
         var status_missing_card = [];
         for (var i = 0; i < status_card_ids.length; i++){
             if (status_card_ids[i] && !card_ids[i]){
-                status_missing_card.push(card_id);
+                status_missing_card.push(status_card_ids[i]);
             }
         }
         tester.assert(
@@ -77,5 +77,5 @@ function test_data(){
         tester.close();
     };
 
-    store.load(tests);
+    store.load(tests, null, true);
 }
