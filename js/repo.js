@@ -127,7 +127,8 @@
     };
 
     module.get_multiverse_id = function(card){
-        return store.multiverse[card.name.toLowerCase()];
+        var fixed_name = card.name.split('/')[0].toLowerCase();
+        return store.multiverse[fixed_name];
     };
 
     module.get_all_cards = function(){
