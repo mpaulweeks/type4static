@@ -3,7 +3,8 @@
 <head>
     <title> Type 4 </title>
 
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js"></script>
     <script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
     
@@ -22,19 +23,17 @@
 </head>
 <body>
 
-<table class="table table-hover table-condensed">
-    <thead>
-        <tr>
-            <th><button id="submit">submit</button></th>
-        </tr>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
+<button id="submit">submit</button>
+<br/>
+<input type="text" id="datepicker">
+<br/>
+<select id="status_picker"></select>
+<br/>
+<textarea id="card_names" rows="20" columns="50"></textarea>
 
 <script type="text/javascript">
     $(document).ready(function () {
-        Module("main").edit();
+        Module("main").status();
     });
 </script>
 <script src="static/type4/gatherer_helper.js"></script>

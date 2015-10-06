@@ -27,11 +27,7 @@
     );
     var INDEX_LINK = '{1}?{2}{3}';
 
-    var status_names = {}
-    status_names[repo.IN_STACK] = 'Cards in the Stack';
-    status_names[repo.GOING_IN_STACK] = 'Cards I want to add';
-    status_names[repo.REMOVED_FROM_STACK] = 'Cards I have tried and removed';
-    status_names[repo.REJECTED_FROM_STACK] = 'Cards I will never consider';
+    var status_names = repo.STATUS_NAMES;
 
     //this module shouldn't persist more than one request
     var request = {};

@@ -8,6 +8,13 @@
     module.REMOVED_FROM_STACK = 3;
     module.REJECTED_FROM_STACK = 4;
 
+    var STATUS_NAMES = {}
+    STATUS_NAMES[module.IN_STACK] = 'Cards in the Stack';
+    STATUS_NAMES[module.GOING_IN_STACK] = 'Cards I want to add';
+    STATUS_NAMES[module.REMOVED_FROM_STACK] = 'Cards I have tried and removed';
+    STATUS_NAMES[module.REJECTED_FROM_STACK] = 'Cards I will never consider';
+    module.STATUS_NAMES = STATUS_NAMES;
+
     module.CATEGORIES = [
         "is_instant",
         "is_wrath",
@@ -184,11 +191,13 @@
     module.update_status = function(card_names, status_code, datetime){
         for (var i = 0; i < card_names.length; i++){
             var card_name = card_names[i];
-            var card = module.get_card_by_name(card_name);
-            if (!card){
-                card = new_card(card_name);
+            if (card_name){
+                var card = module.get_card_by_name(card_name);
+                if (!card){
+                    card = new_card(card_name);
+                }
+                new_status(card, status_code, datetime);
             }
-            new_status(card, status_code, datetime);
         }
         return store.data;
     }
