@@ -8,3 +8,6 @@ Type4 using static pages
 
 todo:
 - add changes.html, w/ 2 datepickers for range + list of eventful days
+- improve category page somehow
+- cards to fix cats:
+    - prahv
