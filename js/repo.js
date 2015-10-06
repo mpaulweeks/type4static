@@ -179,7 +179,6 @@
             timestamp: tool.string_from_date(datetime)
         };
         store.data.status.push(status);
-        console.log(store.data.status);
     }
 
     module.update_status = function(card_names, status_code, datetime){

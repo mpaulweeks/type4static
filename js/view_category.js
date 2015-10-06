@@ -58,4 +58,4 @@
     }
 
 
-})(Module('view_edit'));
+})(Module('view_category'));

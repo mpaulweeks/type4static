@@ -40,6 +40,6 @@ function test_store(callback){
             );
 
             tester.close();
-        }, TEST_FILE, true);
-    }, TEST_FILE, true);
+        }, TEST_FILE);
+    }, TEST_FILE);
 }

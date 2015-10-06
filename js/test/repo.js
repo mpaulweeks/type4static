@@ -9,7 +9,6 @@ function test_repo(callback){
     function tests(){
         var now = new Date(2015, 10, 01);
 
-
         var masticore = repo.get_card_by_name("Masticore");
         tester.assert(
             'get_card_by_name',
@@ -113,5 +112,5 @@ function test_repo(callback){
         tester.close();
     };
 
-    store.load(tests, TEST_FILE, true);
+    store.load(tests, TEST_FILE);
 }

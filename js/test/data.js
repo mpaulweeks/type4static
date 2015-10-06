@@ -77,5 +77,5 @@ function test_data(callback){
         tester.close();
     };
 
-    store.load(tests, null, true);
+    store.load(tests);
 }
