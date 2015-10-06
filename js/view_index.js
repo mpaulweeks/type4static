@@ -22,9 +22,10 @@
         '<td class="text-right col-md-1">{2}%</td>' +
         '<td class="text-center"></td>' +
         '<td>{3}</td>' +
-        '<td><a href="index.html?category={4}">Filter</a></td>' +
+        '<td><a href="{4}">Filter</a></td>' +
         '</tr>'
-    ); //todo url builder for category + date
+    );
+    var CATEGORY_LINK = '{1}?category={2}{3}';
 
     var status_names = {}
     status_names[repo.IN_STACK] = 'Current list';
@@ -36,6 +37,7 @@
     var request = {};
     request.card_img = {};
     request.date = tool.now();
+    request.custom_date_string = null;
     request.category = null;
 
     function get_img_tag(card){
@@ -119,6 +121,13 @@
         return null;
     };
 
+    function filter_url(category){
+        var prefix = tool.is_local ? "index.html" : "";
+        var category_id = category == null ? "" : category;
+        var timestamp = request.custom_date_string ? "&timestamp=" + request.custom_date_string : "";
+        return str_format(CATEGORY_LINK, prefix, category_id, timestamp);
+    }
+
     function display_filter_row(cards, category){
         var total_cards = cards.length;
         if(category){
@@ -127,9 +136,8 @@
         var percentage = parseInt(100*cards.length/total_cards);
         var css_class = category == request.category ? "success" : "";
         var label = category == null ? 'Total' : category;
-        var category_id = category == null ? "" : category;
         var row_html = str_format(filter_table,
-            cards.length, percentage, label, category_id, css_class
+            cards.length, percentage, label, filter_url(category), css_class
         );
         $('#filter_categories').append(row_html);
     };
@@ -140,6 +148,7 @@
         var timestamp = read_url_param("timestamp");
         if (timestamp){
             request.date = tool.date_from_string(timestamp);
+            request.custom_date_string = timestamp;
         }
 
         for (var status in status_names){
