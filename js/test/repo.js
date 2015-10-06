@@ -75,8 +75,8 @@ function test_repo(){
             status: store.data.status
         });
         tester.assert(
-            'get_new_json potential no-op',
-            JSON.stringify(repo.get_new_json(changes)) == expected
+            'update_category potential no-op',
+            JSON.stringify(repo.update_category(changes)) == expected
         );
 
         tester.assert(

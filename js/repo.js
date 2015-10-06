@@ -122,7 +122,7 @@
         return store.data.card;
     };
 
-    module.get_new_json = function(changes){
+    module.update_category = function(changes){
         $.each(changes, function (index, change){
             var card = module.get_card_by_id(change.card_id);
             card[change.category] = change.new_val;

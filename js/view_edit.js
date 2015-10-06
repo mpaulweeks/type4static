@@ -53,7 +53,7 @@
             out.new_val = card.checked;
             changes.push(card);
         });
-        $('body').html(JSON.stringify(repo.get_new_json(changes)));
+        $('body').html(JSON.stringify(repo.update_category(changes)));
     }
 
 
