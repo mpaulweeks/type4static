@@ -35,7 +35,7 @@
     //this module shouldn't persist more than one request
     var request = {};
     request.card_img = {};
-    request.date = new Date();
+    request.date = tool.now();
     request.category = null;
 
     function get_img_tag(card){
@@ -139,7 +139,7 @@
         request.category = category ? category : null;
         var timestamp = read_url_param("timestamp");
         if (timestamp){
-            request.date = new Date(timestamp);
+            request.date = tool.date_from_string(timestamp);
         }
 
         for (var status in status_names){

@@ -6,7 +6,6 @@ Type4 using static pages
 - http://mpaulweeks.github.io/type4static/test
 
 todo:
-- fix timestamp issue that appears in non-Chrome browsers
 - shared module "tools" w/ is_local, fix urls in view (omit .html on not local)
 - update filter urls to keep timestamp if present
 - add datepicker to index

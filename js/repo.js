@@ -1,5 +1,6 @@
 (function(module){
 
+    var tool = Module("tool");
     var store = Module("store");
 
     module.IN_STACK = 1;
@@ -86,7 +87,7 @@
         var latest_timestamp = null;
         for (var i = 0; i < card_statuses.length; i++){
             var status = card_statuses[i];
-            var timestamp = new Date(status.timestamp);
+            var timestamp = tool.date_from_string(status.timestamp);
             if (timestamp < datetime){
                 if (latest_timestamp == null || latest_timestamp < timestamp)
                 {
@@ -118,7 +119,7 @@
     };
 
     module.get_current_cards = function(){
-        return module.get_by_date_and_status(new Date(), module.IN_STACK);
+        return module.get_by_date_and_status(tool.now(), module.IN_STACK);
     };
 
     module.get_all_cards = function(){

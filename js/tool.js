@@ -13,4 +13,13 @@
         return 'http://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=' + card_mid;
     };
 
+    module.date_from_string = function(date_string){
+        var a = date_string.split(/[^0-9]/);
+        return new Date (a[0],a[1]-1,a[2],a[3],a[4],a[5]);
+    }
+
+    module.now = function(){
+        return new Date();
+    }
+
 })(Module('tool'));
