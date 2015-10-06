@@ -119,12 +119,12 @@
         return null;
     };
 
-    function display_filter_row(category){
-        var cards = repo.get_current_cards();
+    function display_filter_row(cards, category){
+        var total_cards = cards.length;
         if(category){
             cards = repo.filter_cards_by_category(cards, category);
         }
-        var percentage = parseInt(100*cards.length/request.total_cards);
+        var percentage = parseInt(100*cards.length/total_cards);
         var css_class = category == request.category ? "success" : "";
         var label = category == null ? 'Total' : category;
         var category_id = category == null ? "" : category;
@@ -146,10 +146,10 @@
             display_status(status);
         }
 
-        request.total_cards = repo.get_current_cards().length;
-        display_filter_row();
+        var in_cards = repo.get_by_date_and_status(request.date, repo.IN_STACK);
+        display_filter_row(in_cards);
         for (var i = 0; i < repo.CATEGORIES.length; i++){
-            display_filter_row(repo.CATEGORIES[i]);
+            display_filter_row(in_cards, repo.CATEGORIES[i]);
         }
     };
 

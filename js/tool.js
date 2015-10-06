@@ -15,6 +15,9 @@
 
     module.date_from_string = function(date_string){
         var a = date_string.split(/[^0-9]/);
+        for (var i = 0; i < 6; i++){
+            a[i] = a[i] || 0;
+        }
         return new Date (a[0],a[1]-1,a[2],a[3],a[4],a[5]);
     }
 
