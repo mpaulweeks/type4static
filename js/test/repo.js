@@ -106,7 +106,7 @@ function test_repo(callback){
             JSON.stringify(repo.get_statuses(masticore))
         );
         tester.assert(
-            'update_status: cards after adding bleep_bloop = 240',
+            'update_status: cards after adding bleep & bloop = 241',
             repo.get_by_date_and_status(timestamp_5, repo.IN_STACK).length == 241
         );
 
