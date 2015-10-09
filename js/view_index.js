@@ -31,6 +31,7 @@
 
     //this module shouldn't persist more than one request
     var request = {};
+    request.cards = {};
     request.card_img = {};
     request.date = tool.now();
     request.custom_date_string = null;
@@ -55,7 +56,7 @@
 
     function get_card_html(status, image){
         var card_html = "";
-        var cards = get_cards(status);
+        var cards = request.cards[status];
         for (var i = 0; i < cards.length; i++){
             var card = cards[i];
             var tag = get_text_tag(card);
@@ -81,23 +82,46 @@
         }
     };
 
-    function display_status(status){
-        var cards = get_cards(status);
-        var header_html = str_format(header, status_names[status]);
+    function display_card_list(cards, header_text, group_key){
+        var header_html = str_format(header, header_text);
         var inner_html = (
-            str_format(toggle_button, status) +
+            str_format(toggle_button, group_key) +
             str_format(card_count, cards.length) +
-            str_format(cardlistdisplay, status)
+            str_format(cardlistdisplay, group_key)
         );
         var list_html = str_format(cardlist, inner_html);
         $("#main_list").append(header_html + list_html);
 
-        request.card_img[status] = true;
-        $("#toggle_" + status).click(function(){
-            toggle_images(status);
+        request.card_img[group_key] = true;
+        request.cards[group_key] = cards;
+        $("#toggle_" + group_key).click(function(){
+            toggle_images(group_key);
         });
-        toggle_images(status);
-        autocard.init();
+        toggle_images(group_key);
+    }
+
+    function display_status(status){
+        display_card_list(get_cards(status), status_names[status], status);
+    };
+
+    function display_changes(){
+        if (!request.custom_date_string){
+            return;
+        }
+
+        var date_card_ids = repo.get_cards_updated_on_date(request.date);
+
+        function is_affected_on_date(card){
+            return date_card_ids[card.id];
+        }
+
+        var in_cards = get_cards(repo.IN_STACK).filter(is_affected_on_date);
+        var out_cards = get_cards(repo.REMOVED_FROM_STACK).filter(is_affected_on_date);
+
+        display_card_list(in_cards, "Changes: Added", "added");
+        display_card_list(out_cards, "Changes: Removed", "removed");
+
+        $("#main_list").append("<hr/>");
     };
 
     function index_url(category, date_string){
@@ -131,6 +155,8 @@
         sorted_keys.sort(function (a,b){
             return dates[b] - dates[a];
         });
+        var today_url = index_url(request.category, "");
+        $('#dates').append(str_format(html, today_url, "Today"));
         for (var i = 0; i < sorted_keys.length; i++){
             var key = sorted_keys[i];
             var date = dates[key];
@@ -153,6 +179,12 @@
         var title_date = request.custom_date_string ? request.date.toDateString() : "TODAY";
         $('#title').html("Stack as of " + title_date);
 
+        if (request.category){
+            $('#subtitle').html('<h4 class="text-center">' + request.category + '</h4><hr/>');
+        }
+
+        display_changes();
+
         for (var status in status_names){
             display_status(status);
         }
@@ -164,6 +196,7 @@
         }
 
         display_dates();
+        autocard.init();
     };
 
 })(Module('view_index'));

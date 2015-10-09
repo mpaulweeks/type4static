@@ -155,6 +155,19 @@
         return dates;
     };
 
+    module.get_cards_updated_on_date = function(selected_date){
+        var card_ids = [];
+        for (var i = 0; i < store.data.status.length; i++){
+            var raw_timestamp = store.data.status[i].timestamp;
+            var datetime = tool.date_from_string(raw_timestamp);
+            var status_date = new Date(datetime.getFullYear(), datetime.getMonth(), datetime.getDate() + 1);
+            if (status_date >= selected_date && status_date <= selected_date){
+                card_ids[store.data.status[i].card_id] = true;
+            }
+        }
+        return card_ids;
+    };
+
     function new_card(name){
         var max_id = 0;
         for (var i = 0; i < store.data.card.length; i++){
