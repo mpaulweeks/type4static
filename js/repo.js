@@ -146,11 +146,14 @@
     module.get_relevant_dates = function(){
         var dates = {};
         for (var i = 0; i < store.data.status.length; i++){
-            var raw_timestamp = store.data.status[i].timestamp;
-            var datetime = tool.date_from_string(raw_timestamp);
-            var date = new Date(datetime.getFullYear(), datetime.getMonth(), datetime.getDate() + 1);
-            var key = date.toDateString();
-            dates[key] = date;
+            var status = store.data.status[i];
+            if (status.status == module.IN_STACK || status.status == module.REMOVED_FROM_STACK){
+                var raw_timestamp = store.data.status[i].timestamp;
+                var datetime = tool.date_from_string(raw_timestamp);
+                var date = new Date(datetime.getFullYear(), datetime.getMonth(), datetime.getDate() + 1);
+                var key = date.toDateString();
+                dates[key] = date;
+            }
         }
         return dates;
     };
