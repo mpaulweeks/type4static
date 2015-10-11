@@ -12,7 +12,7 @@
     STATUS_NAMES[module.IN_STACK] = 'Cards in the Stack';
     STATUS_NAMES[module.GOING_IN_STACK] = 'Cards I want to add';
     STATUS_NAMES[module.REMOVED_FROM_STACK] = 'Cards I have tried and removed';
-    STATUS_NAMES[module.REJECTED_FROM_STACK] = 'Cards I will never consider';
+    STATUS_NAMES[module.REJECTED_FROM_STACK] = 'Cards I have considered but rejected';
     module.STATUS_NAMES = STATUS_NAMES;
 
     module.CATEGORIES = [
