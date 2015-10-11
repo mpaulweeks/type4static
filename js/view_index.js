@@ -90,7 +90,7 @@
             str_format(cardlistdisplay, group_key)
         );
         var list_html = str_format(cardlist, inner_html);
-        $("#main_list").append(header_html + list_html);
+        $("#list_" + group_key).html(header_html + list_html);
 
         request.card_img[group_key] = true;
         request.cards[group_key] = cards;
@@ -121,7 +121,7 @@
         display_card_list(in_cards, "Changes: Added", "added");
         display_card_list(out_cards, "Changes: Removed", "removed");
 
-        $("#main_list").append("<hr/>");
+        $("#list_removed").append("<hr/>");
     };
 
     function index_url(category, date_string){
