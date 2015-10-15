@@ -5,8 +5,3 @@ Type4 using static pages
 - http://mpaulweeks.github.io/type4static/category
 - http://mpaulweeks.github.io/type4static/status
 - http://mpaulweeks.github.io/type4static/test
-
-todo:
-- improve category page somehow
-- cards to fix cats:
-    - prahv
