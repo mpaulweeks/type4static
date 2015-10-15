@@ -25,3 +25,14 @@
 		width: 9.855em;
 	}
 }
+.category_container {
+    overflow-x: scroll;
+    overflow-y: visible;
+
+    margin-left: 166px;
+}
+.headcol {
+	position: absolute;
+	width: 166px;
+	left: 0px;
+}

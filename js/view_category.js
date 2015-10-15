@@ -9,7 +9,8 @@
     }
 
     var EDIT_ROW_TAG = '<td class="text-center"><input class="category_checkbox" type="checkbox" data-id={1} data-category="{2}" {3}></td>';
-    var EDIT_IMG_TAG = '<th><img class="cardimage" alt="{1}" src="{2}"><img/></th>';
+    var EDIT_IMG_TAG = '<th><img class="cardimage" alt="{1}" src="{2}"><img/>{1}</th>';
+    var CAT_ROW = '<tr><td class="headcol">{1}</td>{2}</tr>';
 
     module.run = function(){
         var rows = [];
@@ -39,9 +40,8 @@
             }
         }
 
-        for (var i = 0; i < repo.CATEGORIES.length; i++){
-            var ROW_TEMP = '<tr><td>{1}</td>{2}</tr>';
-            rows[i] = str_format(ROW_TEMP, repo.CATEGORIES[i], rows[i]);
+        for (var i = 0; i < repo.CATEGORIES.length - 1; i++){
+            rows[i] = str_format(CAT_ROW, repo.CATEGORIES[i], rows[i]);
             $('tbody').append(rows[i]);
         }
 
