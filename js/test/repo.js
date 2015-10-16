@@ -70,7 +70,8 @@ function test_repo(callback){
 
         tester.assert(
             'get_relevant_dates',
-            Object.keys(repo.get_relevant_dates()).length == 13
+            Object.keys(repo.get_relevant_dates()).length == 9,
+            Object.keys(repo.get_relevant_dates()).length
         );
 
         var changes = [{
