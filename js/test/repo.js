@@ -56,16 +56,24 @@ function test_repo(callback){
 
         var cards = [masticore];
         tester.assert(
-            'filter_cards_by_category on match',
-            repo.filter_cards_by_category(cards, "is_masticore").length == 1
+            'filter_cards_by_categories on match',
+            repo.filter_cards_by_categories(cards, ["is_masticore"]).length == 1
         );
         tester.assert(
-            'filter_cards_by_category on miss',
-            repo.filter_cards_by_category(cards, "is_instant").length == 0
+            'filter_cards_by_categories on miss',
+            repo.filter_cards_by_categories(cards, ["is_instant"]).length == 0
         );
         tester.assert(
-            'filter_cards_by_category handles bad category miss',
-            repo.filter_cards_by_category(cards, "blerp").length == 0
+            'filter_cards_by_categories handles bad category miss',
+            repo.filter_cards_by_categories(cards, ["blerp"]).length == 0
+        );
+        tester.assert(
+            'filter_cards_by_categories w/ multiple',
+            repo.filter_cards_by_categories(cards, ["is_masticore", "is_artifact"]).length == 1
+        );
+        tester.assert(
+            'filter_cards_by_categories w/ conflict',
+            repo.filter_cards_by_categories(cards, ["is_masticore", "is_instant"]).length == 0
         );
 
         tester.assert(

@@ -17,15 +17,16 @@
     var card_img_template = '<a href="http://magiccards.info/query?q={1}" target="_blank"><img class="cardimage" alt="{1}" src="{2}"><img/></a>';
     var card_text_template = '<div><a href="http://magiccards.info/query?q={1}" class="mtgcard" target="_blank">{1}</a></div>';
     var filter_table = (
-        '<tr class="{5}">' +
+        '<tr class="{6}">' +
         '<td class="text-right col-md-1">{1}</td>' +
         '<td class="text-right col-md-1">{2}%</td>' +
         '<td class="text-center"></td>' +
         '<td>{3}</td>' +
         '<td><a href="{4}">Filter</a></td>' +
+        '<td><a href="{5}">+</a></td>' +
         '</tr>'
     );
-    var INDEX_LINK = '{1}?{2}{3}';
+    var INDEX_LINK = '{1}?{2}';
 
     var status_names = repo.STATUS_NAMES;
 
@@ -35,7 +36,7 @@
     request.card_img = {};
     request.date = tool.now();
     request.custom_date_string = null;
-    request.category = null;
+    request.categories = null;
 
     function get_img_tag(card){
         return str_format(card_img_template, card.name, get_img_url(card));
@@ -47,9 +48,8 @@
 
     function get_cards(status){
         var cards = repo.get_by_date_and_status(request.date, status);
-        var category = request.category;
-        if (category){
-            cards = repo.filter_cards_by_category(cards, category);
+        if (request.categories){
+            cards = repo.filter_cards_by_categories(cards, request.categories);
         }
         return cards;
     }
@@ -124,26 +124,32 @@
         $("#list_removed").append("<hr/>");
     };
 
-    function index_url(category, date_string){
+    function index_url(categories, date_string){
+        categories = categories || [];
         var prefix = tool.is_local ? "index.html" : "";
-        var category_id = category == null ? "" : "category=" + category;
-        var timestamp = date_string == null ? "" : "timestamp=" + date_string;
-        if (category && timestamp){
-            timestamp = "&" + timestamp;
+        var params = date_string == null ? [] : ["timestamp=" + date_string];
+        for (var i = 0; i < categories.length; i++){
+            params.push("category=" + categories[i]);
         }
-        return str_format(INDEX_LINK, prefix, category_id, timestamp);
+        return str_format(INDEX_LINK, prefix, params.join("&"));
     }
 
     function display_filter_row(cards, category){
         var total_cards = cards.length;
         if(category){
-            cards = repo.filter_cards_by_category(cards, category);
+            cards = repo.filter_cards_by_categories(cards, [category]);
         }
         var percentage = parseInt(100*cards.length/total_cards);
-        var css_class = category == request.category ? "success" : "";
-        var label = category == null ? 'Total' : category;
+        var categories = category ? [category] : [];
+        var curr_categories = request.categories ? request.categories : [];
+
+        var label = category ? category : 'Total';
+        var is_selected = curr_categories.indexOf(category) != -1 || (category == null && request.categories == null);
+        var css_class = is_selected ? "success" : "";
+        var only_filter_url = index_url(categories, request.custom_date_string);
+        var add_filter_url = index_url(categories.concat(curr_categories), request.custom_date_string);
         var row_html = str_format(filter_table,
-            cards.length, percentage, label, index_url(category, request.custom_date_string), css_class
+            cards.length, percentage, label, only_filter_url, add_filter_url, css_class
         );
         $('#filter_categories').append(row_html);
     };
@@ -155,21 +161,21 @@
         sorted_keys.sort(function (a,b){
             return dates[b] - dates[a];
         });
-        var today_url = index_url(request.category, "");
+        var today_url = index_url(request.categories, "");
         $('#dates').append(str_format(html, today_url, "Today"));
         for (var i = 0; i < sorted_keys.length; i++){
             var key = sorted_keys[i];
             var date = dates[key];
             var date_string = tool.str_format('{1}-{2}-{3}', date.getFullYear(), date.getMonth()+1, date.getDate());
-            var url = index_url(request.category, date_string);
+            var url = index_url(request.categories, date_string);
             var label = key;
             $('#dates').append(str_format(html, url, label));
         }
     };
 
     module.run = function(){
-        var category = tool.read_url_param("category");
-        request.category = category ? category : null;
+        var categories = tool.read_url_param("category", true);
+        request.categories = categories ? categories : null;
         var timestamp = tool.read_url_param("timestamp");
         if (timestamp){
             request.date = tool.date_from_string(timestamp);
@@ -179,8 +185,8 @@
         var title_date = request.custom_date_string ? request.date.toDateString() : "TODAY";
         $('#title').html("Stack as of " + title_date);
 
-        if (request.category){
-            $('#subtitle').html('<h4 class="text-center">' + request.category + '</h4><hr/>');
+        if (request.categories){
+            $('#subtitle').html('<h4 class="text-center">' + request.categories.join(", ") + '</h4><hr/>');
         }
 
         display_changes();

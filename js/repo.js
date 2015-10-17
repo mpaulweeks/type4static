@@ -43,11 +43,16 @@
         "is_stack_specific"
     ];
 
-    module.filter_cards_by_category = function(cards, category){
+    module.filter_cards_by_categories = function(cards, categories){
         var out = [];
         for (var i = 0; i < cards.length; i++){
             var card = cards[i];
-            if (card.hasOwnProperty(category) && card[category]){
+            var include = true;
+            for (var c = 0; c < categories.length; c++){
+                var category = categories[c];
+                include = include && (card.hasOwnProperty(category) && card[category]);
+            }
+            if (include){
                 out.push(card);
             }
         }
