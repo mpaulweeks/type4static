@@ -2,12 +2,7 @@ import json
 import sys
 
 
-def main():
-    if len(sys.argv) != 2:
-        print "this script takes exactly one arg"
-        return
-
-    keyword = sys.argv[1].lower()
+def main(keyword):
     out = set()
     with open("json/AllSets.json") as json_file:
         sets = json.load(json_file)
@@ -26,5 +21,10 @@ def main():
     for name in out:
         print name
 
+
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) != 2:
+        print "this script takes exactly one arg"
+    else:
+        keyword = sys.argv[1].lower()
+        main(keyword)
