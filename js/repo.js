@@ -35,6 +35,8 @@
         "is_removal_land",
         "is_confiscate",
         "is_morph",
+        "is_flying",
+        "is_haste",
         "is_recurring",
         "is_cycling",
         "is_reanimate",
