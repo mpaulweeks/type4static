@@ -6,19 +6,18 @@ def main(keyword):
     keyword = keyword.lower()
 
     names_out = set()
-    with open("json/AllSets.json") as json_file:
-        sets = json.load(json_file)
+    with open("json/AllCards.json") as json_file:
+        all_cards = json.load(json_file)
     with open("json/stack/current.json") as current_file:
         current = json.load(current_file)
         card_names = set(c["name"].lower() for c in current["card"])
 
-    for card_set in sets.values():
-        for card in card_set["cards"]:
-            name = card["name"].lower()
-            oracle = card.get("text")
-            condition = oracle and keyword in oracle.lower()
-            if condition and name in card_names:
-                names_out.add(name)
+    for card in all_cards.values():
+        name = card["name"].lower()
+        oracle = card.get("text")
+        condition = oracle and keyword in oracle.lower()
+        if condition and name in card_names:
+            names_out.add(name)
 
     for name in names_out:
         print name
