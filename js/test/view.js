@@ -5,6 +5,7 @@ function test_view(callback){
     var store = Module("store");
     var view_index = Module("view_index");
     var view_category = Module("view_category");
+    var view_category_bulk = Module("view_category");
     var view_status = Module("view_status");
 
     function mocks(){
@@ -21,6 +22,10 @@ function test_view(callback){
         tester.assert(
             'category.run() smoke test',
             view_category.run() != 1
+        );
+        tester.assert(
+            'category_bulk.run() smoke test',
+            view_category_bulk.run() != 1
         );
         tester.assert(
             'status.run() smoke test',

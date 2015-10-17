@@ -53,7 +53,7 @@
     };
 
     function submit_edit(){
-        var changes = [];    
+        var changes = [];
         $('.changed').each(function (){
             var out = {};
             var card = $(this);
