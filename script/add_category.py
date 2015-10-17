@@ -3,11 +3,15 @@ import sys
 
 
 def main(new_category):
+    new_category = new_category.lower()
+
     with open("json/stack/current.json") as current_file:
         current = json.load(current_file)
 
     for card in current["card"]:
-        card[new_category] = False
+        if new_category not in card:
+            card[new_category] = False
+
     with open("json/stack/current.json", "w") as current_file:
         json.dump(current, current_file)
 
