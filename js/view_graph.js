@@ -21,6 +21,10 @@
         return COLORS[color_id];
     }
 
+    function highlight(color){
+        return tool.shadeColor(color, 0.2);
+    }
+
     module.run = function(){
         var cards = repo.get_by_date_and_status(tool.now(), repo.IN_STACK);
         var card_names = cards.map(function (card){
@@ -38,6 +42,7 @@
                 d.value = dp_data[label].count;
                 d.label = label;
                 d.color = next_color();
+                d.highlight = highlight(d.color);
                 graph_data.push(d);
             }
             var ctx = $(".chart#" + dp_name).get(0).getContext("2d");
