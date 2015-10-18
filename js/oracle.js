@@ -4,13 +4,13 @@
     var store = Module("store");
     var repo = Module("repo");
 
-    var DATAPOINTS = [
+    module.DATAPOINTS = [
         "flash"
     ];
 
     module.summary = function(judged_cards){
         var result = {};
-        DATAPOINTS.forEach(function (dp_name){
+        module.DATAPOINTS.forEach(function (dp_name){
             var count = {};
             for (var key in judged_cards){
                 var card = judged_cards[key];

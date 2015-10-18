@@ -14,6 +14,8 @@
     ];
     var color_id = 0;
 
+    var CHART_HTML = '<canvas class="chart" id="{1}" width="400" height="400"></canvas>';
+
     function next_color(){
         color_id = (color_id + 1) % COLORS.length;
         return COLORS[color_id];
@@ -27,19 +29,20 @@
         var judged_cards = oracle.judge_cards(card_names);
         var summary = oracle.summary(judged_cards);
 
-        var flash_data = [];
-        for (var label in summary.flash){
-            var d = {};
-            d.value = summary.flash[label];
-            d.label = label;
-            d.color = next_color();
-            flash_data.push(d);
-        }
-
-        // Get context with jQuery - using jQuery's .get() method.
-        var ctx = $("#myChart").get(0).getContext("2d");
-        // This will get the first returned node in the jQuery collection.
-        var flash = new Chart(ctx).Pie(flash_data);
+        oracle.DATAPOINTS.forEach(function (dp_name){
+            $("#charts").append(str_format(CHART_HTML, dp_name));
+            var graph_data = [];
+            var dp_data = summary[dp_name];
+            for (var label in dp_data){
+                var d = {};
+                d.value = dp_data[label];
+                d.label = label;
+                d.color = next_color();
+                graph_data.push(d);
+            }
+            var ctx = $(".chart#" + dp_name).get(0).getContext("2d");
+            var flash = new Chart(ctx).Pie(graph_data);
+        });
 
         autocard.init();
     };
