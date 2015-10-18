@@ -14,7 +14,7 @@
     ];
     var color_id = 0;
 
-    var CHART_HTML = '<canvas class="chart" id="{1}" width="400" height="400"></canvas>';
+    var CHART_HTML = '<div class="chart_holder"><div class="chart_title">{1}</div><canvas class="chart" id="{1}" width="400" height="400"></canvas></div>';
 
     function next_color(){
         color_id = (color_id + 1) % COLORS.length;

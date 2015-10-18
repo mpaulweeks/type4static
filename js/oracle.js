@@ -5,7 +5,8 @@
     var repo = Module("repo");
 
     module.DATAPOINTS = [
-        "flash"
+        "flash",
+        "creature"
     ];
 
     module.summary = function(judged_cards){
@@ -57,8 +58,12 @@
         return false;
     }
 
-    function text_contains(card, search){
-        return card.meta.text.toLowerCase().indexOf(search.toLowerCase()) != -1;
+    function text_contains(card, search_terms){
+        var found = true;
+        search_terms.forEach(function (keyword){
+            found = found && card.meta.text.toLowerCase().indexOf(keyword.toLowerCase()) != -1;
+        });
+        return found;
     }
 
     function judge_card(card_name){
@@ -69,13 +74,32 @@
         card.data = {};
 
         flash(card);
+        creature(card);
 
         return card;
     }
 
     function flash(card){
-        var res = is_type(card, "Instant") || text_contains(card, "flash");
+        var res = is_type(card, "Instant") || text_contains(card, ["flash"]);
         card.data.flash = res;
+    }
+
+    function creature(card){
+        var res = "Not a creature";
+        if (is_type(card, "Creature")){
+            res = "Small Creature";
+            var power = parseInt(card.meta.power);
+            if (power >= 7){
+                res = "Fatty (Power >= 7)";
+            } else if (power >= 4) {
+                res = "Mid Sized (Power >= 4)";
+            }
+        } else if (text_contains(card, ["return", "graveyard", "battlefield"])){
+            res = "Reanimate";
+        } else if (text_contains(card, ["battlefield", "creature", "token"])){
+            res = "Token";
+        }
+        card.data.creature = res;
     }
 
 

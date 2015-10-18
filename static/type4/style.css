@@ -36,3 +36,10 @@
 	width: 166px;
 	left: 0px;
 }
+.chart_holder {
+	float: left;
+}
+.chart_title {
+	font-size: 20px;
+	text-align: center;
+}
