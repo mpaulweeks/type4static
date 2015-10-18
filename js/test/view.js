@@ -4,6 +4,7 @@ function test_view(callback){
     var tester = Module("tester").create("view", callback);
     var store = Module("store");
     var view_index = Module("view_index");
+    var view_graph = Module("view_graph");
     var view_category = Module("view_category");
     var view_category_bulk = Module("view_category");
     var view_status = Module("view_status");
@@ -18,6 +19,10 @@ function test_view(callback){
         tester.assert(
             'index.run() smoke test',
             view_index.run() != 1
+        );
+        tester.assert(
+            'graph.run() smoke test',
+            view_graph.run() != 1
         );
         tester.assert(
             'category.run() smoke test',

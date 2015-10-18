@@ -15,28 +15,34 @@ function test_store(callback){
             'Store becomes non-empty',
             store.data != {}
         );
-
         tester.assert(
             'Store contains cards data',
             store.data.card[0].name != null
         );
-
         tester.assert(
             'Store contains status data',
             store.data.status[0].card_id != null
         );
-
         tester.assert(
             'Store contains multiverse data',
             store.multiverse.masticore != null
         );
+        tester.assert(
+            'all_cards defaults to null',
+            store.all_cards == null
+        );
 
         var card_length = store.data.card.length;
 
-        store.load(function(){
+        store.data = null;
+        store.load_cards(function(){
             tester.assert(
-                'Reloading Store is ok',
-                store.data.card.length = card_length
+                'load_cards() loads stack data',
+                store.data.card.length == card_length
+            );
+            tester.assert(
+                'load_cards() loads all_cards',
+                store.all_cards.Masticore.cmc == 4
             );
 
             tester.close();
