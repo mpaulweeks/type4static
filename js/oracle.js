@@ -4,6 +4,28 @@
     var store = Module("store");
     var repo = Module("repo");
 
+    var DATAPOINTS = [
+        "flash"
+    ];
+
+    module.summary = function(judged_cards){
+        var result = {};
+        DATAPOINTS.forEach(function (dp_name){
+            var count = {};
+            for (var key in judged_cards){
+                var card = judged_cards[key];
+                var value = card.data[dp_name];
+                if (count.hasOwnProperty(value)){
+                    count[value] += 1;
+                } else {
+                    count[value] = 1;
+                }
+            }
+            result[dp_name] = count;
+        });
+        return result;
+    };
+
     module.judge_cards = function(card_names){
         var results = {};
         for (var i = 0; i < card_names.length; i++){

@@ -7,6 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.7.1/themes/base/jquery-ui.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+
     <script src="js/module.js"></script>
     <script src="js/tool.js"></script>
     <script src="js/store.js"></script>
@@ -41,6 +43,11 @@
 
     <h1 id="test_main"></h1>
     <div id="output"></div>
+
+
+    <div style="display: none;">
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
 
     <script type="text/javascript">
         $(document).ready(function () {
