@@ -35,7 +35,7 @@
             var dp_data = summary[dp_name];
             for (var label in dp_data){
                 var d = {};
-                d.value = dp_data[label];
+                d.value = dp_data[label].count;
                 d.label = label;
                 d.color = next_color();
                 graph_data.push(d);

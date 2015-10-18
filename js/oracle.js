@@ -6,23 +6,28 @@
 
     module.DATAPOINTS = [
         "flash",
-        "creature"
+        "creature",
+        "evasion"
     ];
 
     module.summary = function(judged_cards){
         var result = {};
         module.DATAPOINTS.forEach(function (dp_name){
-            var count = {};
+            var slices = {};
             for (var key in judged_cards){
                 var card = judged_cards[key];
-                var value = card.data[dp_name];
-                if (count.hasOwnProperty(value)){
-                    count[value] += 1;
-                } else {
-                    count[value] = 1;
+                if (card.data.hasOwnProperty(dp_name)){
+                    var value = card.data[dp_name];
+                    if (!slices.hasOwnProperty(value)){
+                        slices[value] = {};
+                        slices[value].count = 0;
+                        slices[value].cards = [];
+                    }
+                    slices[value].count += 1;
+                    slices[value].cards.push(card);
                 }
             }
-            result[dp_name] = count;
+            result[dp_name] = slices;
         });
         return result;
     };
@@ -75,6 +80,7 @@
 
         flash(card);
         creature(card);
+        evasion(card);
 
         return card;
     }
@@ -100,6 +106,22 @@
             res = "Token";
         }
         card.data.creature = res;
+    }
+
+    function evasion(card){
+        if (is_type(card, "Creature")){
+            var res = "None";
+            if (text_contains(card, ["can't be blocked"])){
+                res = "Unblockable";
+            } else if (text_contains(card, ["flying", "trample"])){
+                res = "Flample";
+            } else if (text_contains(card, ["flying"])){
+                res = "Flying";
+            } else if (text_contains(card, ["trample"])){
+                res = "Trample";
+            }
+            card.data.evasion = res;
+        }
     }
 
 
