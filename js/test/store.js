@@ -41,8 +41,8 @@ function test_store(callback){
                 store.data.card.length == card_length
             );
             tester.assert(
-                'load_cards() loads all_cards',
-                store.all_cards.Masticore.cmc == 4
+                'load_cards() loads all_cards lower case',
+                store.all_cards.masticore.cmc == 4
             );
 
             tester.close();

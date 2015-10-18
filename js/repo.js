@@ -134,7 +134,11 @@
     };
 
     module.get_multiverse_id = function(card){
-        var fixed_name = card.name.split('/')[0].toLowerCase();
+        return module.get_multiverse_id_by_name(card.name);
+    };
+
+    module.get_multiverse_id_by_name = function(card_name){
+        var fixed_name = card_name.split('/')[0].toLowerCase();
         return store.multiverse[fixed_name];
     };
 

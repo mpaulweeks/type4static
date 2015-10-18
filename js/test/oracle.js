@@ -8,6 +8,13 @@ function test_oracle(callback){
 
     function tests(){
 
+        var res = oracle.judge_cards(['plumeveil', 'dismiss', 'masticore']);
+        tester.assert(
+            "calculated flash",
+            res.dismiss.data.flash && res.plumeveil.data.flash && !res.masticore.data.flash,
+            JSON.stringify(res)
+        );
+
         tester.close();
     };
 

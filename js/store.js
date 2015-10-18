@@ -36,7 +36,11 @@
 	module.load_cards = function(callback, stack_file){
 		var all_cards_file = fix_file(ALL_CARDS_FILE);
 	    $.getJSON(all_cards_file, function(data){
-			module.all_cards = data;
+	    	var lower_data = {};
+	    	for (var key in data){
+	    		lower_data[key.toLowerCase()] = data[key];
+	    	}
+			module.all_cards = lower_data;
 			module.load(callback, stack_file);
 	    });
 	};

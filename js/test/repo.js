@@ -48,6 +48,10 @@ function test_repo(callback){
             'get_multiverse_id',
             repo.get_multiverse_id(masticore) > 0
         );
+        tester.assert(
+            'get_multiverse_id_by_name',
+            repo.get_multiverse_id_by_name(masticore.name) > 0
+        );
 
         tester.assert(
             'get_all_cards',
