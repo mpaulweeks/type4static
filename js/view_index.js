@@ -54,9 +54,8 @@
         return cards;
     }
 
-    function get_card_html(status, image){
+    function get_card_html(cards, image){
         var card_html = "";
-        var cards = request.cards[status];
         for (var i = 0; i < cards.length; i++){
             var card = cards[i];
             var tag = get_text_tag(card);
@@ -72,13 +71,15 @@
         var show_image = !request.card_img[status];
         request.card_img[status] = show_image;
 
-        var card_html = get_card_html(status, show_image);
+        var cards = request.cards[status];
+        var card_html = get_card_html(cards, show_image);
         var div = $("#cardlistdisplay_" + status);
         div.html(card_html);
         if (show_image){
             div.removeClass("columned");
         } else {
             div.addClass("columned");
+            autocard.init();
         }
     };
 
@@ -202,7 +203,6 @@
         }
 
         display_dates();
-        autocard.init();
     };
 
 })(Module('view_index'));
