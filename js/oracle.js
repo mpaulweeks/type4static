@@ -16,8 +16,7 @@
             var slices = {};
             for (var key in judged_cards){
                 var card = judged_cards[key];
-                if (card.data.hasOwnProperty(dp_name)){
-                    var value = card.data[dp_name];
+                card.data[dp_name].forEach(function (value){
                     if (!slices.hasOwnProperty(value)){
                         slices[value] = {};
                         slices[value].count = 0;
@@ -25,7 +24,7 @@
                     }
                     slices[value].count += 1;
                     slices[value].cards.push(card);
-                }
+                });
             }
             result[dp_name] = slices;
         });
@@ -88,7 +87,7 @@
 
     function flash(card){
         var res = is_type(card, "Instant") || text_contains(card, ["flash"]);
-        card.data.flash = res;
+        card.data.flash = [res];
     }
 
     function creature(card){
@@ -106,10 +105,11 @@
         } else if (text_contains(card, ["battlefield", "creature", "token"])){
             res = "Token";
         }
-        card.data.creature = res;
+        card.data.creature = [res];
     }
 
     function evasion(card){
+        var out = [];
         if (is_type(card, "Creature")){
             var res = "None";
             if (text_contains(card, ["can't be blocked"])){
@@ -121,8 +121,9 @@
             } else if (text_contains(card, ["trample"])){
                 res = "Trample";
             }
-            card.data.evasion = res;
+            out = [res];
         }
+        card.data.evasion = out;
     }
 
 
