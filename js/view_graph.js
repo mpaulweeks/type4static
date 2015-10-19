@@ -41,7 +41,7 @@
         var judged_cards = oracle.judge_cards(card_names);
         var summary = oracle.summary(judged_cards);
 
-        oracle.DATAPOINTS.forEach(function (dp_name){
+        for (var dp_name in oracle.DATAPOINTS){
             $("#charts").append(str_format(CHART_HTML, dp_name));
             var graph_data = [];
             var dp_data = summary[dp_name];
@@ -64,7 +64,7 @@
                 var title = dp_name + ' - ' + label;
                 display_cards(cards, title);
             });
-        });
+        }
     };
 
 })(Module('view_graph'));

@@ -4,15 +4,22 @@
     var store = Module("store");
     var repo = Module("repo");
 
-    module.DATAPOINTS = [
-        "flash",
-        "creature",
-        "evasion"
-    ];
+    var TYPE = {
+        PIE: "pie",
+        BAR: "bar"
+    };
+    module.TYPE = TYPE;
+
+    var DATAPOINTS = {
+        flash: TYPE.PIE,
+        creature: TYPE.PIE,
+        evasion: TYPE.PIE
+    };
+    module.DATAPOINTS = DATAPOINTS;
 
     module.summary = function(judged_cards){
         var result = {};
-        module.DATAPOINTS.forEach(function (dp_name){
+        for (var dp_name in DATAPOINTS){
             var slices = {};
             for (var key in judged_cards){
                 var card = judged_cards[key];
@@ -27,7 +34,7 @@
                 });
             }
             result[dp_name] = slices;
-        });
+        }
         return result;
     };
 
