@@ -21,6 +21,7 @@
     var GRAPH_FUNC = {};
     GRAPH_FUNC[oracle.TYPE.PIE] = get_pie_chart;
     GRAPH_FUNC[oracle.TYPE.BAR] = get_bar_chart;
+    GRAPH_FUNC[oracle.TYPE.POLAR] = get_polar_chart;
 
 
     var CHART_HTML = '<div class="chart_holder"><div class="chart_title">{1}</div><canvas class="chart" id="{1}" width="250" height="200"></canvas></div>';
@@ -55,23 +56,29 @@
         return base_chart.Pie(graph_data);
     }
 
-    function get_bar_chart(base_chart, dp_data, dp_type){
-        var data_sets = [];
+    function get_polar_chart(base_chart, dp_data, dp_type){
+        var graph_data = [];
         for (var label in dp_data){
             var d = {};
-            d.data = [dp_data[label].count];
+            d.value = dp_data[label].count;
             d.label = label;
-            d.fillColor = next_color();
-            d.strokeColor = d.fillColor;
-            d.highlightFill = lowlight(d.fillColor);
-            d.highlightStroke = d.highlightFill;
-            data_sets.push(d);
+            d.color = next_color();
+            d.highlight = highlight(d.color);
+            graph_data.push(d);
         }
-        var graph_data = {
-            labels: ["derp"],
-            datasets: data_sets
+        return base_chart.PolarArea(graph_data);
+    }
+
+    function display_factory(chart, dp_data, dp_name, cards){
+        var func = function(evt){
+            var info = chart.getSegmentsAtEvent(evt);
+            console.log(info);
+            var label = info[0].label;
+            var cards = dp_data[label].cards;
+            var title = dp_name + ' - ' + label;
+            display_cards(cards, title);
         };
-        return base_chart.Bar(graph_data);
+        return func;
     }
 
     module.run = function(){
@@ -90,20 +97,7 @@
             var base_chart = new Chart(div.get(0).getContext("2d"));
             var chart_factory = GRAPH_FUNC[oracle.DATAPOINTS[dp_name]];
             var chart = chart_factory(base_chart, dp_data, dp_name);
-            div.click(function (evt){
-                var info = null;
-                info = chart.getSegmentsAtEvent(evt);
-                // if (typeof chart.getSegmentsAtEvent == 'function'){
-                //     info = chart.getSegmentsAtEvent(evt);
-                // } else if (typeof chart.getBarsAtEvent == 'function'){
-                //     info = chart.getBarsAtEvent(evt);
-                // }
-                console.log(info);
-                var label = info[0].label;
-                var cards = dp_data[label].cards;
-                var title = dp_name + ' - ' + label;
-                display_cards(cards, title);
-            });
+            div.click(display_factory(chart, dp_data, dp_name, cards));
         }
     };
 

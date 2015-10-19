@@ -14,7 +14,7 @@
         flash: TYPE.PIE,
         creature: TYPE.PIE,
         evasion: TYPE.PIE,
-        // removal: TYPE.BAR
+        removal: TYPE.POLAR
     };
     module.DATAPOINTS = DATAPOINTS;
 
@@ -139,6 +139,11 @@
         var out = [];
         if (text_contains(card, ["destroy"]) || text_contains(card, ["exile"]) || text_contains(card, ["sacrifice"])){
             var permanent = text_contains(card, [" permanent"]);
+            var nonland_permanent = text_contains(card, [" nonland permanent"]);
+            var any_permanent = permanent && !nonland_permanent;
+            if (any_permanent) {
+                out.push("Permanent");
+            }
             if (permanent || text_contains(card, [" creature"])){
                 out.push("Creature");
             }
@@ -148,7 +153,7 @@
             if (permanent || text_contains(card, [" enchantment"])){
                 out.push("Enchantment");
             }
-            if ((permanent && !text_contains(card, ["non-land"])) || text_contains(card, [" land"])){
+            if (any_permanent || text_contains(card, [" land"])){
                 out.push("Land");
             }
         }
