@@ -40,20 +40,27 @@
     };
 
     module.judge_cards = function(card_names){
-        var results = {};
+        var included = {};
+        var excluded = [];
         for (var i = 0; i < card_names.length; i++){
             var card_name = card_names[i];
-            if (card_name.indexOf("/") == -1){
-                // omit split cards for now
-                results[card_name] = judge_card(card_name);
+            if (card_name.indexOf("/") == -1 && get_meta(card_name)){
+                // omit split cards and mismatches
+                included[card_name] = judge_card(card_name);
+            } else {
+                excluded.push(card_name);
             }
         }
-        return results;
+        return {
+            included: included,
+            excluded: excluded
+        };
     };
 
     function get_meta(card_name){
         if (!store.all_cards.hasOwnProperty(card_name)){
             console.log(card_name);
+            return null;
         }
         return store.all_cards[card_name];
     }

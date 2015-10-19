@@ -78,6 +78,10 @@
     };
 
     function display_card_list(cards, header_text, group_key){
+        cards.sort(function(a,b){
+            return a.name.localeCompare(b.name);
+        });
+
         var header_html = str_format(header, header_text);
         var inner_html = (
             str_format(toggle_button, group_key) +

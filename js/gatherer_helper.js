@@ -13,8 +13,7 @@ function getWizardsHtml(cardName){
 }
 
 function getWizardsSrc(cardName){
-    var card = _repo.get_card_by_name(cardName);
-    var mid = _repo.get_multiverse_id(card);
+    var mid = _repo.get_multiverse_id_by_name(cardName);
 	return _tool.get_img_url(mid);
 }
 

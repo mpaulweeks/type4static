@@ -68,7 +68,7 @@
         return base_chart.PolarArea(graph_data);
     }
 
-    function display_factory(chart, dp_data, dp_name, cards){
+    function display_factory(chart, dp_data, dp_name){
         var func = function(evt){
             var info = chart.getSegmentsAtEvent(evt);
             console.log(info);
@@ -80,13 +80,12 @@
         return func;
     }
 
-    module.run = function(){
-        var cards = repo.get_by_date_and_status(tool.now(), repo.IN_STACK);
-        var card_names = cards.map(function (card){
-            return card.name.toLowerCase();
-        });
+    function main(card_names){
         var judged_cards = oracle.judge_cards(card_names);
-        var summary = oracle.summary(judged_cards);
+        var summary = oracle.summary(judged_cards.included);
+        if (judged_cards.excluded){
+            $("#excluded").html("Excluded: " + judged_cards.excluded.join(", ") + "<hr/>");
+        }
         module.summary = summary; // debug
 
         for (var dp_name in oracle.DATAPOINTS){
@@ -96,7 +95,43 @@
             var base_chart = new Chart(div.get(0).getContext("2d"));
             var chart_factory = GRAPH_FUNC[oracle.DATAPOINTS[dp_name]];
             var chart = chart_factory(base_chart, dp_data, dp_name);
-            div.click(display_factory(chart, dp_data, dp_name, cards));
+            div.click(display_factory(chart, dp_data, dp_name));
+        }
+    }
+
+    var CUSTOM_CARDS_HTML = (
+        '<div>Paste your stack list here. Each card should be separated by a newline. "1 CARDNAME" is OK.</div>' +
+        '<textarea id="card_names" rows="20" style="width: 300px;"></textarea>' +
+        '<br/><button id="submit">submit</button>'
+    );
+
+    module.run = function(){
+        var custom = tool.read_url_param("custom");
+
+        if (!custom){
+            var cards = repo.get_by_date_and_status(tool.now(), repo.IN_STACK);
+            var card_names = cards.map(function (card){
+                return card.name.toLowerCase();
+            });
+            main(card_names);
+        } else {
+            $('#custom').html(CUSTOM_CARDS_HTML);
+            $('#submit').click(function (){
+                var raw_card_names = $('#card_names').val().split('\n');
+                var card_names = [];
+                for (var i = 0; i < raw_card_names.length; i++){
+                    var raw = raw_card_names[i];
+                    if (raw.indexOf("1 ") == 0){
+                        raw = raw.split("1 ")[1];
+                    }
+                    raw = raw.replace(/^\s+|\s+$/g, ''); //trim
+                    if (raw){
+                        card_names.push(raw.toLowerCase());
+                    }
+                }
+                $('#custom').empty();
+                main(card_names);
+            });
         }
     };
 
