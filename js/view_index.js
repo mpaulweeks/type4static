@@ -95,6 +95,7 @@
         });
         div.click();
     }
+    module.display_card_list = display_card_list;
 
     function display_status(status){
         display_card_list(get_cards(status), status_names[status], status);

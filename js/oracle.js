@@ -73,8 +73,9 @@
 
     function judge_card(card_name){
         var card = {};
-        card.name = card_name;
+        card.lower_name = card_name;
         card.meta = get_meta(card_name);
+        card.name = card.meta.name;
         card.mid = repo.get_multiverse_id_by_name(card_name);
         card.data = {};
 
