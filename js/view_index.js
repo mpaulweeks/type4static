@@ -32,8 +32,6 @@
 
     //this module shouldn't persist more than one request
     var request = {};
-    request.cards = {};
-    request.card_img = {};
     request.date = tool.now();
     request.custom_date_string = null;
     request.categories = null;
@@ -67,13 +65,9 @@
         return card_html;
     };
 
-    function toggle_images(status){
-        var show_image = !request.card_img[status];
-        request.card_img[status] = show_image;
-
-        var cards = request.cards[status];
+    function toggle_images(cards, group_key, show_image){
         var card_html = get_card_html(cards, show_image);
-        var div = $("#cardlistdisplay_" + status);
+        var div = $("#cardlistdisplay_" + group_key);
         div.html(card_html);
         if (show_image){
             div.removeClass("columned");
@@ -93,12 +87,13 @@
         var list_html = str_format(cardlist, inner_html);
         $("#list_" + group_key).html(header_html + list_html);
 
-        request.card_img[group_key] = true;
-        request.cards[group_key] = cards;
-        $("#toggle_" + group_key).click(function(){
-            toggle_images(group_key);
+        var show_image = true;
+        var div = $("#toggle_" + group_key);
+        div.click(function(){
+            show_image = !show_image;
+            toggle_images(cards, group_key, show_image);
         });
-        toggle_images(group_key);
+        div.click();
     }
 
     function display_status(status){

@@ -7,6 +7,7 @@
 }
 .cardimage {
 	width: 15.75em;
+	background-image: url("../../img/loading_spinner.gif");
 }
 .columned {
 	-moz-column-width: 14em;
