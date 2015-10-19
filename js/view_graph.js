@@ -18,7 +18,7 @@
     ];
     var color_id = 0;
 
-    var CHART_HTML = '<div class="chart_holder"><div class="chart_title">{1}</div><canvas class="chart" id="{1}" width="200" height="200"></canvas></div>';
+    var CHART_HTML = '<div class="chart_holder"><div class="chart_title">{1}</div><canvas class="chart" id="{1}" width="250" height="200"></canvas></div>';
 
     function next_color(){
         color_id = (color_id + 1) % COLORS.length;
@@ -29,8 +29,8 @@
         return tool.shadeColor(color, 0.2);
     }
 
-    function display_cards(cards){
-        view_index.display_card_list(cards, "derp", 0);
+    function display_cards(cards, title){
+        view_index.display_card_list(cards, title, 0);
     }
 
     module.run = function(){
@@ -61,7 +61,8 @@
                 console.log(info);
                 var label = info[0].label;
                 var cards = dp_data[label].cards;
-                display_cards(cards);
+                var title = dp_name + ' - ' + label;
+                display_cards(cards, title);
             });
         });
     };
