@@ -20,7 +20,6 @@
 
     var GRAPH_FUNC = {};
     GRAPH_FUNC[oracle.TYPE.PIE] = get_pie_chart;
-    GRAPH_FUNC[oracle.TYPE.BAR] = get_bar_chart;
     GRAPH_FUNC[oracle.TYPE.POLAR] = get_polar_chart;
 
 
