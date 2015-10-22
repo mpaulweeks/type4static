@@ -22,4 +22,8 @@
         store.load(Module('view_status').run);
     };
 
+    module.rate = function(){
+        store.load(Module('view_rate').run);
+    };
+
 })(Module("main"));
