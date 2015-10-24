@@ -175,6 +175,8 @@
     };
 
     module.run = function(){
+        tool.load_navbar();
+
         var categories = tool.read_url_param("category", true);
         request.categories = categories ? categories : null;
         var timestamp = tool.read_url_param("timestamp");

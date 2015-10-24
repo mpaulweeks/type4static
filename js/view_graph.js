@@ -106,6 +106,8 @@
     );
 
     module.run = function(){
+        tool.load_navbar();
+
         var custom = tool.read_url_param("custom");
 
         if (!custom){
