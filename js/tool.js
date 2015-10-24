@@ -87,7 +87,7 @@
     );
     module.load_navbar = function(){
         var suffix = module.is_local ? '.html' : '';
-        var index = module.is_local ? 'index.html' : '';
+        var index = module.is_local ? 'index.html' : '/';
         $('body').prepend(module.str_format(NAVBAR, suffix, index));
     }
 
