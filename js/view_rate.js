@@ -12,25 +12,40 @@
         return items[Math.floor(Math.random()*items.length)];
     }
 
-    function random_card(not_card){
+    function random_card(not_cards){
+        not_cards = not_cards || [];
         var cards = repo.get_by_date_and_status(tool.now(), repo.IN_STACK);
         var card = null;
-        while(card == null || card == not_card){
+        while(card == null || not_cards.indexOf(card) != -1){
             card = random(cards);
         }
+        var card_img = new Image();
+        card_img.src = get_img_url(card);
         return card;
+    }
+
+    function random_two_cards(not_cards){
+        var card1 = random_card(not_cards);
+        return [card1, random_card([card1].concat(not_cards))];
     }
 
     var count = 0;
     var results = [];
     var options = [];
+    var username = "";
+    var next_cards = [];
 
     var API_KEY = 'zi4GKdKKpJx4ledJ92-Xhw';
     var EMAIL = 'type4stack@gmail.com';
 
     function submit_data(){
-        var to_submit = results;
+        var data = results;
         results = [];
+        var to_submit = {
+            username: username,
+            timestamp: new Date(),
+            data: data,
+        };
         $.ajax({
             type: 'POST',
             url: 'https://mandrillapp.com/api/1.0/messages/send.json',
@@ -54,13 +69,16 @@
     }
 
     function refresh_cards(){
-        var card1 = random_card();
-        var card2 = random_card(card1);
-        options = [card1.name, card2.name];
-        $('#choice_1').attr("src", get_img_url(card1));
-        $('#choice_2').attr("src", get_img_url(card2));
-        $('#choice_1').data("name", card1.name);
-        $('#choice_2').data("name", card2.name);
+        options = [];
+        var cards = next_cards;
+        next_cards = random_two_cards(cards);
+        for (var i = 0; i < 2; i++){
+            var card = cards[i];
+            options.push(card.name);
+            var div = $('#choice_' + i);
+            div.attr("src", get_img_url(card));
+            div.data("name", card.name);
+        }
     }
 
     function read_results(evt){
@@ -82,9 +100,16 @@
     }
 
     module.run = function(){
+        $("#choice_0").click(read_results);
         $("#choice_1").click(read_results);
-        $("#choice_2").click(read_results);
-        refresh_cards();
+        $("#setup").submit(function(){
+            username = $("#username").val();
+            $("#setup").remove();
+            next_cards = random_two_cards();
+            refresh_cards();
+            // prevent submit from completing
+            return false;
+        });
     };
 
 })(Module('view_rate'));

@@ -44,3 +44,6 @@
 	font-size: 20px;
 	text-align: center;
 }
+.card_choice {
+	cursor: pointer;
+}
