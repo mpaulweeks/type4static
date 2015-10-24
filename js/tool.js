@@ -72,7 +72,7 @@
     var NAVBAR = (
         '<nav class="navbar navbar-default navbar-static-top">' +
             '<div class="container">' +
-                '<a class="navbar-brand" href="index{1}">Type 4 Stack</a>' +
+                '<a class="navbar-brand" href="{2}">Type 4 Stack</a>' +
                 '<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">' +
                     '<span class="sr-only">Toggle navigation</span>' +
                     '<span class="icon-bar"></span>' +
@@ -87,7 +87,8 @@
     );
     module.load_navbar = function(){
         var suffix = module.is_local ? '.html' : '';
-        $('body').prepend(module.str_format(NAVBAR, suffix));
+        var index = module.is_local ? 'index.html' : '';
+        $('body').prepend(module.str_format(NAVBAR, suffix, index));
     }
 
 })(Module('tool'));
