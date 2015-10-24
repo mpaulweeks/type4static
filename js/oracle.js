@@ -148,9 +148,6 @@
             var permanent = text_contains(card, [" permanent"]);
             var nonland_permanent = text_contains(card, [" nonland permanent"]);
             var any_permanent = permanent && !nonland_permanent;
-            if (any_permanent) {
-                out.push("Permanent");
-            }
             if (permanent || text_contains(card, [" creature"])){
                 out.push("Creature");
             }
