@@ -3,9 +3,20 @@
     var tool = Module("tool");
     var repo = Module("repo");
 
+    var _cards = [];
+
     var str_format = tool.str_format;
     function get_img_url (card){
         return tool.get_img_url(repo.get_multiverse_id(card));
+    }
+
+    function all_cards(){
+        if (_cards.length == 0){
+            var in_stack = repo.get_by_date_and_status(tool.now(), repo.IN_STACK);
+            var soon = repo.get_by_date_and_status(tool.now(), repo.GOING_IN_STACK);
+            _cards = in_stack.concat(soon);
+        }
+        return _cards;
     }
 
     function random(items){
@@ -14,7 +25,7 @@
 
     function random_card(not_cards){
         not_cards = not_cards || [];
-        var cards = repo.get_by_date_and_status(tool.now(), repo.IN_STACK);
+        var cards = all_cards();
         var card = null;
         while(card == null || not_cards.indexOf(card) != -1){
             card = random(cards);
