@@ -7,15 +7,15 @@
     module.run = function(){
         tool.load_navbar();
 
-        var scoreboard = ranking.process_ratings(store.ranking_raw);
+        var cards = ranking.process_ratings(store.ranking_raw).get_all();
 
-        var names = Object.keys(scoreboard.ledger);
-        names.sort(function (a,b){
-            return scoreboard.get(a).score < scoreboard.get(b).score;
+        cards.sort(function (a,b){
+            if (a.score > b.score){ return -1; }
+            if (a.score < b.score){ return 1; }
+            return 0;
         });
 
-        names.forEach(function (name){
-            var card = scoreboard.get(name);
+        cards.forEach(function (card){
             var html = card.score + " - " + card.name + "<br/>";
             $("#rankings").append(html);
         });

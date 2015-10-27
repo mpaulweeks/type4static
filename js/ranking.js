@@ -2,17 +2,25 @@
 
     function scoreboard_factory(){
         var api = {};
-        api.ledger = {};
+        var ledger = {};
+
+        api.get_all = function(){
+            var cards = [];
+            for (var c in ledger){
+                cards.push(ledger[c]);
+            }
+            return cards;
+        };
 
         api.get = function(name){
-            if (!api.ledger.hasOwnProperty(name)){
+            if (!ledger.hasOwnProperty(name)){
                 var player = {};
                 player.name = name;
                 player.score = 100;
-                api.ledger[name] = player;
+                ledger[name] = player;
             }
-            return api.ledger[name];
-        }
+            return ledger[name];
+        };
 
         api.record = function(winner_name, loser_name){
             var winner = api.get(winner_name);

@@ -16,6 +16,12 @@ function test_ranking(callback){
             JSON.stringify(scoreboard)
         );
 
+        tester.assert(
+            "get_all returns card objects",
+            scoreboard.get_all()[0].score > 0,
+            JSON.stringify(scoreboard.get_all())
+        );
+
         tester.close();
     };
 
