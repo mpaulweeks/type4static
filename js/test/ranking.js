@@ -8,9 +8,12 @@ function test_ranking(callback){
 
     function tests(){
 
+        var ratings = store.ranking_raw;
+        var scoreboard = ranking.process_ratings(ratings);
         tester.assert(
-            "smoke_test",
-            true
+            "Teferi is doing well",
+            scoreboard.get('Teferi, Mage of Zhalfir').score > 0,
+            JSON.stringify(scoreboard)
         );
 
         tester.close();
