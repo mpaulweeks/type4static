@@ -1,17 +1,17 @@
 (function(module){
 
     function scoreboard_factory(){
-        var ledger = {};
         var api = {};
+        api.ledger = {};
 
         api.get = function(name){
-            if (!ledger.hasOwnProperty(name)){
+            if (!api.ledger.hasOwnProperty(name)){
                 var player = {};
                 player.name = name;
-                player.score = 0;
-                ledger[name] = player;
+                player.score = 100;
+                api.ledger[name] = player;
             }
-            return ledger[name];
+            return api.ledger[name];
         }
 
         api.record = function(winner_name, loser_name){

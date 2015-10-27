@@ -26,4 +26,8 @@
         store.load(Module('view_rate').run);
     };
 
+    module.ranking = function(){
+        store.load_ranking(Module('view_ranking').run);
+    };
+
 })(Module("main"));

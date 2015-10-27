@@ -9,6 +9,7 @@ function test_view(callback){
     var view_category_bulk = Module("view_category");
     var view_status = Module("view_status");
     var view_rate = Module("view_rate");
+    var view_ranking = Module("view_ranking");
 
     function mocks(){
         Module("autocard").init = function(){};
@@ -34,12 +35,16 @@ function test_view(callback){
             view_category_bulk.run() != 1
         );
         tester.assert(
+            'status.run() smoke test',
+            view_status.run() != 1
+        );
+        tester.assert(
             'rate.run() smoke test',
             view_rate.run() != 1
         );
         tester.assert(
-            'status.run() smoke test',
-            view_status.run() != 1
+            'ranking.run() smoke test',
+            view_ranking.run() != 1
         );
 
         tester.close();

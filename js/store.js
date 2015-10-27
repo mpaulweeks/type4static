@@ -11,6 +11,7 @@
 
 	module.data = null;
 	module.all_cards = null;
+	module.ranking_raw = null;
 
 	function fix_file(file_url){
 	    if (tool.is_local && !tool.is_firefox){
