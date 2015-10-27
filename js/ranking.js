@@ -29,16 +29,17 @@
         var scoreboard = scoreboard_factory();
 
         ratings.forEach(function (chunk){
-            if (!chunk.hasOwnProperty('username')){
-                return;
+            var vote_data = chunk;
+            if (chunk.hasOwnProperty('data')){
+                vote_data = chunk.data;
             }
-            chunk.data.forEach(function (vote){
+            vote_data.forEach(function (vote){
                 var winner_name = vote.winner;
-                var loser_name = vote.options[0];
-                if (winner_name == loser_name){
-                    loser_name = vote.options[1];
-                }
-                scoreboard.record(winner_name, loser_name);
+                vote.options.forEach(function (option){
+                    if (winner_name != option){
+                        scoreboard.record(winner_name, option);
+                    }
+                });
             });
         });
 
