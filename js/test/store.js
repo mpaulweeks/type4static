@@ -45,7 +45,18 @@ function test_store(callback){
                 store.all_cards.masticore.cmc == 4
             );
 
-            tester.close();
+            store.load_ranking(function (){
+                tester.assert(
+                    'load_ranking() loads stack data',
+                    store.data.card.length == card_length
+                );
+                tester.assert(
+                    'load_ranking() loads ranking data',
+                    store.ranking_raw.length > 0
+                );
+
+                tester.close();
+            }, TEST_FILE);
         }, TEST_FILE);
     }, TEST_FILE);
 }

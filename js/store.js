@@ -6,6 +6,7 @@
 	var STACK_FILE = 'json/stack/current.json';
 	var MULTIVERSE_FILE = 'json/multiverse_ids.json';
 	var ALL_CARDS_FILE = 'json/AllCards.json';
+	var RANKING_FILE = 'json/mail/raw.json';
 	var GITHUB_BASE = 'http://mpaulweeks.github.io/type4static/';
 
 	module.data = null;
@@ -41,6 +42,14 @@
 	    		lower_data[key.toLowerCase()] = data[key];
 	    	}
 			module.all_cards = lower_data;
+			module.load(callback, stack_file);
+	    });
+	};
+
+	module.load_ranking = function(callback, stack_file){
+		var ranking_file = fix_file(RANKING_FILE);
+	    $.getJSON(ranking_file, function(data){
+			module.ranking_raw = data;
 			module.load(callback, stack_file);
 	    });
 	};
