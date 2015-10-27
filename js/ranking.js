@@ -1,5 +1,7 @@
 (function(module){
 
+    var elo = Module("elo");
+
     function scoreboard_factory(){
         var api = {};
         var ledger = {};
@@ -16,7 +18,7 @@
             if (!ledger.hasOwnProperty(name)){
                 var player = {};
                 player.name = name;
-                player.score = 100;
+                player.score = 1200;
                 ledger[name] = player;
             }
             return ledger[name];
@@ -26,8 +28,13 @@
             var winner = api.get(winner_name);
             var loser = api.get(loser_name);
 
-            winner.score += 1;
-            loser.score += -1;
+            // winner.score += 1;
+            // loser.score += -1;
+
+            var winner_expected = elo.getExpected(winner.score, loser.score);
+            var loser_expected = elo.getExpected(loser.score, winner.score);
+            winner.score  = elo.updateRating(winner_expected, 1, winner.score);
+            loser.score  = elo.updateRating(loser_expected, 0, loser.score);
         };
 
         return api;
