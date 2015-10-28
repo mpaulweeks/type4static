@@ -39,6 +39,23 @@
         return api;
     }
 
+    function get_rating_date(rating_chunk){
+        if (rating_chunk.hasOwnProperty("timestamp")){
+            return new Date(rating_chunk.timestamp);
+        }
+        return new Date(2015, 9, 22);
+    }
+
+    module.sort_ratings = function(ratings){
+        ratings.sort(function (a,b){
+            var a_date = get_rating_date(a);
+            var b_date = get_rating_date(b);
+            if (a_date < b_date){ return -1; }
+            if (a_date > b_date){ return 1; }
+            return 0;
+        })
+    }
+
     module.process_ratings = function(ratings, judges){
         var scoreboard = scoreboard_factory();
         judges = judges || module.get_judges(ratings);

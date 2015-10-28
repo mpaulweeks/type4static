@@ -106,6 +106,7 @@
         tool.load_navbar();
 
         request.ranking_data = store.ranking_raw;
+        ranking.sort_ratings(request.ranking_data);
 
         request.all_judges = ranking.get_judges(request.ranking_data);
         request.judges = request.all_judges;
