@@ -7,7 +7,11 @@
 
     var NOW = tool.now();
 
+    var CATEGORY_HTML = '<button id="category-{1}">{1}</button>';
     var CARD_HTML = '<div class="ranking-status-{1}"> {2} - {3} </div>';
+
+    var request = {};
+    request.categories = [];
 
     function all_relevant_cards(){
         var current = repo.get_by_date_and_status(NOW, repo.IN_STACK);
@@ -16,6 +20,10 @@
     }
 
     function apply_filters(cards){
+        var categories = request.categories;
+        if (categories.length > 0){
+            cards = repo.filter_cards_by_categories(cards, categories);
+        }
         return cards;
     }
 
@@ -53,6 +61,15 @@
 
     module.run = function(){
         tool.load_navbar();
+
+        repo.CATEGORIES.forEach(function (cat){
+            var html = tool.str_format(CATEGORY_HTML, cat);
+            $('#categories').append(html);
+            $('#category-' + cat).click(function (){
+                request.categories = [cat];
+                display_ranking();
+            });
+        });
 
         display_ranking();
     };
