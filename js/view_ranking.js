@@ -9,7 +9,7 @@
 
     var NOW = tool.now();
 
-    var CATEGORY_HTML = '<button id="category-{1}">{1}</button>';
+    var CATEGORY_HTML = '<div><button id="category-{1}">{2}</button></div>';
     var CARD_HTML = '<div class="ranking-status-{1}"> {2} - {3} </div>';
 
     var request = {};
@@ -69,9 +69,16 @@
     module.run = function(){
         tool.load_navbar();
 
+
+        var cat_html = tool.str_format(CATEGORY_HTML, 'reset', '(reset)');
+        $('#categories').append(cat_html);
+        $('#category-reset').click(function (){
+            request.categories = [];
+            display_ranking();
+        });
         repo.CATEGORIES.forEach(function (cat){
-            var html = tool.str_format(CATEGORY_HTML, cat);
-            $('#categories').append(html);
+            cat_html = tool.str_format(CATEGORY_HTML, cat, cat);
+            $('#categories').append(cat_html);
             $('#category-' + cat).click(function (){
                 request.categories = [cat];
                 display_ranking();
