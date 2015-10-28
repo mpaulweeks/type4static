@@ -9,8 +9,8 @@
 
     var NOW = tool.now();
 
-    var CATEGORY_HTML = '<div><button id="category-{1}">{2}</button></div>';
-    var JUDGE_HTML = '<div><button id="judge-{1}">{2}</button></div>';
+    var CATEGORY_HTML = '<div class="radio"><label><input type="radio" name="category" id="category-{1}" {3}>{2}</input><label></div>';
+    var JUDGE_HTML =    '<div class="radio"><label><input type="radio" name="judge" id="judge-{1}" {3}>{2}</input></label></div>';
     var CARD_HTML = '<div class="ranking-status-{1}"> {2} - {3} </div>';
 
     var request = {};
@@ -73,12 +73,14 @@
     function display_category(name){
         var id = name;
         var result = [name];
+        var extra = "";
         if (!name){
             id = 'reset';
-            name = '(reset)';
+            name = '(all)';
             result = [];
+            extra = "checked";
         }
-        var cat_html = tool.str_format(CATEGORY_HTML, id, name);
+        var cat_html = tool.str_format(CATEGORY_HTML, id, name, extra);
         $('#categories').append(cat_html);
         $('#category-' + id).click(function (){
             request.categories = result;
@@ -89,12 +91,14 @@
     function display_judge(name){
         var id = name;
         var result = [name];
+        var extra = "";
         if (!name){
             id = 'reset';
-            name = '(reset)';
+            name = '(all)';
             result = request.all_judges;
+            extra = "checked";
         }
-        var cat_html = tool.str_format(JUDGE_HTML, id, name);
+        var cat_html = tool.str_format(JUDGE_HTML, id, name, extra);
         $('#judges').append(cat_html);
         $('#judge-' + id).click(function (){
             request.judges = result;
