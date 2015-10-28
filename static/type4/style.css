@@ -50,3 +50,9 @@
 .chart {
 	cursor: pointer;
 }
+.ranking-status-1 {
+	background-color: lightgreen;
+}
+.ranking-status-2 {
+	background-color: lightyellow;
+}

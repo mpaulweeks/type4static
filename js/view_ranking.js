@@ -5,10 +5,13 @@
     var repo = Module("repo");
     var ranking = Module("ranking");
 
+    var NOW = tool.now();
+
+    var CARD_HTML = '<div class="ranking-status-{1}"> {2} - {3} </div>';
+
     function all_relevant_cards(){
-        var now = tool.now();
-        var current = repo.get_by_date_and_status(now, repo.IN_STACK);
-        var future = repo.get_by_date_and_status(now, repo.GOING_IN_STACK);
+        var current = repo.get_by_date_and_status(NOW, repo.IN_STACK);
+        var future = repo.get_by_date_and_status(NOW, repo.GOING_IN_STACK);
         return current.concat(future);
     }
 
@@ -41,7 +44,8 @@
 
         var list_html = "";
         cards.forEach(function (card){
-            var html = card.score + " - " + card.name + "<br/>";
+            var status = repo.get_status_code(card, NOW);
+            var html = tool.str_format(CARD_HTML, status, card.score, card.name);
             list_html += html;
         });
         $("#rankings").html(list_html);
