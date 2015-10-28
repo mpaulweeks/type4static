@@ -52,14 +52,17 @@
         apply_scores(cards, scoreboard);
         sort_cards(cards);
 
-        var list_html = "";
+        var descend_html = "";
+        var ascend_html = "";
         cards.forEach(function (card){
             var status = repo.get_status_code(card, NOW);
             var name = view_index.get_text_tag(card);
-            var html = tool.str_format(CARD_HTML, status, card.score, name);
-            list_html += html;
+            var card_html = tool.str_format(CARD_HTML, status, card.score, name);
+            descend_html = descend_html + card_html;
+            ascend_html = card_html + ascend_html;
         });
-        $("#rankings").html(list_html);
+        $("#rankings-ascend").html(ascend_html);
+        $("#rankings-descend").html(descend_html);
         autocard.init();
     }
 
