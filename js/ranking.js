@@ -28,9 +28,6 @@
             var winner = api.get(winner_name);
             var loser = api.get(loser_name);
 
-            // winner.score += 1;
-            // loser.score += -1;
-
             var winner_expected = elo.getExpected(winner.score, loser.score);
             var loser_expected = elo.getExpected(loser.score, winner.score);
             winner.score  = elo.updateRating(winner_expected, 1, winner.score);
