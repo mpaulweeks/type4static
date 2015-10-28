@@ -4,6 +4,8 @@
     var store = Module("store");
     var repo = Module("repo");
     var ranking = Module("ranking");
+    var autocard = Module("autocard");
+    var view_index = Module("view_index");
 
     var NOW = tool.now();
 
@@ -53,10 +55,12 @@
         var list_html = "";
         cards.forEach(function (card){
             var status = repo.get_status_code(card, NOW);
-            var html = tool.str_format(CARD_HTML, status, card.score, card.name);
+            var name = view_index.get_text_tag(card);
+            var html = tool.str_format(CARD_HTML, status, card.score, name);
             list_html += html;
         });
         $("#rankings").html(list_html);
+        autocard.init();
     }
 
     module.run = function(){

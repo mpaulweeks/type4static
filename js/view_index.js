@@ -15,7 +15,7 @@
     var card_count = '<span>{1} cards</span>';
     var cardlistdisplay = '<div id="cardlistdisplay_{1}" class="cardlistdisplay"></div>';
     var card_img_template = '<a href="http://magiccards.info/query?q={1}" target="_blank"><img class="cardimage" alt="{1}" src="{2}"><img/></a>';
-    var card_text_template = '<div><a href="http://magiccards.info/query?q={1}" class="mtgcard" target="_blank">{1}</a></div>';
+    var card_text_template = '<a href="http://magiccards.info/query?q={1}" class="mtgcard" target="_blank">{1}</a>';
     var filter_table = (
         '<tr class="{6}">' +
         '<td class="text-right col-md-1">{1}</td>' +
@@ -40,9 +40,14 @@
         return str_format(card_img_template, card.name, get_img_url(card));
     };
 
-    function get_text_tag(card){
-        return str_format(card_text_template, card.name);
+    function get_text_tag(card, with_div){
+        var html = str_format(card_text_template, card.name);
+        if (with_div){
+            html = str_format("<div>{1}</div>", html);
+        }
+        return html;
     };
+    module.get_text_tag = get_text_tag;
 
     function get_cards(status){
         var cards = repo.get_by_date_and_status(request.date, status);
@@ -56,7 +61,7 @@
         var card_html = "";
         for (var i = 0; i < cards.length; i++){
             var card = cards[i];
-            var tag = get_text_tag(card);
+            var tag = get_text_tag(card, true);
             if (image){
                 tag = get_img_tag(card);
             }
