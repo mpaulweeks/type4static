@@ -10,10 +10,14 @@
     var NOW = tool.now();
 
     var CATEGORY_HTML = '<div><button id="category-{1}">{2}</button></div>';
+    var JUDGE_HTML = '<div><button id="judge-{1}">{2}</button></div>';
     var CARD_HTML = '<div class="ranking-status-{1}"> {2} - {3} </div>';
 
     var request = {};
+    request.ranking_data = [];
     request.categories = [];
+    request.judges = [];
+    request.all_judges = [];
 
     function all_relevant_cards(){
         var current = repo.get_by_date_and_status(NOW, repo.IN_STACK);
@@ -44,7 +48,7 @@
     }
 
     function display_ranking(){
-        var scoreboard = ranking.process_ratings(store.ranking_raw);
+        var scoreboard = ranking.process_ratings(request.ranking_data, request.judges);
         var cards = all_relevant_cards();
 
         cards = apply_filters(cards);
@@ -66,24 +70,50 @@
         autocard.init();
     }
 
+    function display_category(name){
+        var id = name;
+        var result = [name];
+        if (!name){
+            id = 'reset';
+            name = '(reset)';
+            result = [];
+        }
+        var cat_html = tool.str_format(CATEGORY_HTML, id, name);
+        $('#categories').append(cat_html);
+        $('#category-' + id).click(function (){
+            request.categories = result;
+            display_ranking();
+        });
+    }
+
+    function display_judge(name){
+        var id = name;
+        var result = [name];
+        if (!name){
+            id = 'reset';
+            name = '(reset)';
+            result = request.all_judges;
+        }
+        var cat_html = tool.str_format(JUDGE_HTML, id, name);
+        $('#judges').append(cat_html);
+        $('#judge-' + id).click(function (){
+            request.judges = result;
+            display_ranking();
+        });
+    }
+
     module.run = function(){
         tool.load_navbar();
 
+        request.ranking_data = store.ranking_raw;
 
-        var cat_html = tool.str_format(CATEGORY_HTML, 'reset', '(reset)');
-        $('#categories').append(cat_html);
-        $('#category-reset').click(function (){
-            request.categories = [];
-            display_ranking();
-        });
-        repo.CATEGORIES.forEach(function (cat){
-            cat_html = tool.str_format(CATEGORY_HTML, cat, cat);
-            $('#categories').append(cat_html);
-            $('#category-' + cat).click(function (){
-                request.categories = [cat];
-                display_ranking();
-            });
-        });
+        request.all_judges = ranking.get_judges(request.ranking_data);
+        request.judges = request.all_judges;
+        display_judge();
+        request.all_judges.forEach(display_judge);
+
+        display_category();
+        repo.CATEGORIES.forEach(display_category);
 
         display_ranking();
     };

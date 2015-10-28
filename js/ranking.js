@@ -2,6 +2,8 @@
 
     var elo = Module("elo");
 
+    var UNKNOWN_JUDGE = 'Unknown';
+
     function scoreboard_factory(){
         var api = {};
         var ledger = {};
@@ -37,10 +39,16 @@
         return api;
     }
 
-    module.process_ratings = function(ratings){
+    module.process_ratings = function(ratings, judges){
         var scoreboard = scoreboard_factory();
+        judges = judges || module.get_judges(ratings);
 
         ratings.forEach(function (chunk){
+            var judge = chunk.username || UNKNOWN_JUDGE;
+            if (judges.indexOf(judge) == -1){
+                return;
+            }
+
             var vote_data = chunk;
             if (chunk.hasOwnProperty('data')){
                 vote_data = chunk.data;
@@ -56,6 +64,19 @@
         });
 
         return scoreboard;
+    }
+
+    module.get_judges = function(ratings){
+        var judges = {};
+        judges[UNKNOWN_JUDGE] = true;
+
+        ratings.forEach(function (chunk){
+            if (chunk.hasOwnProperty('username')){
+                judges[chunk.username] = true;
+            }
+        });
+
+        return Object.keys(judges);
     }
 
 
