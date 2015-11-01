@@ -1,94 +1,96 @@
-From 1515781204664183123@xxx Fri Oct 23 00:53:24 +0000 2015
-X-GM-THRID: 1515781204664183123
+From 1515794955898415661@xxx Fri Oct 23 04:31:58 +0000 2015
+X-GM-THRID: 1515794955898415661
 X-Gmail-Labels: Sent,data
 Delivered-To: type4stack@gmail.com
-Received: by 10.64.23.142 with SMTP id m14csp849722ief;
-        Thu, 22 Oct 2015 17:53:24 -0700 (PDT)
-X-Received: by 10.129.132.83 with SMTP id u80mr13527922ywf.187.1445561604455;
-        Thu, 22 Oct 2015 17:53:24 -0700 (PDT)
-Return-Path: <bounce-md_30781824.56298504.v1-bf32aa5e8b0f4c0796f540692b6b6ad1@mandrillapp.com>
+Received: by 10.64.23.142 with SMTP id m14csp917693ief;
+        Thu, 22 Oct 2015 21:31:58 -0700 (PDT)
+X-Received: by 10.129.130.7 with SMTP id s7mr13834519ywf.29.1445574718095;
+        Thu, 22 Oct 2015 21:31:58 -0700 (PDT)
+Return-Path: <bounce-md_30781824.5629b83d.v1-6fa713f8238043f78bcef4be94e91364@mandrillapp.com>
 Received: from mail136-15.atl41.mandrillapp.com (mail136-15.atl41.mandrillapp.com. [198.2.136.15])
-        by mx.google.com with ESMTPS id o76si7548950ywd.154.2015.10.22.17.53.24
+        by mx.google.com with ESMTPS id k190si7903779ywg.290.2015.10.22.21.31.57
         for <type4stack@gmail.com>
         (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
-        Thu, 22 Oct 2015 17:53:24 -0700 (PDT)
-Received-SPF: pass (google.com: domain of bounce-md_30781824.56298504.v1-bf32aa5e8b0f4c0796f540692b6b6ad1@mandrillapp.com designates 198.2.136.15 as permitted sender) client-ip=198.2.136.15;
+        Thu, 22 Oct 2015 21:31:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.5629b83d.v1-6fa713f8238043f78bcef4be94e91364@mandrillapp.com designates 198.2.136.15 as permitted sender) client-ip=198.2.136.15;
 Authentication-Results: mx.google.com;
-       spf=pass (google.com: domain of bounce-md_30781824.56298504.v1-bf32aa5e8b0f4c0796f540692b6b6ad1@mandrillapp.com designates 198.2.136.15 as permitted sender) smtp.mailfrom=bounce-md_30781824.56298504.v1-bf32aa5e8b0f4c0796f540692b6b6ad1@mandrillapp.com;
+       spf=pass (google.com: domain of bounce-md_30781824.5629b83d.v1-6fa713f8238043f78bcef4be94e91364@mandrillapp.com designates 198.2.136.15 as permitted sender) smtp.mailfrom=bounce-md_30781824.5629b83d.v1-6fa713f8238043f78bcef4be94e91364@mandrillapp.com;
        dkim=pass header.i=@mail136-15.atl41.mandrillapp.com;
        dkim=pass header.i=@mandrillapp.com;
        dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
 DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail136-15.atl41.mandrillapp.com;
  h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail136-15.atl41.mandrillapp.com;
- bh=b5hh+/UNVcqOprcAqgpAN2MxJVA=;
- b=jPuWbeWtkRj6P7aNXImlKJuoItK794vpJLO3/7UTCGWXzWWF/pJZ1phT4nHAmfr7gxqUGGWUjt1I
-   9oT/qfUzJlPPFJCiwGhcfKgZiMCLR9j/AFveUHcim+wcwFQzBGzeayZcRlNa3GJzrT8qq6bL1XYT
-   3CM1g2q8gxeTzTqNzhI=
+ bh=ekEJuelvaa3nQgoC+PBesSvOKbc=;
+ b=hDlnwHhwI+1QvEUT3sqsQdrbW4ioU0HdTNzJlkV16vVsG+/AxO23MXCQOG8VKjqB2m8JwuPffiYQ
+   n0IK3MAKx/2YXA4n1ohBbpZHxC3hvOsM16z9z9K9j49i43w2Fp5MDRi4r75yJYLoq1rhlMy8TsC4
+   OWwcM3xElLQ7dNn1wOA=
 DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail136-15.atl41.mandrillapp.com;
- b=G226ELgLYOOet1NwkIhOK5ZeamJCGiCMEZF4IsQR7IEiZ72EXfT77ZIypEOAPNPhPQRB3ogcYqTk
-   HLvqSIsrcnKDo5AoyZ3IaX/wc99D8O53WnxSgL+ggNc73nw7Y8geF9dyMIfay/Cr8NweHR8pmIPg
-   Cv7bjtZQQFWJL90K4HU=;
-Received: from pmta04.mandrill.prod.atl01.rsglab.com (127.0.0.1) by mail136-15.atl41.mandrillapp.com id h562g81sb1kb for <type4stack@gmail.com>; Fri, 23 Oct 2015 00:53:24 +0000 (envelope-from <bounce-md_30781824.56298504.v1-bf32aa5e8b0f4c0796f540692b6b6ad1@mandrillapp.com>)
+ b=ZDRL3ibmKipG8/stCfGeAK0ID2c7u2kEvCuoZ5Bhse8cB5XFqwnqpTgeTJxcEFzr9VB4LgNOg+M1
+   ScBHnegPZnT0dBKDqEgtUxCWz3/CQsk60/qaNlpUCiCCaGSls0DVvx4TG8BYXys054tBLV9FDxQ9
+   W7/uW0Ql02An39x8wKA=;
+Received: from pmta04.mandrill.prod.atl01.rsglab.com (127.0.0.1) by mail136-15.atl41.mandrillapp.com id h56s3s1sb1ki for <type4stack@gmail.com>; Fri, 23 Oct 2015 04:31:57 +0000 (envelope-from <bounce-md_30781824.5629b83d.v1-6fa713f8238043f78bcef4be94e91364@mandrillapp.com>)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
- i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1445561604; h=From : 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1445574717; h=From : 
  Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
  : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
- bh=/Y9EVa2BHI87Ovj2HBCovYhSiLGDPc9gJ/Cu7VKj5xw=; 
- b=qGUcwZ/dS7AGrcNCdKwXePlEVwtP/WCkQZaBFFzqv9F6Dsrdnx5bSi0aqJj9e1dMdXz4fg
- QsRxdfoxzV1lAGgSGUqY/rRqJfqm/MgzPwKIUdFI3GgqEGGyrNynUqjmgwbWWQma3xfrspJ1
- KpLbXCMZRGTQmDVtAcYSD2m4NVmfI=
+ bh=37jins9J98o2dmyWL43InbqsPQx1vgeZakJkWxToG98=; 
+ b=Nq4JU13b1eB8G1iSEo7iJd5WiQuUS//+qj/1Us44y3+vTBQ+mU0BbwBBsU9jUKdZPLNPFc
+ K+D5xr4uoNMjDTcCiOIXnlPERZjVXC3grSnMcb29NQ2gnUtr1+FNUTEw3m/htM5tgkBtezuq
+ cctjeijq+PwGpE8Ybkun2WMxyWoCw=
 From: <type4stack@gmail.com>
 Sender: <type4stack@mail136-15.atl41.mandrillapp.com>
 Subject: RATING DATA
-Return-Path: <bounce-md_30781824.56298504.v1-bf32aa5e8b0f4c0796f540692b6b6ad1@mandrillapp.com>
-Received: from [208.54.37.190] by mandrillapp.com id bf32aa5e8b0f4c0796f540692b6b6ad1; Fri, 23 Oct 2015 00:53:24 +0000
+Return-Path: <bounce-md_30781824.5629b83d.v1-6fa713f8238043f78bcef4be94e91364@mandrillapp.com>
+Received: from [73.155.208.61] by mandrillapp.com id 6fa713f8238043f78bcef4be94e91364; Fri, 23 Oct 2015 04:31:57 +0000
 To: ROBOT <type4stack@gmail.com>
 X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
-X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.bf32aa5e8b0f4c0796f540692b6b6ad1
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.6fa713f8238043f78bcef4be94e91364
 X-Mandrill-User: md_30781824
-Message-Id: <30781824.20151023005324.562985041f2975.74306250@mail136-15.atl41.mandrillapp.com>
-Date: Fri, 23 Oct 2015 00:53:24 +0000
+Message-Id: <30781824.20151023043157.5629b83d9fd151.47800248@mail136-15.atl41.mandrillapp.com>
+Date: Fri, 23 Oct 2015 04:31:57 +0000
 MIME-Version: 1.0
-Content-Type: multipart/alternative; boundary="_av-NLKCA67ZdD74w0h-gO1OQg"
+Content-Type: multipart/alternative; boundary="_av-i8qXjyaLZMEYSdwmyHFBSQ"
 
---_av-NLKCA67ZdD74w0h-gO1OQg
+--_av-i8qXjyaLZMEYSdwmyHFBSQ
 Content-Type: text/plain; charset=utf-8
-Content-Transfer-Encoding: 7bit
+Content-Transfer-Encoding: quoted-printable
 
-[{"winner":"Vedalken Orrery","options":["Vedalken Orrery","Mystic
-Snake"]},{"winner":"Ethereal Ambush","options":["Ethereal Ambush","Ritual
-of the Returned"]},{"winner":"Fall of the Gavel","options":["Ritual of the
-Returned","Fall of the Gavel"]},{"winner":"Dack's
-Duplicate","options":["Shipbreaker Kraken","Dack's
-Duplicate"]},{"winner":"Cauldron Dance","options":["Cauldron
-Dance","Decorated Griffin"]},{"winner":"Phthisis","options":["Rite of
-Replication","Phthisis"]},{"winner":"Deepfire
-Elemental","options":["Deepfire Elemental","Kederekt
-Leviathan"]},{"winner":"Stolen Identity","options":["Bosh, Iron
-Golem","Stolen Identity"]},{"winner":"Magister Sphinx","options":["Magister
-Sphinx","Absorb"]},{"winner":"Sorin's Vengeance","options":["Voidmage
-Apprentice","Sorin's Vengeance"]},{"winner":"Mystic
-Genesis","options":["Mystic Genesis","Prahv, Spires of Order"]}]
---_av-NLKCA67ZdD74w0h-gO1OQg
+[{"winner":"Decree of Silence","options":["Decree of Silence","Resolute
+Archangel"]},{"winner":"Tower of Eons","options":["Master of
+Cruelties","Tower of Eons"]},{"winner":"Brilliant
+Ultimatum","options":["Brilliant Ultimatum","Fold into
+=C3=86ther"]},{"winner":"Blatant Thievery","options":["Blatant
+Thievery","Master of Cruelties"]},{"winner":"Blatant
+Thievery","options":["Blatant Thievery","Bogardan
+Hellkite"]},{"winner":"Desertion","options":["Gaea's
+Revenge","Desertion"]},{"winner":"Decorated Griffin","options":["Plated
+Slagwurm","Decorated Griffin"]},{"winner":"Sunhome, Fortress of the
+Legion","options":["Sunhome, Fortress of the Legion","Hoverguard
+Sweepers"]},{"winner":"Living Lore","options":["Gaea's Revenge","Living
+Lore"]},{"winner":"Chromeshell Crab","options":["Tree of
+Redemption","Chromeshell Crab"]},{"winner":"Bogardan
+Hellkite","options":["Bogardan Hellkite","Mystic Genesis"]}]
+
+--_av-i8qXjyaLZMEYSdwmyHFBSQ
 Content-Type: text/html; charset=utf-8
 Content-Transfer-Encoding: quoted-printable
 
-[{"winner":"Vedalken Orrery","options":["Vedalken Orrery","Mystic Snake"]},=
-{"winner":"Ethereal Ambush","options":["Ethereal Ambush","Ritual of the Ret=
-urned"]},{"winner":"Fall of the Gavel","options":["Ritual of the Returned",=
-"Fall of the Gavel"]},{"winner":"Dack's Duplicate","options":["Shipbreaker =
-Kraken","Dack's Duplicate"]},{"winner":"Cauldron Dance","options":["Cauldro=
-n Dance","Decorated Griffin"]},{"winner":"Phthisis","options":["Rite of Rep=
-lication","Phthisis"]},{"winner":"Deepfire Elemental","options":["Deepfire =
-Elemental","Kederekt Leviathan"]},{"winner":"Stolen Identity","options":["B=
-osh, Iron Golem","Stolen Identity"]},{"winner":"Magister Sphinx","options":=
-["Magister Sphinx","Absorb"]},{"winner":"Sorin's Vengeance","options":["Voi=
-dmage Apprentice","Sorin's Vengeance"]},{"winner":"Mystic Genesis","options=
-":["Mystic Genesis","Prahv, Spires of Order"]}]<img src=3D"http://mandrilla=
-pp.com/track/open.php?u=3D30781824&id=3Dbf32aa5e8b0f4c0796f540692b6b6ad1" h=
-eight=3D"1" width=3D"1">
+[{"winner":"Decree of Silence","options":["Decree of Silence","Resolute Arc=
+hangel"]},{"winner":"Tower of Eons","options":["Master of Cruelties","Tower=
+ of Eons"]},{"winner":"Brilliant Ultimatum","options":["Brilliant Ultimatum=
+","Fold into =C3=86ther"]},{"winner":"Blatant Thievery","options":["Blatant=
+ Thievery","Master of Cruelties"]},{"winner":"Blatant Thievery","options":[=
+"Blatant Thievery","Bogardan Hellkite"]},{"winner":"Desertion","options":["=
+Gaea's Revenge","Desertion"]},{"winner":"Decorated Griffin","options":["Pla=
+ted Slagwurm","Decorated Griffin"]},{"winner":"Sunhome, Fortress of the Leg=
+ion","options":["Sunhome, Fortress of the Legion","Hoverguard Sweepers"]},{=
+"winner":"Living Lore","options":["Gaea's Revenge","Living Lore"]},{"winner=
+":"Chromeshell Crab","options":["Tree of Redemption","Chromeshell Crab"]},{=
+"winner":"Bogardan Hellkite","options":["Bogardan Hellkite","Mystic Genesis=
+"]}]<img src=3D"http://mandrillapp.com/track/open.php?u=3D30781824&id=3D6fa=
+713f8238043f78bcef4be94e91364" height=3D"1" width=3D"1">
 
---_av-NLKCA67ZdD74w0h-gO1OQg--
+--_av-i8qXjyaLZMEYSdwmyHFBSQ--
 
 
 From 1515770392723262844@xxx Thu Oct 22 22:01:33 +0000 2015
@@ -836,6 +838,99 @@ s Champion"]}]<img src=3D"http://mandrillapp.com/track/open.php?u=3D3078182=
 4&id=3D9a00343b196543baac3dffd322fe98f5" height=3D"1" width=3D"1">
 
 --_av-qptOvfRUBDSIY8qz3Wt0jg--
+
+
+From 1515781204664183123@xxx Fri Oct 23 00:53:24 +0000 2015
+X-GM-THRID: 1515781204664183123
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp849722ief;
+        Thu, 22 Oct 2015 17:53:24 -0700 (PDT)
+X-Received: by 10.129.132.83 with SMTP id u80mr13527922ywf.187.1445561604455;
+        Thu, 22 Oct 2015 17:53:24 -0700 (PDT)
+Return-Path: <bounce-md_30781824.56298504.v1-bf32aa5e8b0f4c0796f540692b6b6ad1@mandrillapp.com>
+Received: from mail136-15.atl41.mandrillapp.com (mail136-15.atl41.mandrillapp.com. [198.2.136.15])
+        by mx.google.com with ESMTPS id o76si7548950ywd.154.2015.10.22.17.53.24
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 22 Oct 2015 17:53:24 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.56298504.v1-bf32aa5e8b0f4c0796f540692b6b6ad1@mandrillapp.com designates 198.2.136.15 as permitted sender) client-ip=198.2.136.15;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.56298504.v1-bf32aa5e8b0f4c0796f540692b6b6ad1@mandrillapp.com designates 198.2.136.15 as permitted sender) smtp.mailfrom=bounce-md_30781824.56298504.v1-bf32aa5e8b0f4c0796f540692b6b6ad1@mandrillapp.com;
+       dkim=pass header.i=@mail136-15.atl41.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail136-15.atl41.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail136-15.atl41.mandrillapp.com;
+ bh=b5hh+/UNVcqOprcAqgpAN2MxJVA=;
+ b=jPuWbeWtkRj6P7aNXImlKJuoItK794vpJLO3/7UTCGWXzWWF/pJZ1phT4nHAmfr7gxqUGGWUjt1I
+   9oT/qfUzJlPPFJCiwGhcfKgZiMCLR9j/AFveUHcim+wcwFQzBGzeayZcRlNa3GJzrT8qq6bL1XYT
+   3CM1g2q8gxeTzTqNzhI=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail136-15.atl41.mandrillapp.com;
+ b=G226ELgLYOOet1NwkIhOK5ZeamJCGiCMEZF4IsQR7IEiZ72EXfT77ZIypEOAPNPhPQRB3ogcYqTk
+   HLvqSIsrcnKDo5AoyZ3IaX/wc99D8O53WnxSgL+ggNc73nw7Y8geF9dyMIfay/Cr8NweHR8pmIPg
+   Cv7bjtZQQFWJL90K4HU=;
+Received: from pmta04.mandrill.prod.atl01.rsglab.com (127.0.0.1) by mail136-15.atl41.mandrillapp.com id h562g81sb1kb for <type4stack@gmail.com>; Fri, 23 Oct 2015 00:53:24 +0000 (envelope-from <bounce-md_30781824.56298504.v1-bf32aa5e8b0f4c0796f540692b6b6ad1@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1445561604; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=/Y9EVa2BHI87Ovj2HBCovYhSiLGDPc9gJ/Cu7VKj5xw=; 
+ b=qGUcwZ/dS7AGrcNCdKwXePlEVwtP/WCkQZaBFFzqv9F6Dsrdnx5bSi0aqJj9e1dMdXz4fg
+ QsRxdfoxzV1lAGgSGUqY/rRqJfqm/MgzPwKIUdFI3GgqEGGyrNynUqjmgwbWWQma3xfrspJ1
+ KpLbXCMZRGTQmDVtAcYSD2m4NVmfI=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail136-15.atl41.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.56298504.v1-bf32aa5e8b0f4c0796f540692b6b6ad1@mandrillapp.com>
+Received: from [208.54.37.190] by mandrillapp.com id bf32aa5e8b0f4c0796f540692b6b6ad1; Fri, 23 Oct 2015 00:53:24 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.bf32aa5e8b0f4c0796f540692b6b6ad1
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151023005324.562985041f2975.74306250@mail136-15.atl41.mandrillapp.com>
+Date: Fri, 23 Oct 2015 00:53:24 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-NLKCA67ZdD74w0h-gO1OQg"
+
+--_av-NLKCA67ZdD74w0h-gO1OQg
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+[{"winner":"Vedalken Orrery","options":["Vedalken Orrery","Mystic
+Snake"]},{"winner":"Ethereal Ambush","options":["Ethereal Ambush","Ritual
+of the Returned"]},{"winner":"Fall of the Gavel","options":["Ritual of the
+Returned","Fall of the Gavel"]},{"winner":"Dack's
+Duplicate","options":["Shipbreaker Kraken","Dack's
+Duplicate"]},{"winner":"Cauldron Dance","options":["Cauldron
+Dance","Decorated Griffin"]},{"winner":"Phthisis","options":["Rite of
+Replication","Phthisis"]},{"winner":"Deepfire
+Elemental","options":["Deepfire Elemental","Kederekt
+Leviathan"]},{"winner":"Stolen Identity","options":["Bosh, Iron
+Golem","Stolen Identity"]},{"winner":"Magister Sphinx","options":["Magister
+Sphinx","Absorb"]},{"winner":"Sorin's Vengeance","options":["Voidmage
+Apprentice","Sorin's Vengeance"]},{"winner":"Mystic
+Genesis","options":["Mystic Genesis","Prahv, Spires of Order"]}]
+--_av-NLKCA67ZdD74w0h-gO1OQg
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+[{"winner":"Vedalken Orrery","options":["Vedalken Orrery","Mystic Snake"]},=
+{"winner":"Ethereal Ambush","options":["Ethereal Ambush","Ritual of the Ret=
+urned"]},{"winner":"Fall of the Gavel","options":["Ritual of the Returned",=
+"Fall of the Gavel"]},{"winner":"Dack's Duplicate","options":["Shipbreaker =
+Kraken","Dack's Duplicate"]},{"winner":"Cauldron Dance","options":["Cauldro=
+n Dance","Decorated Griffin"]},{"winner":"Phthisis","options":["Rite of Rep=
+lication","Phthisis"]},{"winner":"Deepfire Elemental","options":["Deepfire =
+Elemental","Kederekt Leviathan"]},{"winner":"Stolen Identity","options":["B=
+osh, Iron Golem","Stolen Identity"]},{"winner":"Magister Sphinx","options":=
+["Magister Sphinx","Absorb"]},{"winner":"Sorin's Vengeance","options":["Voi=
+dmage Apprentice","Sorin's Vengeance"]},{"winner":"Mystic Genesis","options=
+":["Mystic Genesis","Prahv, Spires of Order"]}]<img src=3D"http://mandrilla=
+pp.com/track/open.php?u=3D30781824&id=3Dbf32aa5e8b0f4c0796f540692b6b6ad1" h=
+eight=3D"1" width=3D"1">
+
+--_av-NLKCA67ZdD74w0h-gO1OQg--
 
 
 From 1515781280453513901@xxx Fri Oct 23 00:54:36 +0000 2015
@@ -2709,101 +2804,6 @@ andrillapp.com/track/open.php?u=3D30781824&id=3Df52b70745e8846f6b3d417fc688=
 33a5b" height=3D"1" width=3D"1">
 
 --_av--d3YjMURZK86-7NfbFsjTQ--
-
-
-From 1515794955898415661@xxx Fri Oct 23 04:31:58 +0000 2015
-X-GM-THRID: 1515794955898415661
-X-Gmail-Labels: Sent,data
-Delivered-To: type4stack@gmail.com
-Received: by 10.64.23.142 with SMTP id m14csp917693ief;
-        Thu, 22 Oct 2015 21:31:58 -0700 (PDT)
-X-Received: by 10.129.130.7 with SMTP id s7mr13834519ywf.29.1445574718095;
-        Thu, 22 Oct 2015 21:31:58 -0700 (PDT)
-Return-Path: <bounce-md_30781824.5629b83d.v1-6fa713f8238043f78bcef4be94e91364@mandrillapp.com>
-Received: from mail136-15.atl41.mandrillapp.com (mail136-15.atl41.mandrillapp.com. [198.2.136.15])
-        by mx.google.com with ESMTPS id k190si7903779ywg.290.2015.10.22.21.31.57
-        for <type4stack@gmail.com>
-        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
-        Thu, 22 Oct 2015 21:31:58 -0700 (PDT)
-Received-SPF: pass (google.com: domain of bounce-md_30781824.5629b83d.v1-6fa713f8238043f78bcef4be94e91364@mandrillapp.com designates 198.2.136.15 as permitted sender) client-ip=198.2.136.15;
-Authentication-Results: mx.google.com;
-       spf=pass (google.com: domain of bounce-md_30781824.5629b83d.v1-6fa713f8238043f78bcef4be94e91364@mandrillapp.com designates 198.2.136.15 as permitted sender) smtp.mailfrom=bounce-md_30781824.5629b83d.v1-6fa713f8238043f78bcef4be94e91364@mandrillapp.com;
-       dkim=pass header.i=@mail136-15.atl41.mandrillapp.com;
-       dkim=pass header.i=@mandrillapp.com;
-       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail136-15.atl41.mandrillapp.com;
- h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail136-15.atl41.mandrillapp.com;
- bh=ekEJuelvaa3nQgoC+PBesSvOKbc=;
- b=hDlnwHhwI+1QvEUT3sqsQdrbW4ioU0HdTNzJlkV16vVsG+/AxO23MXCQOG8VKjqB2m8JwuPffiYQ
-   n0IK3MAKx/2YXA4n1ohBbpZHxC3hvOsM16z9z9K9j49i43w2Fp5MDRi4r75yJYLoq1rhlMy8TsC4
-   OWwcM3xElLQ7dNn1wOA=
-DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail136-15.atl41.mandrillapp.com;
- b=ZDRL3ibmKipG8/stCfGeAK0ID2c7u2kEvCuoZ5Bhse8cB5XFqwnqpTgeTJxcEFzr9VB4LgNOg+M1
-   ScBHnegPZnT0dBKDqEgtUxCWz3/CQsk60/qaNlpUCiCCaGSls0DVvx4TG8BYXys054tBLV9FDxQ9
-   W7/uW0Ql02An39x8wKA=;
-Received: from pmta04.mandrill.prod.atl01.rsglab.com (127.0.0.1) by mail136-15.atl41.mandrillapp.com id h56s3s1sb1ki for <type4stack@gmail.com>; Fri, 23 Oct 2015 04:31:57 +0000 (envelope-from <bounce-md_30781824.5629b83d.v1-6fa713f8238043f78bcef4be94e91364@mandrillapp.com>)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
- i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1445574717; h=From : 
- Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
- : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
- bh=37jins9J98o2dmyWL43InbqsPQx1vgeZakJkWxToG98=; 
- b=Nq4JU13b1eB8G1iSEo7iJd5WiQuUS//+qj/1Us44y3+vTBQ+mU0BbwBBsU9jUKdZPLNPFc
- K+D5xr4uoNMjDTcCiOIXnlPERZjVXC3grSnMcb29NQ2gnUtr1+FNUTEw3m/htM5tgkBtezuq
- cctjeijq+PwGpE8Ybkun2WMxyWoCw=
-From: <type4stack@gmail.com>
-Sender: <type4stack@mail136-15.atl41.mandrillapp.com>
-Subject: RATING DATA
-Return-Path: <bounce-md_30781824.5629b83d.v1-6fa713f8238043f78bcef4be94e91364@mandrillapp.com>
-Received: from [73.155.208.61] by mandrillapp.com id 6fa713f8238043f78bcef4be94e91364; Fri, 23 Oct 2015 04:31:57 +0000
-To: ROBOT <type4stack@gmail.com>
-X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
-X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.6fa713f8238043f78bcef4be94e91364
-X-Mandrill-User: md_30781824
-Message-Id: <30781824.20151023043157.5629b83d9fd151.47800248@mail136-15.atl41.mandrillapp.com>
-Date: Fri, 23 Oct 2015 04:31:57 +0000
-MIME-Version: 1.0
-Content-Type: multipart/alternative; boundary="_av-i8qXjyaLZMEYSdwmyHFBSQ"
-
---_av-i8qXjyaLZMEYSdwmyHFBSQ
-Content-Type: text/plain; charset=utf-8
-Content-Transfer-Encoding: quoted-printable
-
-[{"winner":"Decree of Silence","options":["Decree of Silence","Resolute
-Archangel"]},{"winner":"Tower of Eons","options":["Master of
-Cruelties","Tower of Eons"]},{"winner":"Brilliant
-Ultimatum","options":["Brilliant Ultimatum","Fold into
-=C3=86ther"]},{"winner":"Blatant Thievery","options":["Blatant
-Thievery","Master of Cruelties"]},{"winner":"Blatant
-Thievery","options":["Blatant Thievery","Bogardan
-Hellkite"]},{"winner":"Desertion","options":["Gaea's
-Revenge","Desertion"]},{"winner":"Decorated Griffin","options":["Plated
-Slagwurm","Decorated Griffin"]},{"winner":"Sunhome, Fortress of the
-Legion","options":["Sunhome, Fortress of the Legion","Hoverguard
-Sweepers"]},{"winner":"Living Lore","options":["Gaea's Revenge","Living
-Lore"]},{"winner":"Chromeshell Crab","options":["Tree of
-Redemption","Chromeshell Crab"]},{"winner":"Bogardan
-Hellkite","options":["Bogardan Hellkite","Mystic Genesis"]}]
-
---_av-i8qXjyaLZMEYSdwmyHFBSQ
-Content-Type: text/html; charset=utf-8
-Content-Transfer-Encoding: quoted-printable
-
-[{"winner":"Decree of Silence","options":["Decree of Silence","Resolute Arc=
-hangel"]},{"winner":"Tower of Eons","options":["Master of Cruelties","Tower=
- of Eons"]},{"winner":"Brilliant Ultimatum","options":["Brilliant Ultimatum=
-","Fold into =C3=86ther"]},{"winner":"Blatant Thievery","options":["Blatant=
- Thievery","Master of Cruelties"]},{"winner":"Blatant Thievery","options":[=
-"Blatant Thievery","Bogardan Hellkite"]},{"winner":"Desertion","options":["=
-Gaea's Revenge","Desertion"]},{"winner":"Decorated Griffin","options":["Pla=
-ted Slagwurm","Decorated Griffin"]},{"winner":"Sunhome, Fortress of the Leg=
-ion","options":["Sunhome, Fortress of the Legion","Hoverguard Sweepers"]},{=
-"winner":"Living Lore","options":["Gaea's Revenge","Living Lore"]},{"winner=
-":"Chromeshell Crab","options":["Tree of Redemption","Chromeshell Crab"]},{=
-"winner":"Bogardan Hellkite","options":["Bogardan Hellkite","Mystic Genesis=
-"]}]<img src=3D"http://mandrillapp.com/track/open.php?u=3D30781824&id=3D6fa=
-713f8238043f78bcef4be94e91364" height=3D"1" width=3D"1">
-
---_av-i8qXjyaLZMEYSdwmyHFBSQ--
 
 
 From 1515948852873449077@xxx Sat Oct 24 21:18:05 +0000 2015
@@ -10196,5 +10196,2012 @@ andrillapp.com/track/open.php?u=3D30781824&id=3Dc115e8ec8b364607a2d4b8ad962=
 8debf" height=3D"1" width=3D"1">
 
 --_av-Q8LeHkPLxNh4VToJEWEhrg--
+
+
+From 1516241599016697936@xxx Wed Oct 28 02:51:10 +0000 2015
+X-GM-THRID: 1516241599016697936
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp2115431ief;
+        Tue, 27 Oct 2015 19:51:10 -0700 (PDT)
+X-Received: by 10.13.203.141 with SMTP id n135mr10847593ywd.335.1446000670589;
+        Tue, 27 Oct 2015 19:51:10 -0700 (PDT)
+Return-Path: <bounce-md_30781824.5630381e.v1-5559badff3614c71976cd3a6e4c1fbb0@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id y71si15406234ywy.309.2015.10.27.19.51.10
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 27 Oct 2015 19:51:10 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.5630381e.v1-5559badff3614c71976cd3a6e4c1fbb0@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.5630381e.v1-5559badff3614c71976cd3a6e4c1fbb0@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.5630381e.v1-5559badff3614c71976cd3a6e4c1fbb0@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=4IgB9GK3x/6O9vwb9V3F/6snOxY=;
+ b=F0u7EeUJd1YDUG+hSF+lOfJ/qPiIGV70Vaik92Ipbs9wnr/SX/h089pJ+44PU07FdWdKBrbbjz9i
+   QCCj4vIY74kaf1h1NOGY4MnHDRr70WCkHgnXDWhGNXaFjVQXGOR04KvzZT6sf7zcwK5KjOpwmMEi
+   SqClriZU9+q2wAmG9+4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=Y9BLHbT2zGk8zC14K7aaODe5W6CVx1PfLag5s+Z5TNzT+BA1hcTlNHEf/kFXKHgMN23ftS1zCnaE
+   ucWXFk1Bgs7/C8dNAHBqjQ35NyycL4sk7myadlwpPxx0OEhVJVhGBbGBDAd4bziZHoO79fzxqHbo
+   5tTzD0kTLkuU1Dpbwdc=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h60s1s174bkb for <type4stack@gmail.com>; Wed, 28 Oct 2015 02:51:10 +0000 (envelope-from <bounce-md_30781824.5630381e.v1-5559badff3614c71976cd3a6e4c1fbb0@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446000670; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=qMfocnKsbJo4S7K7JsHbTQLumeeOECAqwNA/7bV7kYI=; 
+ b=d2TiA5Hk6DXfvnp+DmrLSMfMz1FWED5ne4EAXKdi3K+YeBV+TlqqZ9wWbGYXVQtQj+WtS+
+ dF6Aa8k27WFnMCwgoRYXl0EceQkrynwHfRbH4A7ei9bcA1ih0fRSZMtqAbNXtiGdtNH8+Dph
+ kwtsaHnacT0o2JtBIlkSvViIpDO3s=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.5630381e.v1-5559badff3614c71976cd3a6e4c1fbb0@mandrillapp.com>
+Received: from [24.90.224.69] by mandrillapp.com id 5559badff3614c71976cd3a6e4c1fbb0; Wed, 28 Oct 2015 02:51:10 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.5559badff3614c71976cd3a6e4c1fbb0
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151028025110.5630381e52a9c1.73169906@mail186-28.suw21.mandrillapp.com>
+Date: Wed, 28 Oct 2015 02:51:10 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-9spsjnovNHaLyImPY7aqdg"
+
+--_av-9spsjnovNHaLyImPY7aqdg
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"Qwerty","timestamp":"2015-10-28T02:51:08.222Z","data":[{"winner":"Prophet
+of Kruphix","options":["Prophet of Kruphix","Rakdos the
+Defiler"]},{"winner":"Ulamog, the Ceaseless Hunger","options":["Ulamog, the
+Ceaseless Hunger","Hidetsugu's Second
+Rite"]},{"winner":"Worldfire","options":["Fleetfeather
+Cockatrice","Worldfire"]},{"winner":"Gather Specimens","options":["Gather
+Specimens","Suncrusher"]},{"winner":"Honorable
+Passage","options":["Honorable Passage","Spelljack"]},{"winner":"Essence
+Backlash","options":["Essence Backlash","Kheru
+Spellsnatcher"]},{"winner":"Riddle of Lightning","options":["Riddle of
+Lightning","Pathrazer of Ulamog"]},{"winner":"Essence
+Backlash","options":["Ready/Willing","Essence
+Backlash"]},{"winner":"Suncrusher","options":["Suncrusher","Thornling"]},{"winner":"Gaea's
+Revenge","options":["Gaea's Revenge","Dissipate"]},{"winner":"Merciless
+Eviction","options":["Merciless Eviction","Ulamog, the Ceaseless
+Hunger"]}]}
+--_av-9spsjnovNHaLyImPY7aqdg
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"Qwerty","timestamp":"2015-10-28T02:51:08.222Z","data":[{"winne=
+r":"Prophet of Kruphix","options":["Prophet of Kruphix","Rakdos the Defiler=
+"]},{"winner":"Ulamog, the Ceaseless Hunger","options":["Ulamog, the Ceasel=
+ess Hunger","Hidetsugu's Second Rite"]},{"winner":"Worldfire","options":["F=
+leetfeather Cockatrice","Worldfire"]},{"winner":"Gather Specimens","options=
+":["Gather Specimens","Suncrusher"]},{"winner":"Honorable Passage","options=
+":["Honorable Passage","Spelljack"]},{"winner":"Essence Backlash","options"=
+:["Essence Backlash","Kheru Spellsnatcher"]},{"winner":"Riddle of Lightning=
+","options":["Riddle of Lightning","Pathrazer of Ulamog"]},{"winner":"Essen=
+ce Backlash","options":["Ready/Willing","Essence Backlash"]},{"winner":"Sun=
+crusher","options":["Suncrusher","Thornling"]},{"winner":"Gaea's Revenge","=
+options":["Gaea's Revenge","Dissipate"]},{"winner":"Merciless Eviction","op=
+tions":["Merciless Eviction","Ulamog, the Ceaseless Hunger"]}]}<img src=3D"=
+http://mandrillapp.com/track/open.php?u=3D30781824&id=3D5559badff3614c71976=
+cd3a6e4c1fbb0" height=3D"1" width=3D"1">
+
+--_av-9spsjnovNHaLyImPY7aqdg--
+
+
+From 1516241709444628707@xxx Wed Oct 28 02:52:55 +0000 2015
+X-GM-THRID: 1516241709444628707
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp2116003ief;
+        Tue, 27 Oct 2015 19:52:56 -0700 (PDT)
+X-Received: by 10.129.88.87 with SMTP id m84mr32354244ywb.73.1446000776070;
+        Tue, 27 Oct 2015 19:52:56 -0700 (PDT)
+Return-Path: <bounce-md_30781824.56303887.v1-2afa4c8cb00148caa45d8fb7966c54fe@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id s67si19986465ywe.383.2015.10.27.19.52.55
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 27 Oct 2015 19:52:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.56303887.v1-2afa4c8cb00148caa45d8fb7966c54fe@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.56303887.v1-2afa4c8cb00148caa45d8fb7966c54fe@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.56303887.v1-2afa4c8cb00148caa45d8fb7966c54fe@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=pIsGwu2JnzGnMuWLl9DEdJvjUQU=;
+ b=EIwZjegjwjBJt3M6GqP+FdNpqGHRepICmQhDMORRkEmvCpG/3QQPo4SGDdIM9q5gEhV0pXSVs5CB
+   senTjGnasUgOvzAOZSxQpD2mDgvOvfrSimuaItMHMTi/Th5oOI5m9tn6jxvOAcpqFUyoWSVNlv6n
+   QaDYvqaLH6InHzs3VG0=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=dCL3hBk9018t4Q43Vu85BOg82sTk9XlQU9HEMh9jGgPCsbnthGjDtB9u8dtALY/k1Mx7gDh8mpgY
+   zwNxOEtVnKZo8xJb/aVA1RzH5LUHH1WCOdHAsSxJQcusvTH/2LqVlG7GxW/MwEpcVErYxK9tdIMT
+   MJ8m7ZYK9ysflqtq548=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h60s8g174bke for <type4stack@gmail.com>; Wed, 28 Oct 2015 02:52:55 +0000 (envelope-from <bounce-md_30781824.56303887.v1-2afa4c8cb00148caa45d8fb7966c54fe@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446000775; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=qxIgSm6J+VVrGqtHzz8Wiy/Am0N/ynJ5cmdJkMxYxe4=; 
+ b=oc8LqzrVVinNNXxTM5CPAS39CO4AUqbXmMSpMNqsYkUKYecoVvvXgvClT5GigJEiIXw0Dt
+ i27LaWumVHYH15MKp7NI9ywNtZykmA2b+YeFk8fEWmVvzy/GmGONsjM7Z2QC8OQW0pyzNZHG
+ Zi55F0mh5kC9UAWl2pyu6GLAh2KBc=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.56303887.v1-2afa4c8cb00148caa45d8fb7966c54fe@mandrillapp.com>
+Received: from [24.90.224.69] by mandrillapp.com id 2afa4c8cb00148caa45d8fb7966c54fe; Wed, 28 Oct 2015 02:52:55 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.2afa4c8cb00148caa45d8fb7966c54fe
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151028025255.56303887d2ce37.43313714@mail186-28.suw21.mandrillapp.com>
+Date: Wed, 28 Oct 2015 02:52:55 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-IwNMRLnH1Kl493pXcgtvQg"
+
+--_av-IwNMRLnH1Kl493pXcgtvQg
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"Qwerty","timestamp":"2015-10-28T02:52:53.944Z","data":[{"winner":"Firemane
+Angel","options":["Fleetfeather Cockatrice","Firemane
+Angel"]},{"winner":"Voidmage Prodigy","options":["Decorated
+Griffin","Voidmage Prodigy"]},{"winner":"Divine
+Deflection","options":["Boros Charm","Divine Deflection"]},{"winner":"Grim
+Return","options":["Grim Return","Skeletal Wurm"]},{"winner":"Chronomantic
+Escape","options":["Ulamog, the Ceaseless Hunger","Chronomantic
+Escape"]},{"winner":"Resolute Archangel","options":["Tower of
+Eons","Resolute Archangel"]},{"winner":"Cauldron
+Dance","options":["Cauldron Dance","Silumgar's
+Command"]},{"winner":"Dromar's Charm","options":["Sentinel of the Eternal
+Watch","Dromar's Charm"]},{"winner":"Last Word","options":["Last
+Word","Garza Zol, Plague Queen"]},{"winner":"Infernal Spawn of
+Evil","options":["Infernal Spawn of Evil","Ashcloud
+Phoenix"]},{"winner":"Alchemist's Refuge","options":["Alchemist's
+Refuge","Vault of the Archangel"]}]}
+--_av-IwNMRLnH1Kl493pXcgtvQg
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"Qwerty","timestamp":"2015-10-28T02:52:53.944Z","data":[{"winne=
+r":"Firemane Angel","options":["Fleetfeather Cockatrice","Firemane Angel"]}=
+,{"winner":"Voidmage Prodigy","options":["Decorated Griffin","Voidmage Prod=
+igy"]},{"winner":"Divine Deflection","options":["Boros Charm","Divine Defle=
+ction"]},{"winner":"Grim Return","options":["Grim Return","Skeletal Wurm"]}=
+,{"winner":"Chronomantic Escape","options":["Ulamog, the Ceaseless Hunger",=
+"Chronomantic Escape"]},{"winner":"Resolute Archangel","options":["Tower of=
+ Eons","Resolute Archangel"]},{"winner":"Cauldron Dance","options":["Cauldr=
+on Dance","Silumgar's Command"]},{"winner":"Dromar's Charm","options":["Sen=
+tinel of the Eternal Watch","Dromar's Charm"]},{"winner":"Last Word","optio=
+ns":["Last Word","Garza Zol, Plague Queen"]},{"winner":"Infernal Spawn of E=
+vil","options":["Infernal Spawn of Evil","Ashcloud Phoenix"]},{"winner":"Al=
+chemist's Refuge","options":["Alchemist's Refuge","Vault of the Archangel"]=
+}]}<img src=3D"http://mandrillapp.com/track/open.php?u=3D30781824&id=3D2afa=
+4c8cb00148caa45d8fb7966c54fe" height=3D"1" width=3D"1">
+
+--_av-IwNMRLnH1Kl493pXcgtvQg--
+
+
+From 1516241756036081569@xxx Wed Oct 28 02:53:40 +0000 2015
+X-GM-THRID: 1516241756036081569
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp2116185ief;
+        Tue, 27 Oct 2015 19:53:39 -0700 (PDT)
+X-Received: by 10.129.114.8 with SMTP id n8mr18980990ywc.334.1446000819756;
+        Tue, 27 Oct 2015 19:53:39 -0700 (PDT)
+Return-Path: <bounce-md_30781824.563038b3.v1-7e28a3eec8fa4988af8174d446fafb3b@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id j2si13652443ywf.411.2015.10.27.19.53.39
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 27 Oct 2015 19:53:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.563038b3.v1-7e28a3eec8fa4988af8174d446fafb3b@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.563038b3.v1-7e28a3eec8fa4988af8174d446fafb3b@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.563038b3.v1-7e28a3eec8fa4988af8174d446fafb3b@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=hoXXloEWBAjm7OvHMTLp4MaQRbE=;
+ b=mTjGTbA9tyimFMlWIO0ZemF5qQSDP0D+vdA9UTpPLwoeKuaR44mnzwVUqokiWNrNhW57+7zbmAyJ
+   zsuv65RYqyYkkXAuoV5bzJhgGNt7TQoqLG2EL8HpCORwLoZz3RME+DJC6UM/PG9CjF4vkx/JSJRu
+   10s1mfkKtZNwmn9ArzM=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=AkpKZQdOh3BXLn/YAHO9nvXpoXuxB95FwxZy9pNNljTkSuZu/Nuavkb3jYlefKC6whgzr89FIxt9
+   xxc3cmvmlsGqClQt5kfuUyGpc9dkdDiY1fZoK+TpiNS5Z9x1C/vpa4qD8xe9yIwoI/91TmTXFrZL
+   rq2z6z+7SMiPX9TA6b0=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h60sb6174bkr for <type4stack@gmail.com>; Wed, 28 Oct 2015 02:53:39 +0000 (envelope-from <bounce-md_30781824.563038b3.v1-7e28a3eec8fa4988af8174d446fafb3b@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446000819; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=OcgKHiAFImDjPaR/huRdLrA6IKlf3EYAMW7iDPqI41A=; 
+ b=akek+jwoGBaDyXa94klPV/nWvM3QPtOqkA6znHZFaX19gPPc3nazeNiN2bSPb8Dx/WwJbM
+ /B2r5PayyAjuEfxqukUiMJr4NEMSWDV0aWl5oZ85MLMt+uLdrcxFCGdSld64Mf2RPDL1JNmW
+ rKncXo4xLfphrolTxoLYt6/DGi94c=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.563038b3.v1-7e28a3eec8fa4988af8174d446fafb3b@mandrillapp.com>
+Received: from [24.90.224.69] by mandrillapp.com id 7e28a3eec8fa4988af8174d446fafb3b; Wed, 28 Oct 2015 02:53:39 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.7e28a3eec8fa4988af8174d446fafb3b
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151028025339.563038b389c2d6.92419906@mail186-28.suw21.mandrillapp.com>
+Date: Wed, 28 Oct 2015 02:53:39 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-De5uJr_GtEyo_w0V_XMr8g"
+
+--_av-De5uJr_GtEyo_w0V_XMr8g
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"Qwerty","timestamp":"2015-10-28T02:53:38.071Z","data":[{"winner":"Render
+Silent","options":["Teferi, Mage of Zhalfir","Render
+Silent"]},{"winner":"Hunting Pack","options":["Betrayal of Flesh","Hunting
+Pack"]},{"winner":"Maelstrom Wanderer","options":["Rakdos the
+Defiler","Maelstrom Wanderer"]},{"winner":"Volcanic
+Vision","options":["Arcane Denial","Volcanic Vision"]},{"winner":"Prophet
+of Kruphix","options":["Prophet of Kruphix","Hoverguard
+Sweepers"]},{"winner":"Minamo's Meddling","options":["Minamo's
+Meddling","Thornling"]},{"winner":"Godsire","options":["Godsire","Dictate
+of the Twin Gods"]},{"winner":"Evangelize","options":["Evangelize","Ulamog,
+the Ceaseless Hunger"]},{"winner":"Foul Renewal","options":["Decree of
+Savagery","Foul Renewal"]},{"winner":"Angelic
+Arbiter","options":["Dissipate","Angelic Arbiter"]},{"winner":"Bearer of
+the Heavens","options":["Bearer of the Heavens","Spell Crumple"]}]}
+--_av-De5uJr_GtEyo_w0V_XMr8g
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"Qwerty","timestamp":"2015-10-28T02:53:38.071Z","data":[{"winne=
+r":"Render Silent","options":["Teferi, Mage of Zhalfir","Render Silent"]},{=
+"winner":"Hunting Pack","options":["Betrayal of Flesh","Hunting Pack"]},{"w=
+inner":"Maelstrom Wanderer","options":["Rakdos the Defiler","Maelstrom Wand=
+erer"]},{"winner":"Volcanic Vision","options":["Arcane Denial","Volcanic Vi=
+sion"]},{"winner":"Prophet of Kruphix","options":["Prophet of Kruphix","Hov=
+erguard Sweepers"]},{"winner":"Minamo's Meddling","options":["Minamo's Medd=
+ling","Thornling"]},{"winner":"Godsire","options":["Godsire","Dictate of th=
+e Twin Gods"]},{"winner":"Evangelize","options":["Evangelize","Ulamog, the =
+Ceaseless Hunger"]},{"winner":"Foul Renewal","options":["Decree of Savagery=
+","Foul Renewal"]},{"winner":"Angelic Arbiter","options":["Dissipate","Ange=
+lic Arbiter"]},{"winner":"Bearer of the Heavens","options":["Bearer of the =
+Heavens","Spell Crumple"]}]}<img src=3D"http://mandrillapp.com/track/open.p=
+hp?u=3D30781824&id=3D7e28a3eec8fa4988af8174d446fafb3b" height=3D"1" width=
+=3D"1">
+
+--_av-De5uJr_GtEyo_w0V_XMr8g--
+
+
+From 1516259171223802430@xxx Wed Oct 28 07:30:28 +0000 2015
+X-GM-THRID: 1516259171223802430
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp2206724ief;
+        Wed, 28 Oct 2015 00:30:28 -0700 (PDT)
+X-Received: by 10.13.222.132 with SMTP id h126mr33027345ywe.128.1446017428900;
+        Wed, 28 Oct 2015 00:30:28 -0700 (PDT)
+Return-Path: <bounce-md_30781824.56307994.v1-e4d9843bc099403db06e69f05373714f@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id g65si20497679ywc.22.2015.10.28.00.30.28
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 28 Oct 2015 00:30:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.56307994.v1-e4d9843bc099403db06e69f05373714f@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.56307994.v1-e4d9843bc099403db06e69f05373714f@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.56307994.v1-e4d9843bc099403db06e69f05373714f@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=RT5LCClT4GoIUmhxpovIVnLvMU0=;
+ b=A5NGgvB7ElDgC5yqyK6kb6r8nTKdmnaVVSO4lSL0RxGInhOiJDgVtsHGcsPE34wRBTxzDmRe8YzU
+   5UYJlKw2hW4vto97FjIeDYRwPg2vYbtrnArCCM7xAMj1OimRZJjJy1mmxmEsu+05/CQWHmFrR+rF
+   Qk2OLfN94iof+YtAELY=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=kdaVkYVtivBhmsRXHpMobepa6uUxJdtDaZqDCImgNhUOJGtT0A8OROIu7PlIkIuH9lq/xBee8ME3
+   zsaBRoIiur8lXAestjxuk1lWu33avJpxKjwiv6PFD08qIFMThZN5oxYCOIxnddz+2txdaBQNgYOQ
+   L07KwtMw8xmR9OeJxm0=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h61sp8174bk6 for <type4stack@gmail.com>; Wed, 28 Oct 2015 07:30:28 +0000 (envelope-from <bounce-md_30781824.56307994.v1-e4d9843bc099403db06e69f05373714f@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446017428; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=5YHzIItIOZrE7Oyga+b5MXynbKgVtu1valmsKXnMBrM=; 
+ b=pZ348KUjD2lIrWwiCPQt1QFkvjGs6ePT1LJWjR8qERKYOAZUkj8Qb2qcK4rZuF17Kaoaix
+ ORrVL9eVnrDap7AlEVEf1NzbMIDkSOL9lVNA1Q4pWLG2W7ICyejt5BiX8mPAaVqjEkvDMKPy
+ UjE05Fs4NFSv2Zza+omYjS0LLWrMo=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.56307994.v1-e4d9843bc099403db06e69f05373714f@mandrillapp.com>
+Received: from [24.90.224.69] by mandrillapp.com id e4d9843bc099403db06e69f05373714f; Wed, 28 Oct 2015 07:30:28 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.e4d9843bc099403db06e69f05373714f
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151028073028.56307994815a33.54587297@mail186-28.suw21.mandrillapp.com>
+Date: Wed, 28 Oct 2015 07:30:28 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-GAYYGRMhJLSr4O-ibEZTvQ"
+
+--_av-GAYYGRMhJLSr4O-ibEZTvQ
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:30:26.773Z","data":[{"winner":"Mystic
+Snake","options":["Prahv, Spires of Order","Mystic
+Snake"]},{"winner":"Legacy Weapon","options":["Dream Fracture","Legacy
+Weapon"]},{"winner":"Void Winnower","options":["Desolation Twin","Void
+Winnower"]},{"winner":"Foul Renewal","options":["Kalonian Behemoth","Foul
+Renewal"]},{"winner":"Magmatic Force","options":["Autochthon
+Wurm","Magmatic Force"]},{"winner":"Summoning Trap","options":["Summoning
+Trap","Cunning Strike"]},{"winner":"Perplexing
+Chimera","options":["Makeshift Mannequin","Perplexing
+Chimera"]},{"winner":"Duneblast","options":["Duneblast","Balancing
+Act"]},{"winner":"Counterflux","options":["Counterflux","Slayers'
+Stronghold"]},{"winner":"Uktabi Kong","options":["Illusory Gains","Uktabi
+Kong"]},{"winner":"Hellcarver Demon","options":["Shipbreaker
+Kraken","Hellcarver Demon"]}]}
+--_av-GAYYGRMhJLSr4O-ibEZTvQ
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:30:26.773Z","data":[{"winne=
+r":"Mystic Snake","options":["Prahv, Spires of Order","Mystic Snake"]},{"wi=
+nner":"Legacy Weapon","options":["Dream Fracture","Legacy Weapon"]},{"winne=
+r":"Void Winnower","options":["Desolation Twin","Void Winnower"]},{"winner"=
+:"Foul Renewal","options":["Kalonian Behemoth","Foul Renewal"]},{"winner":"=
+Magmatic Force","options":["Autochthon Wurm","Magmatic Force"]},{"winner":"=
+Summoning Trap","options":["Summoning Trap","Cunning Strike"]},{"winner":"P=
+erplexing Chimera","options":["Makeshift Mannequin","Perplexing Chimera"]},=
+{"winner":"Duneblast","options":["Duneblast","Balancing Act"]},{"winner":"C=
+ounterflux","options":["Counterflux","Slayers' Stronghold"]},{"winner":"Ukt=
+abi Kong","options":["Illusory Gains","Uktabi Kong"]},{"winner":"Hellcarver=
+ Demon","options":["Shipbreaker Kraken","Hellcarver Demon"]}]}<img src=3D"h=
+ttp://mandrillapp.com/track/open.php?u=3D30781824&id=3De4d9843bc099403db06e=
+69f05373714f" height=3D"1" width=3D"1">
+
+--_av-GAYYGRMhJLSr4O-ibEZTvQ--
+
+
+From 1516259280213522331@xxx Wed Oct 28 07:32:12 +0000 2015
+X-GM-THRID: 1516259280213522331
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp2207371ief;
+        Wed, 28 Oct 2015 00:32:12 -0700 (PDT)
+X-Received: by 10.129.134.196 with SMTP id w187mr37088463ywf.162.1446017532671;
+        Wed, 28 Oct 2015 00:32:12 -0700 (PDT)
+Return-Path: <bounce-md_30781824.563079fc.v1-4c9403059dfd4ed0b190c830faa3282a@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id l63si20492632ywe.105.2015.10.28.00.32.12
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 28 Oct 2015 00:32:12 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.563079fc.v1-4c9403059dfd4ed0b190c830faa3282a@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.563079fc.v1-4c9403059dfd4ed0b190c830faa3282a@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.563079fc.v1-4c9403059dfd4ed0b190c830faa3282a@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=HrzU10VbVfk/eR+DD46wI4OOUx0=;
+ b=al4tLLUCt0PKnoQm/U251vkL59cK1eA/hbFd9aEy2df8JzlX2mFzRUrIcyJ2OeM7OcV9SzuZG675
+   GWpCeTfNRIFtgxfoiZAdLUOF0UxcKdz75URitJGzKZORYunr3KLYiNoTb0zqh2DSsGweMm/IQPz6
+   zBCm9Pt56g703LiijWQ=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=qnRp5PqiK4zbxupuyV3x9oeNmduMp/3+InI0f6OPCgUb/h95KeEs3YmOgsvh7HhQWMDpE6Qgopgh
+   2dkVOdeQlTMMD7A/iJnH9MwVEBzZajAUdLXTHiC0Clz0FmUygbNi20jCYoVI5b6H6BOR4ZWPJ9Zx
+   86/7kY69bUOZDxE+0Po=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h61svo174bkg for <type4stack@gmail.com>; Wed, 28 Oct 2015 07:32:12 +0000 (envelope-from <bounce-md_30781824.563079fc.v1-4c9403059dfd4ed0b190c830faa3282a@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446017532; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=Nysy5aLTKn2Dfh5VrTpSFnNyO6qy+N2imVJlrc5F4/4=; 
+ b=YuCh623Bw+CGxUltawmXIURjR6svFEPT9RRS4iuL/wvz852sC/h/zWgXcgbj2uKQMkIs6a
+ k/1Vt1ovW7Q9f81i5lXaK1umiBZHRLUlAaHPoCiPzRDmTUVBQXFMohSbwo756poPV3tqPPlW
+ BFyI7caz57Zr3r5kpClcd2BuUs9+Q=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.563079fc.v1-4c9403059dfd4ed0b190c830faa3282a@mandrillapp.com>
+Received: from [24.90.224.69] by mandrillapp.com id 4c9403059dfd4ed0b190c830faa3282a; Wed, 28 Oct 2015 07:32:12 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.4c9403059dfd4ed0b190c830faa3282a
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151028073212.563079fc703288.10650798@mail186-28.suw21.mandrillapp.com>
+Date: Wed, 28 Oct 2015 07:32:12 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-9A3_whew5Bip_6sbV6G7_A"
+
+--_av-9A3_whew5Bip_6sbV6G7_A
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:32:10.986Z","data":[{"winner":"Lay
+Bare","options":["Lay Bare","Heal the
+Scars"]},{"winner":"Counterflux","options":["Counterflux","Soul
+Foundry"]},{"winner":"Whisperwood Elemental","options":["Whisperwood
+Elemental","Perilous Vault"]},{"winner":"Kheru
+Spellsnatcher","options":["Kheru
+Spellsnatcher","Dissipate"]},{"winner":"Soul Conduit","options":["Bearer of
+the Heavens","Soul Conduit"]},{"winner":"Blighted Fen","options":["Blighted
+Fen","Gaea's Revenge"]},{"winner":"Reign of the Pit","options":["Hythonia
+the Cruel","Reign of the Pit"]},{"winner":"See the
+Unwritten","options":["See the Unwritten","Vex"]},{"winner":"Teferi, Mage
+of Zhalfir","options":["Teferi, Mage of Zhalfir","Deathpact
+Angel"]},{"winner":"Ruric Thar, the Unbowed","options":["Bosh, Iron
+Golem","Ruric Thar, the Unbowed"]},{"winner":"Worthy
+Cause","options":["Minamo's Meddling","Worthy Cause"]}]}
+--_av-9A3_whew5Bip_6sbV6G7_A
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:32:10.986Z","data":[{"winne=
+r":"Lay Bare","options":["Lay Bare","Heal the Scars"]},{"winner":"Counterfl=
+ux","options":["Counterflux","Soul Foundry"]},{"winner":"Whisperwood Elemen=
+tal","options":["Whisperwood Elemental","Perilous Vault"]},{"winner":"Kheru=
+ Spellsnatcher","options":["Kheru Spellsnatcher","Dissipate"]},{"winner":"S=
+oul Conduit","options":["Bearer of the Heavens","Soul Conduit"]},{"winner":=
+"Blighted Fen","options":["Blighted Fen","Gaea's Revenge"]},{"winner":"Reig=
+n of the Pit","options":["Hythonia the Cruel","Reign of the Pit"]},{"winner=
+":"See the Unwritten","options":["See the Unwritten","Vex"]},{"winner":"Tef=
+eri, Mage of Zhalfir","options":["Teferi, Mage of Zhalfir","Deathpact Angel=
+"]},{"winner":"Ruric Thar, the Unbowed","options":["Bosh, Iron Golem","Ruri=
+c Thar, the Unbowed"]},{"winner":"Worthy Cause","options":["Minamo's Meddli=
+ng","Worthy Cause"]}]}<img src=3D"http://mandrillapp.com/track/open.php?u=
+=3D30781824&id=3D4c9403059dfd4ed0b190c830faa3282a" height=3D"1" width=3D"1"=
+>
+
+--_av-9A3_whew5Bip_6sbV6G7_A--
+
+
+From 1516259426669969632@xxx Wed Oct 28 07:34:32 +0000 2015
+X-GM-THRID: 1516259426669969632
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp2208215ief;
+        Wed, 28 Oct 2015 00:34:32 -0700 (PDT)
+X-Received: by 10.129.146.147 with SMTP id j141mr33745496ywg.19.1446017672375;
+        Wed, 28 Oct 2015 00:34:32 -0700 (PDT)
+Return-Path: <bounce-md_30781824.56307a88.v1-9c9c502c5b6542dcbb2f6189e1544a23@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id h6si20498686ywd.59.2015.10.28.00.34.32
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 28 Oct 2015 00:34:32 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.56307a88.v1-9c9c502c5b6542dcbb2f6189e1544a23@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.56307a88.v1-9c9c502c5b6542dcbb2f6189e1544a23@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.56307a88.v1-9c9c502c5b6542dcbb2f6189e1544a23@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=zadOnU1UhgaNj+umC402B7DdHho=;
+ b=RO9BRBhhHYG+EKNAdr2oIugIQoHuflXzTeTTH84Mb/kUwYN1N1e9pIJydZM7kBWiDGKM6dsEAPsh
+   x92Eg40MPcG+n04/e9/p4qOiyhRz5zj7gjp6MR47DNK93IZSw8Xg/vYBNcEbRLSqFJplK8OwnWe+
+   /fGP2ka8VtAGfRZ2Eas=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=JSTyKK3Y5KpFD3pWIPP2yFh64DFzvRKjcXMefdu3RUdGQAfwR/k5uz4FWFylkNLJ/nitFx6V5D9T
+   8z7zQJOAefCBrJoTb14CaNch7yJNypbal6pzwiXNcgQN0AyHZjuOJGbJ6O7YM+/mR8L0xC1us7WS
+   Jovgcb++KQF7BGG1SSU=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h61t8g174bke for <type4stack@gmail.com>; Wed, 28 Oct 2015 07:34:32 +0000 (envelope-from <bounce-md_30781824.56307a88.v1-9c9c502c5b6542dcbb2f6189e1544a23@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446017672; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=2hKZ7IavR1iGyCoJJMfgtSHiUOOTJa384Bq9HekLfSw=; 
+ b=efrd/wS69xqAfzSNVeIQHK33vGZYt+dbzUCKa98OrjtFV0kRYDw06zpYur+AjTcLyMLpLP
+ xifnZ27NupxZIJ5y1bkZLXWsdD+ZeZIjsZYHkAwWjXg50nxBPxhyc63pMzTVaFgcTMjqPSMv
+ RObp0ODDw1099IFuBq0S92CP1AlxE=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.56307a88.v1-9c9c502c5b6542dcbb2f6189e1544a23@mandrillapp.com>
+Received: from [24.90.224.69] by mandrillapp.com id 9c9c502c5b6542dcbb2f6189e1544a23; Wed, 28 Oct 2015 07:34:32 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.9c9c502c5b6542dcbb2f6189e1544a23
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151028073432.56307a8820cfc5.31117871@mail186-28.suw21.mandrillapp.com>
+Date: Wed, 28 Oct 2015 07:34:32 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-Jpeqp11wNLm7TnnqQ0kuNQ"
+
+--_av-Jpeqp11wNLm7TnnqQ0kuNQ
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:34:30.665Z","data":[{"winner":"Dark
+Impostor","options":["Dark Impostor","Undermine"]},{"winner":"Brilliant
+Ultimatum","options":["Stone Idol Trap","Brilliant
+Ultimatum"]},{"winner":"Vengeful Archon","options":["Ashcloud
+Phoenix","Vengeful Archon"]},{"winner":"Rorix
+Bladewing","options":["Countersquall","Rorix
+Bladewing"]},{"winner":"Undermine","options":["Undermine","Atarka, World
+Render"]},{"winner":"Kaervek the Merciless","options":["Kaervek the
+Merciless","Shipbreaker Kraken"]},{"winner":"Winding
+Canyons","options":["Winding Canyons","Soul's Fire"]},{"winner":"Bearer of
+the Heavens","options":["Bearer of the Heavens","Hagra
+Sharpshooter"]},{"winner":"Dawn Charm","options":["Dawn Charm","Tatsumasa,
+the Dragon's Fang"]},{"winner":"Winding Canyons","options":["Pathrazer of
+Ulamog","Winding Canyons"]},{"winner":"Pelakka Wurm","options":["Voidmage
+Prodigy","Pelakka Wurm"]}]}
+--_av-Jpeqp11wNLm7TnnqQ0kuNQ
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:34:30.665Z","data":[{"winne=
+r":"Dark Impostor","options":["Dark Impostor","Undermine"]},{"winner":"Bril=
+liant Ultimatum","options":["Stone Idol Trap","Brilliant Ultimatum"]},{"win=
+ner":"Vengeful Archon","options":["Ashcloud Phoenix","Vengeful Archon"]},{"=
+winner":"Rorix Bladewing","options":["Countersquall","Rorix Bladewing"]},{"=
+winner":"Undermine","options":["Undermine","Atarka, World Render"]},{"winne=
+r":"Kaervek the Merciless","options":["Kaervek the Merciless","Shipbreaker =
+Kraken"]},{"winner":"Winding Canyons","options":["Winding Canyons","Soul's =
+Fire"]},{"winner":"Bearer of the Heavens","options":["Bearer of the Heavens=
+","Hagra Sharpshooter"]},{"winner":"Dawn Charm","options":["Dawn Charm","Ta=
+tsumasa, the Dragon's Fang"]},{"winner":"Winding Canyons","options":["Pathr=
+azer of Ulamog","Winding Canyons"]},{"winner":"Pelakka Wurm","options":["Vo=
+idmage Prodigy","Pelakka Wurm"]}]}<img src=3D"http://mandrillapp.com/track/=
+open.php?u=3D30781824&id=3D9c9c502c5b6542dcbb2f6189e1544a23" height=3D"1" w=
+idth=3D"1">
+
+--_av-Jpeqp11wNLm7TnnqQ0kuNQ--
+
+
+From 1516259525580793103@xxx Wed Oct 28 07:36:06 +0000 2015
+X-GM-THRID: 1516259525580793103
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp2208738ief;
+        Wed, 28 Oct 2015 00:36:06 -0700 (PDT)
+X-Received: by 10.129.71.6 with SMTP id u6mr37703251ywa.247.1446017766764;
+        Wed, 28 Oct 2015 00:36:06 -0700 (PDT)
+Return-Path: <bounce-md_30781824.56307ae6.v1-8c3f16b0a9c5458dbc21a663bd9fdb62@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id w81si9455173ywd.135.2015.10.28.00.36.06
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 28 Oct 2015 00:36:06 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.56307ae6.v1-8c3f16b0a9c5458dbc21a663bd9fdb62@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.56307ae6.v1-8c3f16b0a9c5458dbc21a663bd9fdb62@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.56307ae6.v1-8c3f16b0a9c5458dbc21a663bd9fdb62@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=uibIZJXZRo1GfSJoLCt0vjA37W0=;
+ b=ocQsqVLbcUIGZO00x1nE1u0xkcFQmB6Mtr0rlQAYMFVkzjchkiINSMZtaQt9cI3gmXLKhwvJUpiq
+   WVj/Fd6nwJK2+bc7wSwWoaD1fdOHHkqkRL2sWl8UBqaEIEicf0rAwgQbX+/jrEO8jxE5rtPvgKvM
+   FF7tFSDBFcvXvZxrIFM=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=gV+/bV2DlD1EJOD8MHNRtON32/zd125AtDug0lnf7QrhosAFWVuo+hMHrEpObrBjxc9l21m+WaSd
+   hnw4R+2StN3dunsH04tTXVSSYkHzUWMqwMqd+5KWZsfmvs9uw9kmXww/7+ZbBitHpdBJQsl4gkuY
+   JvCKBHWnJ4JLcOJnhKg=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h61tec174bkk for <type4stack@gmail.com>; Wed, 28 Oct 2015 07:36:06 +0000 (envelope-from <bounce-md_30781824.56307ae6.v1-8c3f16b0a9c5458dbc21a663bd9fdb62@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446017766; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=TbDNwq+i7kdYHj5m6vSXRvyqwFDSzoKJNmyp3PRSyRE=; 
+ b=in/AMDFqy4BxvTvemK6pbN2dPlNM1aXcVGIbOxSemVDwOXXPsjE9Z79E6T65RVw1SD73OO
+ yeOxj0oSPtKoqXKCEik2vuCksnMs9qzVO7KxcQug1FAmE2qTW6V2gC3rEVYDTu8dlolBbxZ9
+ BsV/dJpd3EprL76k/38rmyYFsJJAs=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.56307ae6.v1-8c3f16b0a9c5458dbc21a663bd9fdb62@mandrillapp.com>
+Received: from [24.90.224.69] by mandrillapp.com id 8c3f16b0a9c5458dbc21a663bd9fdb62; Wed, 28 Oct 2015 07:36:06 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.8c3f16b0a9c5458dbc21a663bd9fdb62
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151028073606.56307ae681a929.37205601@mail186-28.suw21.mandrillapp.com>
+Date: Wed, 28 Oct 2015 07:36:06 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-n5yWS5Z_1K6o3LUzP303XQ"
+
+--_av-n5yWS5Z_1K6o3LUzP303XQ
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:36:05.125Z","data":[{"winner":"Leyline
+of Anticipation","options":["Hidetsugu's Second Rite","Leyline of
+Anticipation"]},{"winner":"Decree of Silence","options":["Rescue from the
+Underworld","Decree of
+Silence"]},{"winner":"Spellshift","options":["Spellshift","Kuro,
+Pitlord"]},{"winner":"Rite of Replication","options":["Boros Charm","Rite
+of Replication"]},{"winner":"Worst Fears","options":["Slayers'
+Stronghold","Worst Fears"]},{"winner":"Pulse of the
+Forge","options":["Pulse of the Forge","Rescue from the
+Underworld"]},{"winner":"Avacyn, Guardian Angel","options":["Render
+Silent","Avacyn, Guardian
+Angel"]},{"winner":"Biorhythm","options":["Supplant
+Form","Biorhythm"]},{"winner":"Teferi, Mage of
+Zhalfir","options":["Minamo's Meddling","Teferi, Mage of
+Zhalfir"]},{"winner":"Hellcarver Demon","options":["Hellcarver
+Demon","Stubborn Denial"]},{"winner":"Master of
+Cruelties","options":["Master of Cruelties","Fuel for the Cause"]}]}
+--_av-n5yWS5Z_1K6o3LUzP303XQ
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:36:05.125Z","data":[{"winne=
+r":"Leyline of Anticipation","options":["Hidetsugu's Second Rite","Leyline =
+of Anticipation"]},{"winner":"Decree of Silence","options":["Rescue from th=
+e Underworld","Decree of Silence"]},{"winner":"Spellshift","options":["Spel=
+lshift","Kuro, Pitlord"]},{"winner":"Rite of Replication","options":["Boros=
+ Charm","Rite of Replication"]},{"winner":"Worst Fears","options":["Slayers=
+' Stronghold","Worst Fears"]},{"winner":"Pulse of the Forge","options":["Pu=
+lse of the Forge","Rescue from the Underworld"]},{"winner":"Avacyn, Guardia=
+n Angel","options":["Render Silent","Avacyn, Guardian Angel"]},{"winner":"B=
+iorhythm","options":["Supplant Form","Biorhythm"]},{"winner":"Teferi, Mage =
+of Zhalfir","options":["Minamo's Meddling","Teferi, Mage of Zhalfir"]},{"wi=
+nner":"Hellcarver Demon","options":["Hellcarver Demon","Stubborn Denial"]},=
+{"winner":"Master of Cruelties","options":["Master of Cruelties","Fuel for =
+the Cause"]}]}<img src=3D"http://mandrillapp.com/track/open.php?u=3D3078182=
+4&id=3D8c3f16b0a9c5458dbc21a663bd9fdb62" height=3D"1" width=3D"1">
+
+--_av-n5yWS5Z_1K6o3LUzP303XQ--
+
+
+From 1516259717757926558@xxx Wed Oct 28 07:39:09 +0000 2015
+X-GM-THRID: 1516259717757926558
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp2209776ief;
+        Wed, 28 Oct 2015 00:39:09 -0700 (PDT)
+X-Received: by 10.13.251.66 with SMTP id l63mr20138526ywf.279.1446017949733;
+        Wed, 28 Oct 2015 00:39:09 -0700 (PDT)
+Return-Path: <bounce-md_30781824.56307b9d.v1-50d10fb8ec3247a6abf0c54b555c1f83@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id m6si11157088ywd.349.2015.10.28.00.39.09
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 28 Oct 2015 00:39:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.56307b9d.v1-50d10fb8ec3247a6abf0c54b555c1f83@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.56307b9d.v1-50d10fb8ec3247a6abf0c54b555c1f83@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.56307b9d.v1-50d10fb8ec3247a6abf0c54b555c1f83@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=DZXniJA3UBRUlqO3A7NvZ0nXuHo=;
+ b=GKP7PvEIART/47G8G8HdeFRA2ml4RSIGj7yejoqeggM0rZAF9RSY1jY5VoIPKQWogR49/NfSfzX3
+   d52WjnfRpSTs7aM2P8m0gWhoDcqrGlMWYFGRB5OXnrN1qjwcapVBOVNC4hz86JUS9eAOkdH7RTi2
+   67S08eqWjkjbGldmTMo=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=BgjUdXJIW75v/tg7AVQ5aaerYfsQk+bPu07VEaVFTWIsU4ESZEOtL7siyg5ztfY2FOuzGqxDbkq0
+   sr9NX6SWlOFpDzfIVdtB++dSs/WXP67LTC1HqFd8wLMdHinVEMl5mso864vfmpyUA/fzSREzKDlX
+   extMjzDWz2be9/oiuOk=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h61tpq174bkl for <type4stack@gmail.com>; Wed, 28 Oct 2015 07:39:09 +0000 (envelope-from <bounce-md_30781824.56307b9d.v1-50d10fb8ec3247a6abf0c54b555c1f83@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446017949; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=rHdPoFesNFLjt1teDqvCxEOHGVJnHaUSH5tMGQ/OKro=; 
+ b=d3LZRXLI5jsnIVmSp8glXeVK57Ljh5gupr7IOWxuzR2ki9r7YEZqfjZpqMeGvOFwTnago8
+ uH/g5DRrl0IyxhFw2VNqLhkLwn0yECb3ghh49om2Dv+btZL+XroW1AP+eG9cL7hYDj8+UZG0
+ VxEUiJavQHDhqzMpRyzY6P/Xh2DG0=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.56307b9d.v1-50d10fb8ec3247a6abf0c54b555c1f83@mandrillapp.com>
+Received: from [24.90.224.69] by mandrillapp.com id 50d10fb8ec3247a6abf0c54b555c1f83; Wed, 28 Oct 2015 07:39:09 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.50d10fb8ec3247a6abf0c54b555c1f83
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151028073909.56307b9d80b1f8.08694828@mail186-28.suw21.mandrillapp.com>
+Date: Wed, 28 Oct 2015 07:39:09 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-V2zusvUkBF6b_OS2KR5hXw"
+
+--_av-V2zusvUkBF6b_OS2KR5hXw
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:39:08.049Z","data":[{"winner":"Mercurial
+Pretender","options":["Cackling Counterpart","Mercurial
+Pretender"]},{"winner":"Darksteel Colossus","options":["Decorated
+Griffin","Darksteel Colossus"]},{"winner":"Maelstrom
+Wanderer","options":["Soulblast","Maelstrom Wanderer"]},{"winner":"Divine
+Deflection","options":["Divine Deflection","Savage
+Knuckleblade"]},{"winner":"Worldgorger Dragon","options":["Mystic
+Genesis","Worldgorger Dragon"]},{"winner":"Gather
+Specimens","options":["Sandsteppe Mastodon","Gather
+Specimens"]},{"winner":"The Great Aurora","options":["Fated
+Retribution","The Great Aurora"]},{"winner":"Decree of
+Annihilation","options":["Decree of Annihilation","Gather
+Specimens"]},{"winner":"Bane of the Living","options":["Bane of the
+Living","Miraculous Recovery"]},{"winner":"Mystifying
+Maze","options":["Grim Backwoods","Mystifying
+Maze"]},{"winner":"Fleetfeather Cockatrice","options":["Tower of
+Eons","Fleetfeather Cockatrice"]}]}
+--_av-V2zusvUkBF6b_OS2KR5hXw
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:39:08.049Z","data":[{"winne=
+r":"Mercurial Pretender","options":["Cackling Counterpart","Mercurial Prete=
+nder"]},{"winner":"Darksteel Colossus","options":["Decorated Griffin","Dark=
+steel Colossus"]},{"winner":"Maelstrom Wanderer","options":["Soulblast","Ma=
+elstrom Wanderer"]},{"winner":"Divine Deflection","options":["Divine Deflec=
+tion","Savage Knuckleblade"]},{"winner":"Worldgorger Dragon","options":["My=
+stic Genesis","Worldgorger Dragon"]},{"winner":"Gather Specimens","options"=
+:["Sandsteppe Mastodon","Gather Specimens"]},{"winner":"The Great Aurora","=
+options":["Fated Retribution","The Great Aurora"]},{"winner":"Decree of Ann=
+ihilation","options":["Decree of Annihilation","Gather Specimens"]},{"winne=
+r":"Bane of the Living","options":["Bane of the Living","Miraculous Recover=
+y"]},{"winner":"Mystifying Maze","options":["Grim Backwoods","Mystifying Ma=
+ze"]},{"winner":"Fleetfeather Cockatrice","options":["Tower of Eons","Fleet=
+feather Cockatrice"]}]}<img src=3D"http://mandrillapp.com/track/open.php?u=
+=3D30781824&id=3D50d10fb8ec3247a6abf0c54b555c1f83" height=3D"1" width=3D"1"=
+>
+
+--_av-V2zusvUkBF6b_OS2KR5hXw--
+
+
+From 1516259833070248935@xxx Wed Oct 28 07:40:59 +0000 2015
+X-GM-THRID: 1516259833070248935
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp2210423ief;
+        Wed, 28 Oct 2015 00:40:59 -0700 (PDT)
+X-Received: by 10.129.85.202 with SMTP id j193mr34142577ywb.194.1446018059953;
+        Wed, 28 Oct 2015 00:40:59 -0700 (PDT)
+Return-Path: <bounce-md_30781824.56307c0b.v1-63b774135801412fb75a3d6bfa9bb6fe@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id q2si20480297ywb.397.2015.10.28.00.40.59
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 28 Oct 2015 00:40:59 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.56307c0b.v1-63b774135801412fb75a3d6bfa9bb6fe@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.56307c0b.v1-63b774135801412fb75a3d6bfa9bb6fe@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.56307c0b.v1-63b774135801412fb75a3d6bfa9bb6fe@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=W8uzVygO0SuNf/7r1Gl/8VrOA20=;
+ b=dVSd+LFX8fH2rNjzfw09paRo5Fy124q+UR+H1LygUAhGECnPwHCXBrhtDq4EDIEheNdUOftJX2yi
+   +HafqSMLuT9fWF6pR0WoZ/4kA6gP9KqFR71Y1X0oxQew754r08EKYo0eo2V+zIxGunZso0iSO2hW
+   45CXszopEHUPmrItp2E=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=RBo03lYE0gQBkR4xfWHYJSAQWxmU/Atm0lIK8yzVNCz+rccyOBXqI+fU7FyhKRwJ0j2NLLY0/hsW
+   DHZr5FjlKoxP+Yp14IHQvgiHbPcvYJJ1jBpGCmg/U8pHDibTEih9XPb/9xu7UMRt+4E6Vkl/YKlP
+   LM9OjETLi5ONgzSe69U=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h61u0m174bk3 for <type4stack@gmail.com>; Wed, 28 Oct 2015 07:40:59 +0000 (envelope-from <bounce-md_30781824.56307c0b.v1-63b774135801412fb75a3d6bfa9bb6fe@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446018059; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=4GVEHPm9r52NrNh12QVSt34VfQrYhGW9ETxhD4v5g1I=; 
+ b=QHUMjhuZ/FS4Rt92sOmi5zn3es/Am6H7bdgav5in6mIKjBhiKZdn1CkEgR3cMrWhZz6vdx
+ Zm4aSIxJhnbvQFrj3CfPpRuFPZjmppj4yzxBwCHG+b5i5zeJtPk+bSqrnrTOJMEh06Tsab0Q
+ 1Fm5xLTgW/KFx7Cms6Dsjbu4MLBMg=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.56307c0b.v1-63b774135801412fb75a3d6bfa9bb6fe@mandrillapp.com>
+Received: from [24.90.224.69] by mandrillapp.com id 63b774135801412fb75a3d6bfa9bb6fe; Wed, 28 Oct 2015 07:40:59 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.63b774135801412fb75a3d6bfa9bb6fe
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151028074059.56307c0baadbe0.96866862@mail186-28.suw21.mandrillapp.com>
+Date: Wed, 28 Oct 2015 07:40:59 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-UkNbWPvLxOxIbBrfBUVQmw"
+
+--_av-UkNbWPvLxOxIbBrfBUVQmw
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:40:58.321Z","data":[{"winner":"Rite
+of Replication","options":["Rite of Replication","Grab the
+Reins"]},{"winner":"Searing Touch","options":["Bosh, Iron Golem","Searing
+Touch"]},{"winner":"Captain's Maneuver","options":["Captain's
+Maneuver","Tower of Eons"]},{"winner":"Ashen
+Monstrosity","options":["Skeletal Wurm","Ashen
+Monstrosity"]},{"winner":"Blighted Fen","options":["Blighted Fen","Bearer
+of the Heavens"]},{"winner":"Ashen Rider","options":["Pulse of the
+Forge","Ashen Rider"]},{"winner":"Backlash","options":["Backlash","Grab the
+Reins"]},{"winner":"Flowstone Overseer","options":["Suffocating
+Blast","Flowstone Overseer"]},{"winner":"Whisperwood
+Elemental","options":["Voidmage Apprentice","Whisperwood
+Elemental"]},{"winner":"Benalish Commander","options":["Benalish
+Commander","Pulse of the Forge"]},{"winner":"Divine
+Deflection","options":["Dawn Charm","Divine Deflection"]}]}
+--_av-UkNbWPvLxOxIbBrfBUVQmw
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:40:58.321Z","data":[{"winne=
+r":"Rite of Replication","options":["Rite of Replication","Grab the Reins"]=
+},{"winner":"Searing Touch","options":["Bosh, Iron Golem","Searing Touch"]}=
+,{"winner":"Captain's Maneuver","options":["Captain's Maneuver","Tower of E=
+ons"]},{"winner":"Ashen Monstrosity","options":["Skeletal Wurm","Ashen Mons=
+trosity"]},{"winner":"Blighted Fen","options":["Blighted Fen","Bearer of th=
+e Heavens"]},{"winner":"Ashen Rider","options":["Pulse of the Forge","Ashen=
+ Rider"]},{"winner":"Backlash","options":["Backlash","Grab the Reins"]},{"w=
+inner":"Flowstone Overseer","options":["Suffocating Blast","Flowstone Overs=
+eer"]},{"winner":"Whisperwood Elemental","options":["Voidmage Apprentice","=
+Whisperwood Elemental"]},{"winner":"Benalish Commander","options":["Benalis=
+h Commander","Pulse of the Forge"]},{"winner":"Divine Deflection","options"=
+:["Dawn Charm","Divine Deflection"]}]}<img src=3D"http://mandrillapp.com/tr=
+ack/open.php?u=3D30781824&id=3D63b774135801412fb75a3d6bfa9bb6fe" height=3D"=
+1" width=3D"1">
+
+--_av-UkNbWPvLxOxIbBrfBUVQmw--
+
+
+From 1516259911695440142@xxx Wed Oct 28 07:42:14 +0000 2015
+X-GM-THRID: 1516259911695440142
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp2210888ief;
+        Wed, 28 Oct 2015 00:42:14 -0700 (PDT)
+X-Received: by 10.13.250.69 with SMTP id k66mr23916980ywf.107.1446018134870;
+        Wed, 28 Oct 2015 00:42:14 -0700 (PDT)
+Return-Path: <bounce-md_30781824.56307c56.v1-def704cd2bbb46cbb8aae0314cfc4a5a@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id h6si20510967ywd.59.2015.10.28.00.42.14
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 28 Oct 2015 00:42:14 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.56307c56.v1-def704cd2bbb46cbb8aae0314cfc4a5a@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.56307c56.v1-def704cd2bbb46cbb8aae0314cfc4a5a@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.56307c56.v1-def704cd2bbb46cbb8aae0314cfc4a5a@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=xV0978HXR4BTZsMtn7uSzi5HYLY=;
+ b=YcrDQMf0ETlFfxvPXw1VNBYgYD7G8YxZSwoj7lmgH/+ZwLRsM+05NkwvtDLRFoBolAZSyfRF6c82
+   SmBPDH+LDNs826QP0SnA6oal4dY34vw/Ph1tLEMQLjSVt3PQRRZH1/pouRO5gWyqmUl/BiLHBHrf
+   WSEbb60Hu2XMs0FpMgk=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=ObGwci8YQqKbap+tSBPf/cqkKSz2Jhf7/YmlIq86tLdX4nytna55ma+dBntqK2OByrIFVyMNNmZ3
+   aOy6wRszAZfEJwE/NnncK6d++9akiUdeDTlWuvbBSgX9/rslCh2jjbQORyZElp8yU/zl0GN7/0EV
+   +fCDcVUabYDUCuko7SM=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h61u5c174bks for <type4stack@gmail.com>; Wed, 28 Oct 2015 07:42:14 +0000 (envelope-from <bounce-md_30781824.56307c56.v1-def704cd2bbb46cbb8aae0314cfc4a5a@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446018134; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=5fhSsM5MaYOYx42iH/dm2CdiCSfgsuwgOUzLrroWoAQ=; 
+ b=YIoI0S+UmcZ5CqOv2Z1SAOzh7JCc0RI1PneiIXGmKDetKJkcqamjV//3sfVQiaqdvotM8x
+ jPAI+4BlJm39dmhTYnCyM2pbbqjdJdPzezkt6erGyJlOmXrDPltaOHGtKCh+bJYD7VaUOAJb
+ NLJe3JPop2/IUSDK6baGiaBmh4TP0=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.56307c56.v1-def704cd2bbb46cbb8aae0314cfc4a5a@mandrillapp.com>
+Received: from [24.90.224.69] by mandrillapp.com id def704cd2bbb46cbb8aae0314cfc4a5a; Wed, 28 Oct 2015 07:42:14 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.def704cd2bbb46cbb8aae0314cfc4a5a
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151028074214.56307c56954266.51829760@mail186-28.suw21.mandrillapp.com>
+Date: Wed, 28 Oct 2015 07:42:14 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-9dk9zOpBVEy7DxsVqMjktg"
+
+--_av-9dk9zOpBVEy7DxsVqMjktg
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:42:13.085Z","data":[{"winner":"Baneful
+Omen","options":["Flamekin Village","Baneful Omen"]},{"winner":"Hagra
+Sharpshooter","options":["Countersquall","Hagra
+Sharpshooter"]},{"winner":"Delirium","options":["Balancing
+Act","Delirium"]},{"winner":"See the
+Unwritten","options":["Countersquall","See the
+Unwritten"]},{"winner":"Crush of Wurms","options":["Bloodfire
+Colossus","Crush of Wurms"]},{"winner":"Bant Charm","options":["Bant
+Charm","Tower of Eons"]},{"winner":"Pelakka Wurm","options":["Pelakka
+Wurm","Xanthic Statue"]},{"winner":"Ritual of the
+Returned","options":["Ritual of the Returned","Tatsumasa, the Dragon's
+Fang"]},{"winner":"Worst Fears","options":["Worst Fears","Phage the
+Untouchable"]},{"winner":"Worldgorger Dragon","options":["Smokespew
+Invoker","Worldgorger Dragon"]},{"winner":"Hythonia the
+Cruel","options":["Baneful Omen","Hythonia the Cruel"]}]}
+--_av-9dk9zOpBVEy7DxsVqMjktg
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:42:13.085Z","data":[{"winne=
+r":"Baneful Omen","options":["Flamekin Village","Baneful Omen"]},{"winner":=
+"Hagra Sharpshooter","options":["Countersquall","Hagra Sharpshooter"]},{"wi=
+nner":"Delirium","options":["Balancing Act","Delirium"]},{"winner":"See the=
+ Unwritten","options":["Countersquall","See the Unwritten"]},{"winner":"Cru=
+sh of Wurms","options":["Bloodfire Colossus","Crush of Wurms"]},{"winner":"=
+Bant Charm","options":["Bant Charm","Tower of Eons"]},{"winner":"Pelakka Wu=
+rm","options":["Pelakka Wurm","Xanthic Statue"]},{"winner":"Ritual of the R=
+eturned","options":["Ritual of the Returned","Tatsumasa, the Dragon's Fang"=
+]},{"winner":"Worst Fears","options":["Worst Fears","Phage the Untouchable"=
+]},{"winner":"Worldgorger Dragon","options":["Smokespew Invoker","Worldgorg=
+er Dragon"]},{"winner":"Hythonia the Cruel","options":["Baneful Omen","Hyth=
+onia the Cruel"]}]}<img src=3D"http://mandrillapp.com/track/open.php?u=3D30=
+781824&id=3Ddef704cd2bbb46cbb8aae0314cfc4a5a" height=3D"1" width=3D"1">
+
+--_av-9dk9zOpBVEy7DxsVqMjktg--
+
+
+From 1516259955107909217@xxx Wed Oct 28 07:42:56 +0000 2015
+X-GM-THRID: 1516259955107909217
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp2211120ief;
+        Wed, 28 Oct 2015 00:42:56 -0700 (PDT)
+X-Received: by 10.13.228.65 with SMTP id n62mr33946378ywe.302.1446018176122;
+        Wed, 28 Oct 2015 00:42:56 -0700 (PDT)
+Return-Path: <bounce-md_30781824.56307c7f.v1-355201b4b202443cad438c86602414a2@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id m6si11162888ywd.349.2015.10.28.00.42.56
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 28 Oct 2015 00:42:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.56307c7f.v1-355201b4b202443cad438c86602414a2@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.56307c7f.v1-355201b4b202443cad438c86602414a2@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.56307c7f.v1-355201b4b202443cad438c86602414a2@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=bBbMG5XuQ7kfcXbVmgOCWc/eVzk=;
+ b=gRU2WSy8tZQlq4MXnU0BhjHdzpZxMcnjZgWk0z6XkCzYzsRBAp7k/pckGJi2xfG1KulzqjKQ4N3+
+   DbC7X6O2N4CIwluU+r0/J/CfUoO7bI0w9EUhvFAZp5x0cV/ANz8dL2xKEbR2hOTo83RdLNzVSX4S
+   csvO1bRT6ZBP2unQXc4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=h1axEqvpkZqbXB17Fvifd35LKS0dBUhTESOZMIyQDkJJbJVHN65wRwBTLvfyX1GHvENOob9vCMc4
+   H32Zmg8EI0EiegvHU6tVN9Lww6CKq/AWSTuThV2ROgmMeuTHqCICf9cqlqM6O364+i0SDFpjU0oH
+   aIL8fKxqr/qnS20PBww=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h61u80174bkt for <type4stack@gmail.com>; Wed, 28 Oct 2015 07:42:55 +0000 (envelope-from <bounce-md_30781824.56307c7f.v1-355201b4b202443cad438c86602414a2@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446018175; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=v2oNNYNqbpi/W91g6Jz2erjeJgymxegdjncNoaVeVdY=; 
+ b=Q2iBn1ftRzmHZaj2tatRmazz23mIMRva03CSAaIi1JstsDEWYeUNW7ae4SpxW5Oe7FPINZ
+ S2Vvs5fZBqtz3EnrHJxA4mjcakqLOjiNPKVJl1X4MdykJpUthFnEG8JrzCosEFBcpQAllKZY
+ 6WkiuODr3GTZ+KbV55LAnamph6eA8=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.56307c7f.v1-355201b4b202443cad438c86602414a2@mandrillapp.com>
+Received: from [24.90.224.69] by mandrillapp.com id 355201b4b202443cad438c86602414a2; Wed, 28 Oct 2015 07:42:55 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.355201b4b202443cad438c86602414a2
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151028074255.56307c7fd730a9.43088511@mail186-28.suw21.mandrillapp.com>
+Date: Wed, 28 Oct 2015 07:42:55 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-GTmXVNgXhDzY1DbxNxNj2A"
+
+--_av-GTmXVNgXhDzY1DbxNxNj2A
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:42:54.525Z","data":[{"winner":"Vex","options":["Grim
+Return","Vex"]},{"winner":"Decree of Annihilation","options":["Miraculous
+Recovery","Decree of Annihilation"]},{"winner":"Statute of
+Denial","options":["Rescue from the Underworld","Statute of
+Denial"]},{"winner":"Minamo's Meddling","options":["Minamo's
+Meddling","Undermine"]},{"winner":"Phthisis","options":["Phthisis","Winding
+Canyons"]},{"winner":"Terastodon","options":["Hunting
+Pack","Terastodon"]},{"winner":"Savage Knuckleblade","options":["Savage
+Knuckleblade","Slayers' Stronghold"]},{"winner":"Avatar of
+Slaughter","options":["Fated Infatuation","Avatar of
+Slaughter"]},{"winner":"Deathpact Angel","options":["Stormbreath
+Dragon","Deathpact Angel"]},{"winner":"Summoning
+Trap","options":["Shipbreaker Kraken","Summoning
+Trap"]},{"winner":"Novablast Wurm","options":["Spelljack","Novablast
+Wurm"]}]}
+--_av-GTmXVNgXhDzY1DbxNxNj2A
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:42:54.525Z","data":[{"winne=
+r":"Vex","options":["Grim Return","Vex"]},{"winner":"Decree of Annihilation=
+","options":["Miraculous Recovery","Decree of Annihilation"]},{"winner":"St=
+atute of Denial","options":["Rescue from the Underworld","Statute of Denial=
+"]},{"winner":"Minamo's Meddling","options":["Minamo's Meddling","Undermine=
+"]},{"winner":"Phthisis","options":["Phthisis","Winding Canyons"]},{"winner=
+":"Terastodon","options":["Hunting Pack","Terastodon"]},{"winner":"Savage K=
+nuckleblade","options":["Savage Knuckleblade","Slayers' Stronghold"]},{"win=
+ner":"Avatar of Slaughter","options":["Fated Infatuation","Avatar of Slaugh=
+ter"]},{"winner":"Deathpact Angel","options":["Stormbreath Dragon","Deathpa=
+ct Angel"]},{"winner":"Summoning Trap","options":["Shipbreaker Kraken","Sum=
+moning Trap"]},{"winner":"Novablast Wurm","options":["Spelljack","Novablast=
+ Wurm"]}]}<img src=3D"http://mandrillapp.com/track/open.php?u=3D30781824&id=
+=3D355201b4b202443cad438c86602414a2" height=3D"1" width=3D"1">
+
+--_av-GTmXVNgXhDzY1DbxNxNj2A--
+
+
+From 1516260048159516887@xxx Wed Oct 28 07:44:24 +0000 2015
+X-GM-THRID: 1516260048159516887
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp2211661ief;
+        Wed, 28 Oct 2015 00:44:24 -0700 (PDT)
+X-Received: by 10.13.194.4 with SMTP id e4mr33420901ywd.57.1446018264780;
+        Wed, 28 Oct 2015 00:44:24 -0700 (PDT)
+Return-Path: <bounce-md_30781824.56307cd8.v1-601823088852472d801ec0e10ab56ace@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id l186si20506634ywg.13.2015.10.28.00.44.24
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 28 Oct 2015 00:44:24 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.56307cd8.v1-601823088852472d801ec0e10ab56ace@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.56307cd8.v1-601823088852472d801ec0e10ab56ace@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.56307cd8.v1-601823088852472d801ec0e10ab56ace@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=/AA9fIC9WcQdY31jU3XLVnPsWO4=;
+ b=faY3a+JYXhv8AYyMINmKy14XgiDujMUdEi9M/Tu2xRCK9Q/8v0HhqXaTLOC26hpbQIJsIPGw30or
+   GS8hnTQX6MUohkyPF8e3mkJg9Dgnn0sQROiWi0HN0Uj9ydQZKwBjJnWeurw7rxrmt+kGV9rbp6gJ
+   tNbaW3qmhUO0Az+YaJ8=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=TF5A8+bA3TXU+LA2MhevxMpkmIyeOoe9CXp50XLRq76QeQrC6FsVTVd1pdqJ+ZiVTf5t8heiCIin
+   GsICWP4LJ/vtLLq8T3oKmEu4iLxAHUwYsP+khBNOV6e/AHFvmMF0oSW94PuFmKZKv1bIGJ2GwzSJ
+   aQS0+fumv1njIod7EkE=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h61udg174bk8 for <type4stack@gmail.com>; Wed, 28 Oct 2015 07:44:24 +0000 (envelope-from <bounce-md_30781824.56307cd8.v1-601823088852472d801ec0e10ab56ace@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446018264; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=5Y8RXi8f7SoQUsqifsuNyaBQBButUMTVTkDwLnUfkRM=; 
+ b=Afk81XHJ2U6YEFVfbezsK+PTKZC1c70yl3QOdawVM9j/ePxM/GBOnL8bv05s1zXdrg+lMG
+ bAatCLYLqwu0hLzuGlI5h8+OIQIlneIhPabYv3sPnR7OwmAYjuwvjb/ljUTZz5EAsw2H+mZb
+ DWZ1r5mS3vAYS70Byip1gw7SwI+MY=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.56307cd8.v1-601823088852472d801ec0e10ab56ace@mandrillapp.com>
+Received: from [24.90.224.69] by mandrillapp.com id 601823088852472d801ec0e10ab56ace; Wed, 28 Oct 2015 07:44:24 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.601823088852472d801ec0e10ab56ace
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151028074424.56307cd87ed7a2.19247457@mail186-28.suw21.mandrillapp.com>
+Date: Wed, 28 Oct 2015 07:44:24 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-CnTRa1AB1IK7gg7Mw6ZPEg"
+
+--_av-CnTRa1AB1IK7gg7Mw6ZPEg
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:44:23.160Z","data":[{"winner":"Obzedat,
+Ghost council","options":["Obzedat, Ghost council","Mystic
+Genesis"]},{"winner":"Krosan Colossus","options":["Countersquall","Krosan
+Colossus"]},{"winner":"Karrthus, Tyrant of Jund","options":["Karrthus,
+Tyrant of Jund","Suffocating Blast"]},{"winner":"Atarka, World
+Render","options":["Atarka, World Render","Plated
+Slagwurm"]},{"winner":"Hydra Omnivore","options":["Hydra
+Omnivore","Sentinel of the Eternal Watch"]},{"winner":"Perplexing
+Chimera","options":["Deepfire Elemental","Perplexing
+Chimera"]},{"winner":"Brutal Expulsion","options":["Brutal
+Expulsion","Silumgar's Command"]},{"winner":"Merciless
+Eviction","options":["Merciless Eviction","Bosh, Iron
+Golem"]},{"winner":"Prince of Thralls","options":["Timmy, Power
+Gamer","Prince of Thralls"]},{"winner":"Memnarch","options":["Balancing
+Act","Memnarch"]},{"winner":"Bloodfire Colossus","options":["Bloodfire
+Colossus","Decree of Silence"]}]}
+--_av-CnTRa1AB1IK7gg7Mw6ZPEg
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"Qwerty","timestamp":"2015-10-28T07:44:23.160Z","data":[{"winne=
+r":"Obzedat, Ghost council","options":["Obzedat, Ghost council","Mystic Gen=
+esis"]},{"winner":"Krosan Colossus","options":["Countersquall","Krosan Colo=
+ssus"]},{"winner":"Karrthus, Tyrant of Jund","options":["Karrthus, Tyrant o=
+f Jund","Suffocating Blast"]},{"winner":"Atarka, World Render","options":["=
+Atarka, World Render","Plated Slagwurm"]},{"winner":"Hydra Omnivore","optio=
+ns":["Hydra Omnivore","Sentinel of the Eternal Watch"]},{"winner":"Perplexi=
+ng Chimera","options":["Deepfire Elemental","Perplexing Chimera"]},{"winner=
+":"Brutal Expulsion","options":["Brutal Expulsion","Silumgar's Command"]},{=
+"winner":"Merciless Eviction","options":["Merciless Eviction","Bosh, Iron G=
+olem"]},{"winner":"Prince of Thralls","options":["Timmy, Power Gamer","Prin=
+ce of Thralls"]},{"winner":"Memnarch","options":["Balancing Act","Memnarch"=
+]},{"winner":"Bloodfire Colossus","options":["Bloodfire Colossus","Decree o=
+f Silence"]}]}<img src=3D"http://mandrillapp.com/track/open.php?u=3D3078182=
+4&id=3D601823088852472d801ec0e10ab56ace" height=3D"1" width=3D"1">
+
+--_av-CnTRa1AB1IK7gg7Mw6ZPEg--
+
+
+From 1516394570629989943@xxx Thu Oct 29 19:22:35 +0000 2015
+X-GM-THRID: 1516394570629989943
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp703000ief;
+        Thu, 29 Oct 2015 12:22:35 -0700 (PDT)
+X-Received: by 10.129.128.65 with SMTP id q62mr3251568ywf.210.1446146555574;
+        Thu, 29 Oct 2015 12:22:35 -0700 (PDT)
+Return-Path: <bounce-md_30781824.563271fb.v1-dfc6c8f28d454be7ab53086f552bbc56@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id a129si1424042ywf.426.2015.10.29.12.22.35
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Oct 2015 12:22:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.563271fb.v1-dfc6c8f28d454be7ab53086f552bbc56@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.563271fb.v1-dfc6c8f28d454be7ab53086f552bbc56@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.563271fb.v1-dfc6c8f28d454be7ab53086f552bbc56@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=7e46tju9U3tniqIlcEiJe+ISUK8=;
+ b=DJ42xUDtZ6n64mlZ1ovPSA5e65KAOps5coIceRMc59PeKZi2s2tB5ePqqtaeG9GSTLKu0/NQVAz3
+   WYchx5WDfPQJJ41aXegwEpOIS9cKsUh/2X5N0D5AD+azcibPD8MZzOcipH+yOPM2SkEsF/iF3yRr
+   MQytw3C+yiI5o66CB9M=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=ErKzSkZWXtrvhbAwf0TpAB9stFSia91xZwLUm9PfTOqK9IHTktYOo6HSZlaTILAoiVKNsJsmnsWM
+   eIqek+egZYsXC99MjZkhDGt3/2nyVkQrE4auJd1b1ZhzRUIQOB8vPlgGs2kiRCs+d5XkIPc4pX7+
+   E6/+K0a9pTEWq4vQ/hs=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h69ovm174bki for <type4stack@gmail.com>; Thu, 29 Oct 2015 19:22:35 +0000 (envelope-from <bounce-md_30781824.563271fb.v1-dfc6c8f28d454be7ab53086f552bbc56@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446146555; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=XfA5pRmPVIkMB2vCL+gZkPGh3a8Dd/pUjZpgcUUAXs4=; 
+ b=GaQuEOwivlAdOTchRvB+q+qGcYIoJK+gqx3YXuP/ivkmW1r9oDTnl0MqGl2sHuUI4OK2cg
+ cx1wxcQ3QcUGfaGNXFX2NsiWIH0YIHxc2zu93b2llwaKKcfcRmK0yPv1sBgsjg7bzp+UV1hH
+ 2NZc5KnVYFzyBzYyHkGAKx5UMPzo4=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.563271fb.v1-dfc6c8f28d454be7ab53086f552bbc56@mandrillapp.com>
+Received: from [104.192.218.186] by mandrillapp.com id dfc6c8f28d454be7ab53086f552bbc56; Thu, 29 Oct 2015 19:22:35 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.dfc6c8f28d454be7ab53086f552bbc56
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151029192235.563271fb0e48c3.54141128@mail186-28.suw21.mandrillapp.com>
+Date: Thu, 29 Oct 2015 19:22:35 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-Dvl75JnQNB_Iqsu7z5Jpnw"
+
+--_av-Dvl75JnQNB_Iqsu7z5Jpnw
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"MPW","timestamp":"2015-10-29T19:22:34.826Z","data":[{"winner":"Decree
+of Annihilation","options":["Decree of
+Annihilation","Voidslime"]},{"winner":"Ethereal
+Ambush","options":["Ulamog's Crusher","Ethereal Ambush"]},{"winner":"Dragon
+Wings","options":["Dragon Wings","Master of Cruelties"]},{"winner":"Timmy,
+Power Gamer","options":["Hagra Sharpshooter","Timmy, Power
+Gamer"]},{"winner":"Leyline of Anticipation","options":["Leyline of
+Anticipation","Delirium"]},{"winner":"Infernal Spawn of
+Evil","options":["Infernal Spawn of Evil","Terastodon"]},{"winner":"Zurgo
+Helmsmasher","options":["Fated Retribution","Zurgo
+Helmsmasher"]},{"winner":"Root Elemental","options":["Root Elemental","Lord
+of the Void"]},{"winner":"See the Unwritten","options":["See the
+Unwritten","Rorix Bladewing"]},{"winner":"Shorecrasher
+Elemental","options":["Shorecrasher Elemental","It That
+Betrays"]},{"winner":"Stifle","options":["Stifle","Commandeer"]}]}
+--_av-Dvl75JnQNB_Iqsu7z5Jpnw
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"MPW","timestamp":"2015-10-29T19:22:34.826Z","data":[{"winner":=
+"Decree of Annihilation","options":["Decree of Annihilation","Voidslime"]},=
+{"winner":"Ethereal Ambush","options":["Ulamog's Crusher","Ethereal Ambush"=
+]},{"winner":"Dragon Wings","options":["Dragon Wings","Master of Cruelties"=
+]},{"winner":"Timmy, Power Gamer","options":["Hagra Sharpshooter","Timmy, P=
+ower Gamer"]},{"winner":"Leyline of Anticipation","options":["Leyline of An=
+ticipation","Delirium"]},{"winner":"Infernal Spawn of Evil","options":["Inf=
+ernal Spawn of Evil","Terastodon"]},{"winner":"Zurgo Helmsmasher","options"=
+:["Fated Retribution","Zurgo Helmsmasher"]},{"winner":"Root Elemental","opt=
+ions":["Root Elemental","Lord of the Void"]},{"winner":"See the Unwritten",=
+"options":["See the Unwritten","Rorix Bladewing"]},{"winner":"Shorecrasher =
+Elemental","options":["Shorecrasher Elemental","It That Betrays"]},{"winner=
+":"Stifle","options":["Stifle","Commandeer"]}]}<img src=3D"http://mandrilla=
+pp.com/track/open.php?u=3D30781824&id=3Ddfc6c8f28d454be7ab53086f552bbc56" h=
+eight=3D"1" width=3D"1">
+
+--_av-Dvl75JnQNB_Iqsu7z5Jpnw--
+
+
+From 1516394649409121380@xxx Thu Oct 29 19:23:50 +0000 2015
+X-GM-THRID: 1516394649409121380
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp703655ief;
+        Thu, 29 Oct 2015 12:23:51 -0700 (PDT)
+X-Received: by 10.129.55.211 with SMTP id e202mr2897334ywa.254.1446146631087;
+        Thu, 29 Oct 2015 12:23:51 -0700 (PDT)
+Return-Path: <bounce-md_30781824.56327246.v1-0231cc5347134dfaad390da6998051b6@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id q186si1431069ywb.385.2015.10.29.12.23.50
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Oct 2015 12:23:51 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.56327246.v1-0231cc5347134dfaad390da6998051b6@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.56327246.v1-0231cc5347134dfaad390da6998051b6@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.56327246.v1-0231cc5347134dfaad390da6998051b6@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=XIU+khfxwnCCN022tYrXHFjlii8=;
+ b=S2JbplrvoZQfPX5yXIyVXl6vpGmTR5ANBbw3Ha8aaQVzPxhP4bkNRH6U6rOKmHyjJsTIJM8o1m0c
+   u/ZbSnJp4AdxdkpGkE1jEEZnNqCT7COpM1Ng1NwaNamo5UAolOLTIf9bd9JLErWPH51RK99CUjU+
+   0az02iPSXKU1m8x4K8M=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=ZSDwpdImhftHNlZtSRdEAp+iDgkU+QQmK1gn+Gea1I+b/kKadiwuwSSHQROPxXSfISLnFxVS3wbw
+   mjoAAuqdA79v5USSLVfiHPz0AR7VB2YT+NMSPc4SHyoUOJBEq9mN1BTn11ntzClwdH8A4IEG5w0P
+   9nckglOuCzC+LfyspfU=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h69p4e174bkg for <type4stack@gmail.com>; Thu, 29 Oct 2015 19:23:50 +0000 (envelope-from <bounce-md_30781824.56327246.v1-0231cc5347134dfaad390da6998051b6@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446146630; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=gW4CytLbITGWfnrKLq9NKxAcrDNvjS5yOW/NW6b9poY=; 
+ b=dlnXoDyBqI2Newb1QcKFEabu1NB6ykci9IAPDkKohgBp23uHPceSXDH2y6B0hlqVDp4df1
+ bgRU5t8ggyGlOb2u0CnDRLUyeTpWqfRrSLXO1yRWDBs70eRJn4ubE6TR0mwhbUmWC9gotDM9
+ qKnlOpDq2bLYNb3MvFPA9EG7+3Q8E=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.56327246.v1-0231cc5347134dfaad390da6998051b6@mandrillapp.com>
+Received: from [104.192.218.186] by mandrillapp.com id 0231cc5347134dfaad390da6998051b6; Thu, 29 Oct 2015 19:23:50 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.0231cc5347134dfaad390da6998051b6
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151029192350.56327246d33f39.58800843@mail186-28.suw21.mandrillapp.com>
+Date: Thu, 29 Oct 2015 19:23:50 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-punhdBBCdCbq2sr7o0vdug"
+
+--_av-punhdBBCdCbq2sr7o0vdug
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"MPW","timestamp":"2015-10-29T19:23:50.533Z","data":[{"winner":"Prahv,
+Spires of Order","options":["Prahv, Spires of Order","Dack's
+Duplicate"]},{"winner":"The Great Aurora","options":["The Great
+Aurora","Platinum
+Angel"]},{"winner":"Chromanticore","options":["Chromanticore","Rorix
+Bladewing"]},{"winner":"Kheru Spellsnatcher","options":["The Great
+Aurora","Kheru Spellsnatcher"]},{"winner":"Fleetfeather
+Cockatrice","options":["Fleetfeather Cockatrice","Bant
+Charm"]},{"winner":"Kaervek the Merciless","options":["Kaervek the
+Merciless","Deathless Angel"]},{"winner":"Summoning
+Trap","options":["Summoning Trap","Sandsteppe Mastodon"]},{"winner":"Kheru
+Spellsnatcher","options":["Kheru Spellsnatcher","Miraculous
+Recovery"]},{"winner":"Corpse Dance","options":["Corpse Dance","Avatar of
+Slaughter"]},{"winner":"Denizen of the Deep","options":["Denizen of the
+Deep","Clay Pigeon"]},{"winner":"Sandsteppe Mastodon","options":["Flying
+Crane Technique","Sandsteppe Mastodon"]}]}
+--_av-punhdBBCdCbq2sr7o0vdug
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"MPW","timestamp":"2015-10-29T19:23:50.533Z","data":[{"winner":=
+"Prahv, Spires of Order","options":["Prahv, Spires of Order","Dack's Duplic=
+ate"]},{"winner":"The Great Aurora","options":["The Great Aurora","Platinum=
+ Angel"]},{"winner":"Chromanticore","options":["Chromanticore","Rorix Blade=
+wing"]},{"winner":"Kheru Spellsnatcher","options":["The Great Aurora","Kher=
+u Spellsnatcher"]},{"winner":"Fleetfeather Cockatrice","options":["Fleetfea=
+ther Cockatrice","Bant Charm"]},{"winner":"Kaervek the Merciless","options"=
+:["Kaervek the Merciless","Deathless Angel"]},{"winner":"Summoning Trap","o=
+ptions":["Summoning Trap","Sandsteppe Mastodon"]},{"winner":"Kheru Spellsna=
+tcher","options":["Kheru Spellsnatcher","Miraculous Recovery"]},{"winner":"=
+Corpse Dance","options":["Corpse Dance","Avatar of Slaughter"]},{"winner":"=
+Denizen of the Deep","options":["Denizen of the Deep","Clay Pigeon"]},{"win=
+ner":"Sandsteppe Mastodon","options":["Flying Crane Technique","Sandsteppe =
+Mastodon"]}]}<img src=3D"http://mandrillapp.com/track/open.php?u=3D30781824=
+&id=3D0231cc5347134dfaad390da6998051b6" height=3D"1" width=3D"1">
+
+--_av-punhdBBCdCbq2sr7o0vdug--
+
+
+From 1516394702850862183@xxx Thu Oct 29 19:24:41 +0000 2015
+X-GM-THRID: 1516394702850862183
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp704135ief;
+        Thu, 29 Oct 2015 12:24:41 -0700 (PDT)
+X-Received: by 10.13.218.4 with SMTP id c4mr2890703ywe.259.1446146681425;
+        Thu, 29 Oct 2015 12:24:41 -0700 (PDT)
+Return-Path: <bounce-md_30781824.56327279.v1-cc7f788ba3f64f259402716f0dd71022@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id u205si1447445ywu.197.2015.10.29.12.24.41
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Oct 2015 12:24:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.56327279.v1-cc7f788ba3f64f259402716f0dd71022@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.56327279.v1-cc7f788ba3f64f259402716f0dd71022@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.56327279.v1-cc7f788ba3f64f259402716f0dd71022@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=Svmladz3O6Ag8CCZ7jmeKsNICW8=;
+ b=JQp6fib1RdRMgP+vz0AqGc0kBqfZGG8bt3Vea3cX6jKzckfFVLu9b64IQepjTvNgIGek59D3yOwi
+   oXqsCU67dYAAlp5lv8+k+G1Ni+MhF+U9clRixMyg3hVM8bZzyGUvrmB/JsrUBSYcyXLm+lEgA41F
+   IXy0p+Xv95p1ER/Rr4g=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=DCv8DPgh22gW0ldxsccopajetC4pNdXoRqtA8IDS1ak+HcrJ9IzHTjboi7leIxnWBNOI+XZEK276
+   hL7idFP7h9iuDyGsD02SrcO/Bl0BRl/4VHHi9Hv3Yku9uQtrxEDDhI8Hoe60f/Uf/NpCO8QAjzF5
+   HMvizi00PtTXJ1oxYGM=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h69p7i174bkf for <type4stack@gmail.com>; Thu, 29 Oct 2015 19:24:41 +0000 (envelope-from <bounce-md_30781824.56327279.v1-cc7f788ba3f64f259402716f0dd71022@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446146681; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=XK1bXaGjUg5fJEihZSUJDOq73hdfBjeZFjytXKqTnJk=; 
+ b=ly+/LZwoeXzF8Ku8R8DDIRmAyLOU8R85nylTLY17Nn2Ns+OGwSbnYw3it1AGJ7sj2orqlb
+ HVmyerGCPLOQFge8Kv4Uc+wgTW0kRr3oMk9EDFvEYxjDM9Viod+GNEN5ZJINyDg84IP3t95D
+ +WMFJjWNc4s/1X//9zt3Qrbj42xe4=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.56327279.v1-cc7f788ba3f64f259402716f0dd71022@mandrillapp.com>
+Received: from [104.192.218.186] by mandrillapp.com id cc7f788ba3f64f259402716f0dd71022; Thu, 29 Oct 2015 19:24:41 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.cc7f788ba3f64f259402716f0dd71022
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151029192441.5632727927d827.04909350@mail186-28.suw21.mandrillapp.com>
+Date: Thu, 29 Oct 2015 19:24:41 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-dz0iopWAdOwLS9WyyKE1Cg"
+
+--_av-dz0iopWAdOwLS9WyyKE1Cg
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"MPW","timestamp":"2015-10-29T19:24:40.964Z","data":[{"winner":"Lost
+in the Mist","options":["Garza Zol, Plague Queen","Lost in the
+Mist"]},{"winner":"Monastery Loremaster","options":["Monastery
+Loremaster","Root Elemental"]},{"winner":"New Prahv
+Guildmage","options":["New Prahv Guildmage","Riddle of
+Lightning"]},{"winner":"Decree of Annihilation","options":["Decree of
+Annihilation","Resounding Wave"]},{"winner":"Cackling
+Counterpart","options":["Cackling Counterpart","Obzedat, Ghost
+council"]},{"winner":"Bloodfire Colossus","options":["Ixidron","Bloodfire
+Colossus"]},{"winner":"Obliterate","options":["Obliterate","Hinder"]},{"winner":"Grim
+Backwoods","options":["Grim Backwoods","Spelljack"]},{"winner":"Bosh, Iron
+Golem","options":["Monastery Loremaster","Bosh, Iron
+Golem"]},{"winner":"Reality Strobe","options":["Reality Strobe","Desolate
+Lighthouse"]},{"winner":"Vedalken Orrery","options":["Garza Zol, Plague
+Queen","Vedalken Orrery"]}]}
+--_av-dz0iopWAdOwLS9WyyKE1Cg
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"MPW","timestamp":"2015-10-29T19:24:40.964Z","data":[{"winner":=
+"Lost in the Mist","options":["Garza Zol, Plague Queen","Lost in the Mist"]=
+},{"winner":"Monastery Loremaster","options":["Monastery Loremaster","Root =
+Elemental"]},{"winner":"New Prahv Guildmage","options":["New Prahv Guildmag=
+e","Riddle of Lightning"]},{"winner":"Decree of Annihilation","options":["D=
+ecree of Annihilation","Resounding Wave"]},{"winner":"Cackling Counterpart"=
+,"options":["Cackling Counterpart","Obzedat, Ghost council"]},{"winner":"Bl=
+oodfire Colossus","options":["Ixidron","Bloodfire Colossus"]},{"winner":"Ob=
+literate","options":["Obliterate","Hinder"]},{"winner":"Grim Backwoods","op=
+tions":["Grim Backwoods","Spelljack"]},{"winner":"Bosh, Iron Golem","option=
+s":["Monastery Loremaster","Bosh, Iron Golem"]},{"winner":"Reality Strobe",=
+"options":["Reality Strobe","Desolate Lighthouse"]},{"winner":"Vedalken Orr=
+ery","options":["Garza Zol, Plague Queen","Vedalken Orrery"]}]}<img src=3D"=
+http://mandrillapp.com/track/open.php?u=3D30781824&id=3Dcc7f788ba3f64f25940=
+2716f0dd71022" height=3D"1" width=3D"1">
+
+--_av-dz0iopWAdOwLS9WyyKE1Cg--
+
+
+From 1516394772518027626@xxx Thu Oct 29 19:25:48 +0000 2015
+X-GM-THRID: 1516394772518027626
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp704722ief;
+        Thu, 29 Oct 2015 12:25:48 -0700 (PDT)
+X-Received: by 10.13.236.198 with SMTP id v189mr3226364ywe.231.1446146748238;
+        Thu, 29 Oct 2015 12:25:48 -0700 (PDT)
+Return-Path: <bounce-md_30781824.563272bb.v1-9c9444d9f6694cf6ac82606fdea782f6@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id k5si1461914ywb.39.2015.10.29.12.25.48
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Oct 2015 12:25:48 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.563272bb.v1-9c9444d9f6694cf6ac82606fdea782f6@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.563272bb.v1-9c9444d9f6694cf6ac82606fdea782f6@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.563272bb.v1-9c9444d9f6694cf6ac82606fdea782f6@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=lM1I0jqkkHRLZ7LwRhP7bRgdmKU=;
+ b=SIxd9XWW3Kr/OzEmfb1HsEV2iKtFuOEDjg/JixEBRG0d3VRDU/I6Fq3lbb/NWtUGMBbRmtGhDLGK
+   JA7X69+ZC7lAEEjk5f42G3dVJn1pdYd89etRO7A5x5tgFipGrSwiuH1qF6m0nRWu3rroM7S4MloH
+   /iNk0YZkuuQQGiO4Vbk=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=PdhGLk9wWg3bOBR9n8chaCjTidOsf4wH+EXti8txt5Ra0qObTkEma4AOpwXmTyH114XOdvIbkcVD
+   0E2SB+1fmKHn4gOXayZuCJKEFCJz9lD9HPXA4nKcSaaPQXszDMJrvBk6jjbNstPzMB64AR1SOOe9
+   qccHGJieShvUHgL9Rfg=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h69pbo174bk9 for <type4stack@gmail.com>; Thu, 29 Oct 2015 19:25:47 +0000 (envelope-from <bounce-md_30781824.563272bb.v1-9c9444d9f6694cf6ac82606fdea782f6@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446146747; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=be93v6RRU2pVfPs6hDfMQlsaoon629P2JGo8VQP44po=; 
+ b=YuZR+EpvSEXYkZ/DID7spb5CZo9tGaVHBoCqE4k/szg//7sJ07C4Q8fZD1QjQMqzKx/ik4
+ pQBdB7J8TPlpDj1w0qhXz+bW14w4cvvYvf0/oTi9kfZLhCcXOr0AIoeFBAcvHtCrIt9ZYQzw
+ FplaLVms+HNxPW7n+KgPvNwU2Mzfg=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.563272bb.v1-9c9444d9f6694cf6ac82606fdea782f6@mandrillapp.com>
+Received: from [104.192.218.186] by mandrillapp.com id 9c9444d9f6694cf6ac82606fdea782f6; Thu, 29 Oct 2015 19:25:47 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.9c9444d9f6694cf6ac82606fdea782f6
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151029192547.563272bbc50783.45590439@mail186-28.suw21.mandrillapp.com>
+Date: Thu, 29 Oct 2015 19:25:47 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-J0HOnaui5LsbXBLrKh_Z0w"
+
+--_av-J0HOnaui5LsbXBLrKh_Z0w
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"MPW","timestamp":"2015-10-29T19:25:47.587Z","data":[{"winner":"Kederekt
+Leviathan","options":["Vault of the Archangel","Kederekt
+Leviathan"]},{"winner":"Sphinx of the Steel
+Wind","options":["Invulnerability","Sphinx of the Steel
+Wind"]},{"winner":"Spelljack","options":["Avatar of
+Slaughter","Spelljack"]},{"winner":"Boros
+Fury-Shield","options":["Chronomantic Escape","Boros
+Fury-Shield"]},{"winner":"Sorin's Vengeance","options":["Sorin's
+Vengeance","Tree of Redemption"]},{"winner":"Shipbreaker
+Kraken","options":["Autochthon Wurm","Shipbreaker
+Kraken"]},{"winner":"Platinum Angel","options":["Platinum Angel","Rakdos
+the Defiler"]},{"winner":"Mystic Genesis","options":["Obzedat, Ghost
+council","Mystic Genesis"]},{"winner":"Worldfire","options":["Vault of the
+Archangel","Worldfire"]},{"winner":"Ashen Rider","options":["Hidetsugu's
+Second Rite","Ashen Rider"]},{"winner":"Rescue from the
+Underworld","options":["Rescue from the Underworld","Dictate of the Twin
+Gods"]}]}
+--_av-J0HOnaui5LsbXBLrKh_Z0w
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"MPW","timestamp":"2015-10-29T19:25:47.587Z","data":[{"winner":=
+"Kederekt Leviathan","options":["Vault of the Archangel","Kederekt Leviatha=
+n"]},{"winner":"Sphinx of the Steel Wind","options":["Invulnerability","Sph=
+inx of the Steel Wind"]},{"winner":"Spelljack","options":["Avatar of Slaugh=
+ter","Spelljack"]},{"winner":"Boros Fury-Shield","options":["Chronomantic E=
+scape","Boros Fury-Shield"]},{"winner":"Sorin's Vengeance","options":["Sori=
+n's Vengeance","Tree of Redemption"]},{"winner":"Shipbreaker Kraken","optio=
+ns":["Autochthon Wurm","Shipbreaker Kraken"]},{"winner":"Platinum Angel","o=
+ptions":["Platinum Angel","Rakdos the Defiler"]},{"winner":"Mystic Genesis"=
+,"options":["Obzedat, Ghost council","Mystic Genesis"]},{"winner":"Worldfir=
+e","options":["Vault of the Archangel","Worldfire"]},{"winner":"Ashen Rider=
+","options":["Hidetsugu's Second Rite","Ashen Rider"]},{"winner":"Rescue fr=
+om the Underworld","options":["Rescue from the Underworld","Dictate of the =
+Twin Gods"]}]}<img src=3D"http://mandrillapp.com/track/open.php?u=3D3078182=
+4&id=3D9c9444d9f6694cf6ac82606fdea782f6" height=3D"1" width=3D"1">
+
+--_av-J0HOnaui5LsbXBLrKh_Z0w--
+
+
+From 1516394856885336350@xxx Thu Oct 29 19:27:08 +0000 2015
+X-GM-THRID: 1516394856885336350
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp705452ief;
+        Thu, 29 Oct 2015 12:27:08 -0700 (PDT)
+X-Received: by 10.129.40.198 with SMTP id o189mr2883970ywo.145.1446146828468;
+        Thu, 29 Oct 2015 12:27:08 -0700 (PDT)
+Return-Path: <bounce-md_30781824.5632730c.v1-9ead02868c8c43f1abbc011e25eae12c@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id m4si1441908ywb.305.2015.10.29.12.27.08
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Oct 2015 12:27:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.5632730c.v1-9ead02868c8c43f1abbc011e25eae12c@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.5632730c.v1-9ead02868c8c43f1abbc011e25eae12c@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.5632730c.v1-9ead02868c8c43f1abbc011e25eae12c@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=TVwusIZ51PqNNR5QeoZzBWpp4bQ=;
+ b=h5Eq6UoXTywYDo/5kXGY9WXUgYx6PgWJJVztu0PxWcJ5S2OlbFzIzCsEXVYJ2X0e/KGGmzcMXXvR
+   x5z1/Vv0MGGdkGu/zc2xIC7BIeG71m9sHow4XpG+y4s62oFc0oQoKMXWh+RpUbb7jSd555n96Icc
+   R/Twka+32MJUYcfqPAk=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=c6jZ5xxDxsX6fBjA3KdcYxCQ/xTtLDXfPRhC5g5aHyW4f8g8xWWXeHhufe96PxWcC3PALwM+XbT4
+   kSyKOC629iNFwq90RCUQI5ICiawfUJB41YMSuKG4Zp70wDb/lQUYXqmS2Q62cg3s582W1uomMCnQ
+   9kD34TJOU4d5Sa+bs4U=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h69pgo174bki for <type4stack@gmail.com>; Thu, 29 Oct 2015 19:27:08 +0000 (envelope-from <bounce-md_30781824.5632730c.v1-9ead02868c8c43f1abbc011e25eae12c@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446146828; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=gZidky8r4a0r2ziqnbWTOcd7+2Zf1q4O8BeJeZkLHno=; 
+ b=S9CNlpe1udVhpXoyTrbS188+5y+VQgR7p0JpeZjMc7ystzlzXzaYZVlm2WbFAJzcinqRCv
+ BvFpQc/yXyKGnJcu3rH2OyKQ6KLLs6rzDqxqQxq0SA6Cp3ulxvxf8ohuE0dcuoWlElz3HmYf
+ baTDFCMltWz8CYHmF4/gkO75MImcA=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.5632730c.v1-9ead02868c8c43f1abbc011e25eae12c@mandrillapp.com>
+Received: from [104.192.218.186] by mandrillapp.com id 9ead02868c8c43f1abbc011e25eae12c; Thu, 29 Oct 2015 19:27:08 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.9ead02868c8c43f1abbc011e25eae12c
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151029192708.5632730c2a34c0.92014538@mail186-28.suw21.mandrillapp.com>
+Date: Thu, 29 Oct 2015 19:27:08 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-sNKs7Eh9JFU5jQE-BahbTw"
+
+--_av-sNKs7Eh9JFU5jQE-BahbTw
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"MPW","timestamp":"2015-10-29T19:27:07.958Z","data":[{"winner":"Flowstone
+Overseer","options":["Agonizing Demise","Flowstone
+Overseer"]},{"winner":"Dragon Wings","options":["Dragon Wings","Garza Zol,
+Plague Queen"]},{"winner":"Savage Knuckleblade","options":["Savage
+Knuckleblade","Stubborn Denial"]},{"winner":"Soul
+Conduit","options":["Riddle of Lightning","Soul
+Conduit"]},{"winner":"Magmatic Force","options":["Magmatic Force","Flamekin
+Village"]},{"winner":"Baneful Omen","options":["Baneful Omen","Desolation
+Twin"]},{"winner":"Rescue from the Underworld","options":["Rescue from the
+Underworld","Vault of the Archangel"]},{"winner":"Azorius
+Guildmage","options":["Bloodfire Colossus","Azorius
+Guildmage"]},{"winner":"Denizen of the Deep","options":["Rakdos the
+Defiler","Denizen of the Deep"]},{"winner":"Agonizing
+Demise","options":["Agonizing Demise","Sandsteppe
+Mastodon"]},{"winner":"Stifle","options":["Stifle","Dispersal Shield"]}]}
+--_av-sNKs7Eh9JFU5jQE-BahbTw
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"MPW","timestamp":"2015-10-29T19:27:07.958Z","data":[{"winner":=
+"Flowstone Overseer","options":["Agonizing Demise","Flowstone Overseer"]},{=
+"winner":"Dragon Wings","options":["Dragon Wings","Garza Zol, Plague Queen"=
+]},{"winner":"Savage Knuckleblade","options":["Savage Knuckleblade","Stubbo=
+rn Denial"]},{"winner":"Soul Conduit","options":["Riddle of Lightning","Sou=
+l Conduit"]},{"winner":"Magmatic Force","options":["Magmatic Force","Flamek=
+in Village"]},{"winner":"Baneful Omen","options":["Baneful Omen","Desolatio=
+n Twin"]},{"winner":"Rescue from the Underworld","options":["Rescue from th=
+e Underworld","Vault of the Archangel"]},{"winner":"Azorius Guildmage","opt=
+ions":["Bloodfire Colossus","Azorius Guildmage"]},{"winner":"Denizen of the=
+ Deep","options":["Rakdos the Defiler","Denizen of the Deep"]},{"winner":"A=
+gonizing Demise","options":["Agonizing Demise","Sandsteppe Mastodon"]},{"wi=
+nner":"Stifle","options":["Stifle","Dispersal Shield"]}]}<img src=3D"http:/=
+/mandrillapp.com/track/open.php?u=3D30781824&id=3D9ead02868c8c43f1abbc011e2=
+5eae12c" height=3D"1" width=3D"1">
+
+--_av-sNKs7Eh9JFU5jQE-BahbTw--
+
+
+From 1516394894455685666@xxx Thu Oct 29 19:27:44 +0000 2015
+X-GM-THRID: 1516394894455685666
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp705820ief;
+        Thu, 29 Oct 2015 12:27:44 -0700 (PDT)
+X-Received: by 10.129.81.131 with SMTP id f125mr2898110ywb.109.1446146864359;
+        Thu, 29 Oct 2015 12:27:44 -0700 (PDT)
+Return-Path: <bounce-md_30781824.56327330.v1-87a79f58dbd3485291c9e0a0807777cd@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id w187si1454555ywg.169.2015.10.29.12.27.44
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Oct 2015 12:27:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.56327330.v1-87a79f58dbd3485291c9e0a0807777cd@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.56327330.v1-87a79f58dbd3485291c9e0a0807777cd@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.56327330.v1-87a79f58dbd3485291c9e0a0807777cd@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=nD36+Dys3ToGLAkHW6tNGq/JaFU=;
+ b=A6NuY6w4UGr6rkq7YPAci3eqVDld4N5lg+Trisw4PR8bAsR3WxsJqkMLdA6w9nzBE0J50XT7KRSD
+   FzzwQ231y03eo0upXLWyAwtn/T/+Wa1ueTVMZgy9Z3UqWTeV2VPCz6hhXbP/D9FdsWQBVrkBn8M9
+   TaayZb+s0ZxPRHwz+UA=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=Q1fk5ZSYnCD3oe4hKXRpO272VSFzKLyqA1alRnKSAFHKSDq4yAoq6UDzvK64JoiGUXDBEII7DTzI
+   SAKear0M6SbxYQ8fgedUJU5nQHNkz2D0L4Tz7ypriMUXuTpMrc9fNnY49wKvAq3mwy/LECSCn1GY
+   vh809UiYHObwmAWomB8=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h69pj0174bk9 for <type4stack@gmail.com>; Thu, 29 Oct 2015 19:27:44 +0000 (envelope-from <bounce-md_30781824.56327330.v1-87a79f58dbd3485291c9e0a0807777cd@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446146864; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=FfCKLaqcoUbnW/S6NGjqtrLnsKH18cMhZOIfR0qf/xA=; 
+ b=Qdrgadqpfbx8aJJSLsd7+LsuxIM8XUuqu4EU8F4/1ntXCaMuzuqi2fc2+1++fNu7EUDwkI
+ 1qpKdA7L2u7YEQ/qaRu2+aZWieF1wirZgbekSr6KZPRJnMmewpw2VA9EQ19NzuBp7V/mXiMc
+ l6C9aI6kteG2d9ANmB5dx4FpQnIj0=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.56327330.v1-87a79f58dbd3485291c9e0a0807777cd@mandrillapp.com>
+Received: from [104.192.218.186] by mandrillapp.com id 87a79f58dbd3485291c9e0a0807777cd; Thu, 29 Oct 2015 19:27:44 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.87a79f58dbd3485291c9e0a0807777cd
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151029192744.563273301bfa02.42904247@mail186-28.suw21.mandrillapp.com>
+Date: Thu, 29 Oct 2015 19:27:44 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-FOaEm4Ue9IOZ35pkrSrlTg"
+
+--_av-FOaEm4Ue9IOZ35pkrSrlTg
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"MPW","timestamp":"2015-10-29T19:27:43.927Z","data":[{"winner":"Alchemist's
+Refuge","options":["Thunderblust","Alchemist's Refuge"]},{"winner":"Avacyn,
+Guardian Angel","options":["Hunting Pack","Avacyn, Guardian
+Angel"]},{"winner":"Statute of Denial","options":["Crackling Doom","Statute
+of Denial"]},{"winner":"Savage Knuckleblade","options":["Magister
+Sphinx","Savage Knuckleblade"]},{"winner":"Whisperwood
+Elemental","options":["Whisperwood Elemental","Sins of the
+Past"]},{"winner":"Kuro, Pitlord","options":["Kuro, Pitlord","Stormtide
+Leviathan"]},{"winner":"Summoning Trap","options":["Soul
+Conduit","Summoning Trap"]},{"winner":"Sphinx of the Steel
+Wind","options":["Clay Pigeon","Sphinx of the Steel Wind"]},{"winner":"Lay
+Bare","options":["Lay Bare","Riddle of Lightning"]},{"winner":"Rorix
+Bladewing","options":["Rorix Bladewing","Platinum Angel"]},{"winner":"Pulse
+of the Forge","options":["Hinder","Pulse of the Forge"]}]}
+--_av-FOaEm4Ue9IOZ35pkrSrlTg
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"MPW","timestamp":"2015-10-29T19:27:43.927Z","data":[{"winner":=
+"Alchemist's Refuge","options":["Thunderblust","Alchemist's Refuge"]},{"win=
+ner":"Avacyn, Guardian Angel","options":["Hunting Pack","Avacyn, Guardian A=
+ngel"]},{"winner":"Statute of Denial","options":["Crackling Doom","Statute =
+of Denial"]},{"winner":"Savage Knuckleblade","options":["Magister Sphinx","=
+Savage Knuckleblade"]},{"winner":"Whisperwood Elemental","options":["Whispe=
+rwood Elemental","Sins of the Past"]},{"winner":"Kuro, Pitlord","options":[=
+"Kuro, Pitlord","Stormtide Leviathan"]},{"winner":"Summoning Trap","options=
+":["Soul Conduit","Summoning Trap"]},{"winner":"Sphinx of the Steel Wind","=
+options":["Clay Pigeon","Sphinx of the Steel Wind"]},{"winner":"Lay Bare","=
+options":["Lay Bare","Riddle of Lightning"]},{"winner":"Rorix Bladewing","o=
+ptions":["Rorix Bladewing","Platinum Angel"]},{"winner":"Pulse of the Forge=
+","options":["Hinder","Pulse of the Forge"]}]}<img src=3D"http://mandrillap=
+p.com/track/open.php?u=3D30781824&id=3D87a79f58dbd3485291c9e0a0807777cd" he=
+ight=3D"1" width=3D"1">
+
+--_av-FOaEm4Ue9IOZ35pkrSrlTg--
+
+
+From 1516394960248712411@xxx Thu Oct 29 19:28:47 +0000 2015
+X-GM-THRID: 1516394960248712411
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp706379ief;
+        Thu, 29 Oct 2015 12:28:47 -0700 (PDT)
+X-Received: by 10.13.253.198 with SMTP id n189mr2903366ywf.298.1446146927478;
+        Thu, 29 Oct 2015 12:28:47 -0700 (PDT)
+Return-Path: <bounce-md_30781824.5632736f.v1-ac981f42ce86447ebdbdb8919866bd11@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id z20si1459953ywz.131.2015.10.29.12.28.47
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Oct 2015 12:28:47 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.5632736f.v1-ac981f42ce86447ebdbdb8919866bd11@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.5632736f.v1-ac981f42ce86447ebdbdb8919866bd11@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.5632736f.v1-ac981f42ce86447ebdbdb8919866bd11@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=pdzZGQViAmme+FBrFxWUTpXDJEo=;
+ b=VOXCdeiFPF9g+1gvtbS/NSKuHvEKjHwH8OLiVffBzWicqWiwm9Y889R/Gn1c/VNbZb6hY51d9lKZ
+   sTRagD75LlzNayjcmycNbb/vht6W4meIPWwBmur+YtXJmHTx6zGEI3Jh3Fs2ZwRRz3G8qU9BUV3Z
+   sYEJ2w8+ytFpq0++7rY=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=IHq7CeQ8h4pnQupHSnxo20ZzFSQ3SwkuEKYGVZGviPTKhF3MMi9sGo9U0ZrpsEBsIiRD0BtMW9Bq
+   Dsiq7E7AxUFdxJ17o1evdWjAbaxmcFoqq65jnmZqeRqZYiL+OMZLV2s8ZwH/xIUUZlDYZhSYuMEB
+   s4xWh9xXdTLcGL1NkFg=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h69pmu174bki for <type4stack@gmail.com>; Thu, 29 Oct 2015 19:28:47 +0000 (envelope-from <bounce-md_30781824.5632736f.v1-ac981f42ce86447ebdbdb8919866bd11@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446146927; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=lTwMw4hGqcPNEhKYzmIkU0Q9NG6fwwosFuYSngbS6us=; 
+ b=i2sowqT6/xoLXWMwlfaC1lozOkVTYckZ/Y912tYQssdXT/48Xy1RRZRGvd++OfquED2x33
+ THIyjsLYB5QZSisC0SKnzT47cjyINvjcSPxi1QjNhzUsGmL8ej8c8evl4AxCw6vVEtrfhVc3
+ tfg7dbOFh1aV71+YcA5XwqC18b7zU=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.5632736f.v1-ac981f42ce86447ebdbdb8919866bd11@mandrillapp.com>
+Received: from [104.192.218.186] by mandrillapp.com id ac981f42ce86447ebdbdb8919866bd11; Thu, 29 Oct 2015 19:28:47 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.ac981f42ce86447ebdbdb8919866bd11
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151029192847.5632736f400b73.82983696@mail186-28.suw21.mandrillapp.com>
+Date: Thu, 29 Oct 2015 19:28:47 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-gY91iD6yBBkKuarK7Nxs9w"
+
+--_av-gY91iD6yBBkKuarK7Nxs9w
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"MPW","timestamp":"2015-10-29T19:28:46.967Z","data":[{"winner":=
+"Bloodfire
+Colossus","options":["Absorb","Bloodfire Colossus"]},{"winner":"Captain's
+Maneuver","options":["Captain's Maneuver","Thornling"]},{"winner":"Mystic
+Snake","options":["Mystic Snake","Planar
+Cleansing"]},{"winner":"Memnarch","options":["Gather
+Specimens","Memnarch"]},{"winner":"Tatsumasa, the Dragon's
+Fang","options":["Fold into =C3=86ther","Tatsumasa, the Dragon's
+Fang"]},{"winner":"Moldgraf Monstrosity","options":["Moldgraf
+Monstrosity","Rescue from the
+Underworld"]},{"winner":"Suncrusher","options":["Suncrusher","Render
+Silent"]},{"winner":"Stormbreath Dragon","options":["Stormbreath
+Dragon","Desolation Twin"]},{"winner":"Infernal Spawn of
+Evil","options":["Thunderblust","Infernal Spawn of
+Evil"]},{"winner":"Planar Cleansing","options":["Sunhome, Fortress of the
+Legion","Planar Cleansing"]},{"winner":"Hagra
+Sharpshooter","options":["Winding Canyons","Hagra Sharpshooter"]}]}
+
+--_av-gY91iD6yBBkKuarK7Nxs9w
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"MPW","timestamp":"2015-10-29T19:28:46.967Z","data":[{"winner":=
+"Bloodfire Colossus","options":["Absorb","Bloodfire Colossus"]},{"winner":"=
+Captain's Maneuver","options":["Captain's Maneuver","Thornling"]},{"winner"=
+:"Mystic Snake","options":["Mystic Snake","Planar Cleansing"]},{"winner":"M=
+emnarch","options":["Gather Specimens","Memnarch"]},{"winner":"Tatsumasa, t=
+he Dragon's Fang","options":["Fold into =C3=86ther","Tatsumasa, the Dragon'=
+s Fang"]},{"winner":"Moldgraf Monstrosity","options":["Moldgraf Monstrosity=
+","Rescue from the Underworld"]},{"winner":"Suncrusher","options":["Suncrus=
+her","Render Silent"]},{"winner":"Stormbreath Dragon","options":["Stormbrea=
+th Dragon","Desolation Twin"]},{"winner":"Infernal Spawn of Evil","options"=
+:["Thunderblust","Infernal Spawn of Evil"]},{"winner":"Planar Cleansing","o=
+ptions":["Sunhome, Fortress of the Legion","Planar Cleansing"]},{"winner":"=
+Hagra Sharpshooter","options":["Winding Canyons","Hagra Sharpshooter"]}]}<i=
+mg src=3D"http://mandrillapp.com/track/open.php?u=3D30781824&id=3Dac981f42c=
+e86447ebdbdb8919866bd11" height=3D"1" width=3D"1">
+
+--_av-gY91iD6yBBkKuarK7Nxs9w--
+
+
+From 1516395017966815072@xxx Thu Oct 29 19:29:42 +0000 2015
+X-GM-THRID: 1516395017966815072
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp706764ief;
+        Thu, 29 Oct 2015 12:29:42 -0700 (PDT)
+X-Received: by 10.129.70.197 with SMTP id t188mr2873154ywa.292.1446146982349;
+        Thu, 29 Oct 2015 12:29:42 -0700 (PDT)
+Return-Path: <bounce-md_30781824.563273a5.v1-063619cbab624c7a8ccead5b2b643110@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id r21si1453937ywg.245.2015.10.29.12.29.42
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Oct 2015 12:29:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.563273a5.v1-063619cbab624c7a8ccead5b2b643110@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.563273a5.v1-063619cbab624c7a8ccead5b2b643110@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.563273a5.v1-063619cbab624c7a8ccead5b2b643110@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=alYkS+vbFSIRJx/lqIFooKFSzvs=;
+ b=mAUEA10UIZLJV2j+Ht3hucUrOIlkSCCxk2zqTB/PXq2grUZUCE2y5VE19CtOkPMECLa3sZn9qB6t
+   l5i71fmT8XiMxYRkGDBhasIQAhd2e5Nind7O9eizIkDvUPC/AillhhslHibDURDPXaN64ZeoIztI
+   Ec6LGRwl8oaBJc7HAm4=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=KdtBTyQ7LahxNlzC2tKpePZKvSdgb+E3r4sFtDdP0+lP11wuB6HNAoUae7Hq2EXg6bTSEkqJJRMV
+   7/pWpWALCuunshHIKLTGWh2dqNLwNzk74HIuCVdLue7YVGljqFstqDKj1ySUdDN/7DlBr02hmRVJ
+   CvVfhSsxmDcYGUOd/EY=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h69pqc174bkc for <type4stack@gmail.com>; Thu, 29 Oct 2015 19:29:41 +0000 (envelope-from <bounce-md_30781824.563273a5.v1-063619cbab624c7a8ccead5b2b643110@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446146981; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=AHw08b//M906BpIyFxT42F2arP0pIGEvkzUD4t8RQts=; 
+ b=KXyuYU+AobVv/PnjFatCECxFar49o9YWoy36qvRP/FkbaoNPONIxjuAuD5fN/6PzWxL41W
+ 925sEvnXeARyDJdyswBCfCT8ZXvPs5nAKH6v5XwTLiXVRpIjUWLibVpH5/tPClCl5Z+xTe4I
+ /iqhWZbTXBYs1OdeRETBNv9clqnVw=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.563273a5.v1-063619cbab624c7a8ccead5b2b643110@mandrillapp.com>
+Received: from [104.192.218.186] by mandrillapp.com id 063619cbab624c7a8ccead5b2b643110; Thu, 29 Oct 2015 19:29:41 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.063619cbab624c7a8ccead5b2b643110
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151029192941.563273a5496a69.97911728@mail186-28.suw21.mandrillapp.com>
+Date: Thu, 29 Oct 2015 19:29:41 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-k_rPJNv4pMnpUhMfZURl6w"
+
+--_av-k_rPJNv4pMnpUhMfZURl6w
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"MPW","timestamp":"2015-10-29T19:29:41.084Z","data":[{"winner":=
+"Prahv,
+Spires of Order","options":["Prince of Thralls","Prahv, Spires of
+Order"]},{"winner":"Tatsumasa, the Dragon's Fang","options":["Call to
+Heel","Tatsumasa, the Dragon's
+Fang"]},{"winner":"Worldfire","options":["Vault of the
+Archangel","Worldfire"]},{"winner":"Hellcarver
+Demon","options":["Hellcarver Demon","Angel of the Dire
+Hour"]},{"winner":"Desertion","options":["Desertion","Ready/Willing"]},{"wi=
+nner":"Makeshift
+Mannequin","options":["Makeshift Mannequin","Prophet of
+Kruphix"]},{"winner":"Dictate of the Twin Gods","options":["Dictate of the
+Twin Gods","Fold into =C3=86ther"]},{"winner":"Xanthic
+Statue","options":["Xanthic Statue","Rogue's
+Passage"]},{"winner":"Protective Sphere","options":["Protective
+Sphere","Arcane Denial"]},{"winner":"Statute of Denial","options":["Bant
+Charm","Statute of Denial"]},{"winner":"Bogardan
+Hellkite","options":["Bogardan Hellkite","Decree of Annihilation"]}]}
+
+--_av-k_rPJNv4pMnpUhMfZURl6w
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"MPW","timestamp":"2015-10-29T19:29:41.084Z","data":[{"winner":=
+"Prahv, Spires of Order","options":["Prince of Thralls","Prahv, Spires of O=
+rder"]},{"winner":"Tatsumasa, the Dragon's Fang","options":["Call to Heel",=
+"Tatsumasa, the Dragon's Fang"]},{"winner":"Worldfire","options":["Vault of=
+ the Archangel","Worldfire"]},{"winner":"Hellcarver Demon","options":["Hell=
+carver Demon","Angel of the Dire Hour"]},{"winner":"Desertion","options":["=
+Desertion","Ready/Willing"]},{"winner":"Makeshift Mannequin","options":["Ma=
+keshift Mannequin","Prophet of Kruphix"]},{"winner":"Dictate of the Twin Go=
+ds","options":["Dictate of the Twin Gods","Fold into =C3=86ther"]},{"winner=
+":"Xanthic Statue","options":["Xanthic Statue","Rogue's Passage"]},{"winner=
+":"Protective Sphere","options":["Protective Sphere","Arcane Denial"]},{"wi=
+nner":"Statute of Denial","options":["Bant Charm","Statute of Denial"]},{"w=
+inner":"Bogardan Hellkite","options":["Bogardan Hellkite","Decree of Annihi=
+lation"]}]}<img src=3D"http://mandrillapp.com/track/open.php?u=3D30781824&i=
+d=3D063619cbab624c7a8ccead5b2b643110" height=3D"1" width=3D"1">
+
+--_av-k_rPJNv4pMnpUhMfZURl6w--
+
+
+From 1516395099460152163@xxx Thu Oct 29 19:30:59 +0000 2015
+X-GM-THRID: 1516395099460152163
+X-Gmail-Labels: Sent,data
+Delivered-To: type4stack@gmail.com
+Received: by 10.64.23.142 with SMTP id m14csp707484ief;
+        Thu, 29 Oct 2015 12:30:59 -0700 (PDT)
+X-Received: by 10.13.254.69 with SMTP id o66mr2982791ywf.252.1446147059825;
+        Thu, 29 Oct 2015 12:30:59 -0700 (PDT)
+Return-Path: <bounce-md_30781824.563273f1.v1-5b64e7cde09d4f90931bbeec9aeb849e@mandrillapp.com>
+Received: from mail186-28.suw21.mandrillapp.com (mail186-28.suw21.mandrillapp.com. [198.2.186.28])
+        by mx.google.com with ESMTPS id h7si1468061ywb.58.2015.10.29.12.30.59
+        for <type4stack@gmail.com>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Oct 2015 12:30:59 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30781824.563273f1.v1-5b64e7cde09d4f90931bbeec9aeb849e@mandrillapp.com designates 198.2.186.28 as permitted sender) client-ip=198.2.186.28;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-md_30781824.563273f1.v1-5b64e7cde09d4f90931bbeec9aeb849e@mandrillapp.com designates 198.2.186.28 as permitted sender) smtp.mailfrom=bounce-md_30781824.563273f1.v1-5b64e7cde09d4f90931bbeec9aeb849e@mandrillapp.com;
+       dkim=pass header.i=@mail186-28.suw21.mandrillapp.com;
+       dkim=pass header.i=@mandrillapp.com;
+       dmarc=fail (p=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=type4stack@mail186-28.suw21.mandrillapp.com;
+ bh=EtMYkUzLC7hsOIz2z1buR8gegxE=;
+ b=ZNUz8gtuHgBMb9CpHl6HPXjmhQb9WK32+m7B7BZ/z3WHLBuZCSIAEPS7fU1ffHbmQtlQ9OaUv6nj
+   yTHHtmMl0oM9TTsJeGPHF3GU5tPVkhF/eM/Ua7qJcuJIndqa8i/XT7AOnPoNsBU3Z6r44sUjwOfJ
+   7zEmmA+4JzAZ6x2y0ok=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mandrill; d=mail186-28.suw21.mandrillapp.com;
+ b=VfeW5kwf2IgbYYsd/6rAVy3BIa/QoUDmOFkZSYCFuYrNh/9WXY6IqoRNkJKMNSBoVhF0JYRUZVcm
+   uDVPihl26i1pohYOCDe+RBYnJHIdgLv2m9lthfTFvDiHgebGq/7UYRr6MMAtAXvDfso/C+3sXozq
+   vvnlXpTWVWzuhjFfIHg=;
+Received: from pmta02.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail186-28.suw21.mandrillapp.com id h69pv6174bk3 for <type4stack@gmail.com>; Thu, 29 Oct 2015 19:30:57 +0000 (envelope-from <bounce-md_30781824.563273f1.v1-5b64e7cde09d4f90931bbeec9aeb849e@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1446147057; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=t8dmK1BlvnXf/lhzhst+eZPltwPKqo6BOw9aNINJvMY=; 
+ b=Yc72g2eLKT1nL3QFOjAn0JOzIHcpBBoWrF+xIRuVAoQcEdo82wqXR4CpiaHmyLztkhlkt5
+ ZQM554jiIu8l6gzxRtBcGNy4SYsA6v8+Qi5tHHBC1b8Knuk6Y7u94BNvN6q/etiG4GWz498G
+ 6Hjgpg5MH8k5/u+jKs64TD8+Omgw0=
+From: <type4stack@gmail.com>
+Sender: <type4stack@mail186-28.suw21.mandrillapp.com>
+Subject: RATING DATA
+Return-Path: <bounce-md_30781824.563273f1.v1-5b64e7cde09d4f90931bbeec9aeb849e@mandrillapp.com>
+Received: from [104.192.218.186] by mandrillapp.com id 5b64e7cde09d4f90931bbeec9aeb849e; Thu, 29 Oct 2015 19:30:57 +0000
+To: ROBOT <type4stack@gmail.com>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30781824.5b64e7cde09d4f90931bbeec9aeb849e
+X-Mandrill-User: md_30781824
+Message-Id: <30781824.20151029193057.563273f10f2933.95432194@mail186-28.suw21.mandrillapp.com>
+Date: Thu, 29 Oct 2015 19:30:57 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-aVcIHyhwJPqrElEiOwlx4Q"
+
+--_av-aVcIHyhwJPqrElEiOwlx4Q
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+{"username":"MPW","timestamp":"2015-10-29T19:30:56.825Z","data":[{"winner":"Phage
+the Untouchable","options":["Chronomantic Escape","Phage the
+Untouchable"]},{"winner":"Reign of the Pit","options":["Krosan
+Cloudscraper","Reign of the Pit"]},{"winner":"Skeletal
+Wurm","options":["Sphinx of the Steel Wind","Skeletal
+Wurm"]},{"winner":"Balancing Act","options":["Balancing Act","Zurgo
+Helmsmasher"]},{"winner":"Hellcarver Demon","options":["Resolute
+Archangel","Hellcarver Demon"]},{"winner":"Smokespew
+Invoker","options":["Whisperwood Elemental","Smokespew
+Invoker"]},{"winner":"Rescue from the Underworld","options":["Rescue from
+the Underworld","Rogue's Passage"]},{"winner":"Sins of the
+Past","options":["Sins of the Past","Foul Renewal"]},{"winner":"Vedalken
+Orrery","options":["Thornling","Vedalken Orrery"]},{"winner":"Soul
+Conduit","options":["Gideon's Phalanx","Soul Conduit"]},{"winner":"Tyrant
+of Discord","options":["Hidetsugu's Second Rite","Tyrant of Discord"]}]}
+--_av-aVcIHyhwJPqrElEiOwlx4Q
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+{"username":"MPW","timestamp":"2015-10-29T19:30:56.825Z","data":[{"winner":=
+"Phage the Untouchable","options":["Chronomantic Escape","Phage the Untouch=
+able"]},{"winner":"Reign of the Pit","options":["Krosan Cloudscraper","Reig=
+n of the Pit"]},{"winner":"Skeletal Wurm","options":["Sphinx of the Steel W=
+ind","Skeletal Wurm"]},{"winner":"Balancing Act","options":["Balancing Act"=
+,"Zurgo Helmsmasher"]},{"winner":"Hellcarver Demon","options":["Resolute Ar=
+changel","Hellcarver Demon"]},{"winner":"Smokespew Invoker","options":["Whi=
+sperwood Elemental","Smokespew Invoker"]},{"winner":"Rescue from the Underw=
+orld","options":["Rescue from the Underworld","Rogue's Passage"]},{"winner"=
+:"Sins of the Past","options":["Sins of the Past","Foul Renewal"]},{"winner=
+":"Vedalken Orrery","options":["Thornling","Vedalken Orrery"]},{"winner":"S=
+oul Conduit","options":["Gideon's Phalanx","Soul Conduit"]},{"winner":"Tyra=
+nt of Discord","options":["Hidetsugu's Second Rite","Tyrant of Discord"]}]}=
+<img src=3D"http://mandrillapp.com/track/open.php?u=3D30781824&id=3D5b64e7c=
+de09d4f90931bbeec9aeb849e" height=3D"1" width=3D"1">
+
+--_av-aVcIHyhwJPqrElEiOwlx4Q--
 
 
