@@ -83,6 +83,7 @@
                     '<ul class="nav navbar-nav navbar-left">' +
                         '<li><a href="graph{1}">Graphs</a></li>' +
                         '<li><a href="rate{1}">Rate Cards</a></li>' +
+                        '<li><a href="ranking{1}">Rankings</a></li>' +
                     '</ul></div></div></nav>'
     );
     module.load_navbar = function(){
