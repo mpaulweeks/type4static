@@ -190,8 +190,8 @@
             request.custom_date_string = timestamp;
         }
 
-        var title_date = request.custom_date_string ? request.date.toDateString() : "TODAY";
-        $('#title').html("Stack as of " + title_date);
+        var title_message = request.custom_date_string ? "The Stack on: " + request.date.toDateString() : "The Stack";
+        $('#title').html(title_message);
 
         if (request.categories){
             $('#subtitle').html('<h4 class="text-center">' + request.categories.join(", ") + '</h4><hr/>');
