@@ -9,7 +9,7 @@
     }
 
     var EDIT_ROW_TAG = '<td class="text-center"><input class="category_checkbox" type="checkbox" data-id={1} data-category="{2}" {3}></td>';
-    var EDIT_IMG_TAG = '<th><img class="cardimage" alt="{1}" src="{2}"><img/>{1}</th>';
+    var EDIT_IMG_TAG = '<th><img class="cardimage" alt="{1}" src="{2}"><img/><br/>{1}</th>';
     var CAT_ROW = '<tr><td class="headcol">{1}</td>{2}</tr>';
 
     module.run = function(){
