@@ -1,4 +1,6 @@
 # type4static
+Forked and improved here: https://github.com/mpaulweeks/type4flask
+
 Type4 using static pages
 
 - http://mpaulweeks.github.io/type4static/
